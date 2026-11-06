@@ -26,3 +26,7 @@ bash manage.sh "/path/to/Deadlock/game/citadel"
 
 - `python3 tools/translate_common.py` فایل `data/pak82_dir.vpk` را به‌روز می‌کند؛ می‌توان مسیر یک نسخهٔ دیگر را نیز به‌عنوان آرگومان داد.
 - `python3 scripts/translate_menu.py deadlock_english_localization.zip` فایل `data/citadel_main_english.txt` را از بستهٔ فایل‌های انگلیسی بازسازی می‌کند. عبارت‌هایی که هنوز ترجمه نشده‌اند انگلیسی باقی می‌مانند.
+
+## فایل‌های محلی توسعه
+
+کش‌های Python، فایل‌های موقت نصب و گزارش محلی `deadlock_vpk_report.txt` در `.gitignore` قرار دارند. بخش‌های VPK که از بازی استخراج یا بازسازی می‌شوند نیز به‌طور پیش‌فرض نادیده گرفته می‌شوند؛ فایل‌هایی که از قبل در مخزن ثبت شده‌اند همچنان تحت کنترل نسخه باقی می‌مانند. فایل ترجمهٔ موردنیاز نصب یعنی `data/pak82_dir.vpk` نادیده گرفته نمی‌شود.
