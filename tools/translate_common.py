@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Translate selected exact UI strings in the standalone VPK, preserving assets.
 
-Run from the repository root. Only Valve VPK v2 archives with inline entries and
+By default, translate data/pak82_dir.vpk relative to the repository root.
+Pass an explicit VPK path to translate a copy instead. Only Valve VPK v2
+archives with inline entries and
 no archive-MD5 or signature section are supported. Changes are idempotent.
 """
+import argparse
 import hashlib
 import re
 import struct
@@ -1206,7 +1209,9 @@ DESCRIPTIONS.update({
 
 
 def main():
-    path = Path('pak82_dir.vpk')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('vpk', nargs='?', type=Path, default=Path('data/pak82_dir.vpk'))
+    path = parser.parse_args().vpk
     raw = path.read_bytes()
     sig, version, tree_size, data_size, archive_md5_size, other_size, signature_size = struct.unpack_from('<7I', raw)
     if (sig, version, archive_md5_size, other_size, signature_size) != (0x55aa1234, 2, 0, 48, 0):
