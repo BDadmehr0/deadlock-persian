@@ -13,6 +13,8 @@ import struct
 import zlib
 from pathlib import Path
 
+from persian_terms import translate_visible_terms
+
 TRANSLATIONS = {
     'Duration': 'مدت زمان', 'Debuff Duration': 'مدت اثر منفی',
     'Slow Duration': 'مدت کندی', 'Buff Duration': 'مدت اثر مثبت',
@@ -1254,10 +1256,15 @@ def main():
                         raise ValueError(f'Placeholder or markup mismatch: {key}')
                 else:
                     translated = TRANSLATIONS.get(old)
+                    if translated is None and re.search(r'[\u0600-\u06ff]', old):
+                        translated = translate_visible_terms(old)
+                        if translated == old:
+                            translated = None
                 if translated is None:
                     return match.group(0)
                 count += 1
-                return match.group(1) + '\u200f' + translated + match.group(4)
+                prefix = '' if old.startswith('\u200f') else '\u200f'
+                return match.group(1) + prefix + translated + match.group(4)
             content = pattern.sub(translate, text).encode('utf-8')
         struct.pack_into('<I', tree, entry_pos, zlib.crc32(content))
         struct.pack_into('<II', tree, entry_pos + 8, len(chunks), len(content))
