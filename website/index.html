@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Persian | فارسی‌ساز بازی Deadlock</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Vazirmatn', 'sans-serif'] },
+                    colors: {
+                        dl_bg: '#161616',
+                        dl_card: '#1c1c1c',
+                        dl_border: '#2a2a2a',
+                        dl_text: '#f5f5f6',
+                        dl_peach: '#f6845d',
+                        dl_olive: '#89954b',
+                        dl_purple: '#b377e1'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #161616;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #161616; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #89954b; }
+        .code-block {
+            direction: ltr; text-align: left;
+            font-family: 'Consolas', monospace;
+            border-left: 3px solid #444;
+        }
+        .deadlock-logo {
+            filter: invert(1) brightness(1.5);
+            mix-blend-mode: screen;
+        }
+        .hero-bg {
+            background-image: 
+                linear-gradient(to bottom, rgba(22, 22, 22, 0.8) 0%, rgba(22, 22, 22, 0.3) 40%, rgba(22, 22, 22, 0.9) 85%, #161616 100%),
+                url('header_city.webp');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+        #lightbox-thumbs::-webkit-scrollbar { height: 6px; }
+        #lightbox-thumbs::-webkit-scrollbar-track { background: #111; }
+        #lightbox-thumbs::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        #lightbox-thumbs::-webkit-scrollbar-thumb:hover { background: #89954b; }
+    </style>
+</head>
+<body class="text-dl_text font-sans antialiased leading-relaxed overflow-x-hidden selection:bg-dl_olive selection:text-dl_bg flex flex-col min-h-screen relative">
+
+    <section class="hero-bg relative pt-20 pb-28 px-4 text-center border-b border-dl_border/50 flex-grow flex flex-col justify-center">
+        
+        <div class="absolute top-6 right-6 md:top-8 md:right-8 z-20">
+            <a href="https://github.com/BDadmehr0/deadlock-persian" target="_blank" class="flex items-center gap-2 text-sm font-bold text-dl_text/70 hover:text-dl_peach transition-colors bg-dl_bg/80 backdrop-blur-sm border border-dl_border px-4 py-2 rounded-sm shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                Source Code
+            </a>
+        </div>
+
+        <div class="max-w-3xl mx-auto relative z-10 mt-10">
+            
+            <div class="mb-8 flex justify-center drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+                <img src="logo.svg" alt="Deadlock Logo" class="w-full max-w-md md:max-w-xl object-contain" style="filter: brightness(0) invert(1); mix-blend-mode: screen;">
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6 tracking-tight text-dl_text drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                فارسی‌ساز کامل
+            </h1>
+            
+            <p class="text-lg md:text-xl text-dl_text/80 mb-10 max-w-lg mx-auto font-light drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                تجربه بازی به زبان فارسی. نصب آسان، امن و قابل بازگشت. مخصوص جامعه فارسی‌زبان.
+            </p>
+            
+            <a href="#setup" class="inline-flex items-center gap-3 bg-dl_text text-dl_bg hover:bg-dl_peach hover:text-dl_bg text-base font-bold px-8 py-3.5 rounded-sm transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.5)]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                دانلود و شروع نصب
+            </a>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-4 py-16 w-full relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <div class="bg-dl_card border border-dl_border p-8 relative overflow-hidden group hover:border-dl_olive/50 transition-colors">
+                <div class="absolute top-0 right-0 w-1 h-full bg-dl_olive/20 group-hover:bg-dl_olive transition-colors"></div>
+                <h2 class="text-xl font-bold mb-4 text-dl_olive">اطلاعات کلیدی</h2>
+                <ul class="space-y-3 text-sm text-dl_text/70">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> ترجمه کامل منوها، آیتم‌ها و تنظیمات</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> پشتیبان‌گیری خودکار از فایل‌های استیم</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> سازگار با آخرین آپدیت‌های Valve</li>
+                </ul>
+            </div>
+
+            <div class="bg-[url('fairfax_plaza_01.jpg')] bg-cover bg-center border border-dl_border p-8 relative overflow-hidden group hover:border-dl_peach/50 transition-colors flex flex-col justify-center">
+                <div class="absolute inset-0 bg-dl_bg/85 group-hover:bg-dl_bg/75 transition-colors duration-500"></div>
+                <div class="absolute top-0 right-0 w-1 h-full bg-dl_peach/50 group-hover:bg-dl_peach transition-colors z-10"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-xl font-bold mb-4 text-dl_peach">پیش‌نیازها</h2>
+                    <p class="text-sm text-dl_text/80 mb-6 leading-relaxed">
+                        برای اجرای اسکریپت به <strong class="text-dl_text">Python 3</strong> نیاز دارید. قبل از شروع، مطمئن شوید بازی Deadlock کاملاً بسته است.
+                    </p>
+                    <a href="https://github.com/BDadmehr0/deadlock-persian" target="_blank" class="inline-block bg-dl_bg/50 backdrop-blur-sm border border-dl_peach text-dl_peach hover:bg-dl_peach hover:text-dl_bg font-bold px-6 py-2.5 rounded-sm transition-all text-center text-sm">
+                        دریافت سورس کد
+                    </a>
+                </div>
+            </div>
+
+            <div id="setup" class="lg:col-span-2 relative mt-6 p-6 md:p-10 border border-dl_purple/40 bg-[url('fairfax_plaza_01.jpg')] bg-cover bg-center overflow-hidden">
+                <div class="absolute inset-0 bg-dl_card/95"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-dl_purple z-10"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-dl_purple z-10"></div>
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-dl_purple inline-block border-b border-dl_purple/30 pb-2 px-4 bg-dl_bg/50 rounded-t-sm">راهنمای نصب و ستاپ</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <div id="os-linux" class="bg-dl_bg/90 backdrop-blur-sm border border-dl_border p-6 transition-all duration-500 relative">
+                            <span class="detect-badge hidden absolute top-0 left-0 bg-dl_olive text-dl_bg text-xs font-bold px-3 py-1">OS DETECTED</span>
+                            <h3 class="text-lg font-bold text-dl_text mb-4 flex items-center gap-2">
+                                Linux <span class="text-dl_olive text-xl">🐧</span>
+                            </h3>
+                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><span class="text-dl_text/30"># Clone & Run</span>
+git clone https://github.com/BDadmehr0/deadlock-persian.git
+cd deadlock-persian
+<span class="text-dl_olive">bash</span> manage.sh</div>
+                        </div>
+
+                        <div id="os-windows" class="bg-dl_bg/90 backdrop-blur-sm border border-dl_border p-6 transition-all duration-500 relative">
+                            <span class="detect-badge hidden absolute top-0 left-0 bg-dl_peach text-dl_bg text-xs font-bold px-3 py-1">OS DETECTED</span>
+                            <h3 class="text-lg font-bold text-dl_text mb-4 flex items-center gap-2">
+                                Windows <span class="text-dl_peach text-xl">🪟</span>
+                            </h3>
+                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><span class="text-dl_text/30"># Clone & Run in Git Bash</span>
+git clone https://github.com/BDadmehr0/deadlock-persian.git
+cd deadlock-persian
+<span class="text-dl_peach">bash</span> manage.sh</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 mt-6">
+                <h2 class="text-xl font-bold text-dl_text mb-4">تصاویر محیط بازی</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <div class="screenshot-thumb border border-dl_border group relative aspect-video overflow-hidden cursor-pointer hover:border-dl_peach transition-colors" data-index="0">
+                        <img src="https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/1_hero_switch.png" alt="Screenshot 1" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-dl_text drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" /></svg>
+                        </div>
+                    </div>
+                    <div class="screenshot-thumb border border-dl_border group relative aspect-video overflow-hidden cursor-pointer hover:border-dl_peach transition-colors" data-index="1">
+                        <img src="https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/2_esc.png" alt="Screenshot 2" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-dl_text drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" /></svg>
+                        </div>
+                    </div>
+                    <div class="screenshot-thumb border border-dl_border group relative aspect-video overflow-hidden cursor-pointer hover:border-dl_peach transition-colors" data-index="2">
+                        <img src="https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/3_setting.png" alt="Screenshot 3" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-dl_text drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" /></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="relative border-t border-dl_border mt-auto overflow-hidden">
+        <div class="absolute inset-0 bg-[url('chinatown_01.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dl_bg via-dl_bg/90 to-dl_bg/60"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="md:col-span-1">
+                    <img src="logo.svg" alt="Deadlock Persian" class="h-8 md:h-10 w-auto object-contain mb-4 opacity-80" style="filter: brightness(0) invert(1); mix-blend-mode: screen;">
+                    <p class="text-sm text-dl_text/70 leading-relaxed text-justify drop-shadow-md">
+                        پروژه متن‌باز فارسی‌سازی بازی Deadlock. هدف این پروژه ارائه یک تجربه روان و بومی‌سازی شده برای کاربران فارسی‌زبان است. تمامی حقوق مربوط به بازی اصلی متعلق به Valve است.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-dl_text font-bold mb-4 border-b border-dl_border pb-2 inline-block text-sm drop-shadow-md">اطلاعات مخزن</h4>
+                    <ul class="space-y-3 text-sm text-dl_text/80 drop-shadow-md">
+                        <li class="flex items-center gap-2">
+                            <span class="text-dl_purple">■</span> 
+                            <a href="https://github.com/BDadmehr0/deadlock-persian" class="hover:text-dl_purple transition-colors" target="_blank">مخزن اصلی در گیت‌هاب</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-dl_purple">■</span> 
+                            <a href="https://github.com/BDadmehr0/deadlock-persian/issues" class="hover:text-dl_purple transition-colors" target="_blank">گزارش باگ و مشکلات</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-dl_purple">■</span> 
+                            <span>مجوز: Open Source / MIT</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-dl_text font-bold mb-4 border-b border-dl_border pb-2 inline-block text-sm drop-shadow-md">توسعه‌دهنده</h4>
+                    <ul class="space-y-3 text-sm text-dl_text/80 drop-shadow-md">
+                        <li class="flex items-center gap-2">
+                            <span class="text-dl_olive">■</span>
+                            <span>نگهداری و توسعه توسط <strong class="text-dl_text">BDadmehr0</strong></span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-dl_olive">■</span>
+                            <a href="https://github.com/BDadmehr0" class="hover:text-dl_olive transition-colors" target="_blank">پروفایل شخصی گیت‌هاب</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-dl_border/50 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-dl_text/60 drop-shadow-md">
+                <p>&copy; 2024 Deadlock Persian. Built for the Persian Deadlock Community.</p>
+                <p class="mt-2 md:mt-0 flex items-center gap-1">ساخته شده با <span class="text-dl_peach">♥</span> برای گیمرهای ایرانی</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-4 left-4 z-50 group cursor-pointer">
+        <img src="mustdo_crate.webp" alt="Must Do Crate" class="w-24 md:w-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300">
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden flex-col opacity-0 transition-opacity duration-300">
+        
+        <div class="flex items-center justify-between px-4 md:px-6 py-3 border-b border-dl_border/50">
+            <div id="lightbox-counter" class="text-dl_text/80 text-sm bg-dl_card/80 border border-dl_border px-4 py-1 rounded-sm">1 / 1</div>
+            <button id="lightbox-close" class="text-dl_text/70 hover:text-dl_peach transition-colors bg-dl_card/80 hover:bg-dl_card border border-dl_border rounded-sm p-2" aria-label="بستن">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+        </div>
+
+        <div class="relative flex-1 flex items-center justify-center overflow-hidden p-4">
+            
+            <div id="lightbox-loading" class="absolute inset-0 flex items-center justify-center hidden">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-dl_peach"></div>
+            </div>
+
+            <button id="lightbox-prev" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-10 text-dl_text/70 hover:text-dl_peach bg-dl_card/80 hover:bg-dl_card border border-dl_border rounded-sm p-2" aria-label="قبلی">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+
+            <img id="lightbox-img" src="" alt="Screenshot" class="max-w-full max-h-full object-contain border border-dl_border shadow-2xl hidden">
+
+            <button id="lightbox-next" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-10 text-dl_text/70 hover:text-dl_peach bg-dl_card/80 hover:bg-dl_card border border-dl_border rounded-sm p-2" aria-label="بعدی">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+        </div>
+
+        <div class="border-t border-dl_border/50 bg-dl_bg/80">
+            <div id="lightbox-thumbs" class="flex gap-2 overflow-x-auto px-3 py-3" style="scroll-behavior: smooth;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const platform = navigator.platform.toLowerCase();
+            const isWindows = userAgent.includes("windows") || platform.includes("win");
+            const isLinux = userAgent.includes("linux") && !userAgent.includes("android");
+            const linuxBox = document.getElementById("os-linux");
+            const windowsBox = document.getElementById("os-windows");
+            if (isWindows) {
+                windowsBox.classList.add("border-dl_peach", "bg-dl_peach/10");
+                windowsBox.querySelector(".detect-badge").classList.remove("hidden");
+                linuxBox.classList.add("opacity-40", "grayscale");
+            } else if (isLinux) {
+                linuxBox.classList.add("border-dl_olive", "bg-dl_olive/10");
+                linuxBox.querySelector(".detect-badge").classList.remove("hidden");
+                windowsBox.classList.add("opacity-40", "grayscale");
+            }
+        });
+
+        const fallbackScreenshots = [
+            'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/1_hero_switch.png',
+            'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/2_esc.png',
+            'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/3_setting.png'
+        ];
+
+        let allScreenshots = [];
+        let currentIndex = 0;
+        let fetchPromise = null;
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+        const lightboxLoading = document.getElementById('lightbox-loading');
+        const lightboxThumbs = document.getElementById('lightbox-thumbs');
+
+        async function tryFetchContents(ref, path) {
+            const url = `https://api.github.com/repos/BDadmehr0/deadlock-persian/contents/${path}?ref=${encodeURIComponent(ref)}`;
+            const res = await fetch(url, { headers: { 'Accept': 'application/vnd.github+json' } });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            if (!Array.isArray(data)) throw new Error('Not array');
+            return data;
+        }
+
+        async function fetchAllScreenshots() {
+            if (allScreenshots.length > 0) return allScreenshots;
+            if (fetchPromise) return fetchPromise;
+
+            fetchPromise = (async () => {
+                const attempts = [
+                    ['arena/435414a8-deadlock-persian', 'Screenshots'],
+                    ['arena', '435414a8-deadlock-persian/Screenshots'],
+                ];
+                for (const [ref, path] of attempts) {
+                    try {
+                        const files = await tryFetchContents(ref, path);
+                        const imgs = files
+                            .filter(f => f.type === 'file' && /\.(png|jpe?g|webp|gif)$/i.test(f.name))
+                            .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }))
+                            .map(f => f.download_url);
+                        if (imgs.length > 0) {
+                            allScreenshots = imgs;
+                            return allScreenshots;
+                        }
+                    } catch (e) {
+                        console.warn('Fetch attempt failed:', ref, path, e);
+                    }
+                }
+                allScreenshots = fallbackScreenshots.slice();
+                return allScreenshots;
+            })();
+
+            return fetchPromise;
+        }
+
+        async function openLightbox(startIndex) {
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            requestAnimationFrame(() => lightbox.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+
+            lightboxLoading.classList.remove('hidden');
+            lightboxImg.classList.add('hidden');
+            lightboxCounter.textContent = '…';
+            lightboxThumbs.innerHTML = '';
+
+            const clickedUrl = fallbackScreenshots[startIndex] || fallbackScreenshots[0];
+            const list = await fetchAllScreenshots();
+
+            let idx = list.findIndex(url => url === clickedUrl);
+            if (idx < 0) {
+                const clickedName = clickedUrl.split('/').pop().toLowerCase();
+                idx = list.findIndex(url => url.split('/').pop().toLowerCase() === clickedName);
+            }
+            currentIndex = idx >= 0 ? idx : 0;
+
+            renderThumbs();
+            showImage(currentIndex);
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                lightboxImg.src = '';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function showImage(index) {
+            if (!allScreenshots.length) return;
+            currentIndex = (index + allScreenshots.length) % allScreenshots.length;
+
+            lightboxLoading.classList.remove('hidden');
+            lightboxImg.classList.add('hidden');
+            lightboxImg.src = allScreenshots[currentIndex];
+            lightboxCounter.textContent = `${currentIndex + 1} / ${allScreenshots.length}`;
+
+            lightboxThumbs.querySelectorAll('.lightbox-thumb').forEach((el, i) => {
+                const active = i === currentIndex;
+                el.classList.toggle('ring-2', active);
+                el.classList.toggle('ring-dl_peach', active);
+                el.classList.toggle('opacity-100', active);
+                el.classList.toggle('opacity-50', !active);
+            });
+
+            const activeThumb = lightboxThumbs.querySelector(`.lightbox-thumb[data-index="${currentIndex}"]`);
+            if (activeThumb) {
+                activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+
+        lightboxImg.addEventListener('load', () => {
+            lightboxLoading.classList.add('hidden');
+            lightboxImg.classList.remove('hidden');
+        });
+
+        lightboxImg.addEventListener('error', () => {
+            lightboxLoading.classList.add('hidden');
+            lightboxImg.classList.remove('hidden');
+        });
+
+        function renderThumbs() {
+            lightboxThumbs.innerHTML = allScreenshots.map((url, i) => `
+                <button data-index="${i}" class="lightbox-thumb shrink-0 h-16 w-24 border border-dl_border rounded-sm overflow-hidden transition-all hover:border-dl_peach opacity-50">
+                    <img src="${url}" class="w-full h-full object-cover" loading="lazy" alt="thumb ${i+1}">
+                </button>
+            `).join('');
+
+            lightboxThumbs.querySelectorAll('.lightbox-thumb').forEach(btn => {
+                btn.addEventListener('click', () => showImage(parseInt(btn.dataset.index, 10)));
+            });
+        }
+
+        document.querySelectorAll('.screenshot-thumb').forEach(el => {
+            el.addEventListener('click', () => {
+                const idx = parseInt(el.dataset.index, 10) || 0;
+                openLightbox(idx);
+            });
+        });
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox-next').addEventListener('click', () => showImage(currentIndex + 1));
+        document.getElementById('lightbox-prev').addEventListener('click', () => showImage(currentIndex - 1));
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showImage(currentIndex + 1);
+            if (e.key === 'ArrowRight') showImage(currentIndex - 1);
+        });
+    </script>
+</body>
+</html>
