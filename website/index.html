@@ -53,6 +53,29 @@
             background-position: center top;
             background-repeat: no-repeat;
         }
+        /* Decorative game objects are non-interactive and never cover links. */
+        .game-ornament {
+            pointer-events: none;
+            user-select: none;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 18px rgba(0, 0, 0, .65));
+        }
+        .hero-ornament {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            width: clamp(75px, 14vw, 170px);
+        }
+        .hero-barrel { left: clamp(8px, 4vw, 72px); transform: rotate(-8deg); }
+        .hero-tome { right: clamp(8px, 4vw, 72px); transform: rotate(8deg); }
+        .gallery-snack { width: clamp(55px, 8vw, 88px); flex: none; }
+        @media (max-width: 640px) {
+            .hero-ornament { width: 72px; opacity: .78; }
+            .gallery-snack { width: 52px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .game-ornament { transition: none !important; }
+        }
         #lightbox-thumbs::-webkit-scrollbar { height: 6px; }
         #lightbox-thumbs::-webkit-scrollbar-track { background: #111; }
         #lightbox-thumbs::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
@@ -62,7 +85,10 @@
 <body class="text-dl_text font-sans antialiased leading-relaxed overflow-x-hidden selection:bg-dl_olive selection:text-dl_bg flex flex-col min-h-screen relative">
 
     <section class="hero-bg relative pt-20 pb-28 px-4 text-center border-b border-dl_border/50 flex-grow flex flex-col justify-center">
-        
+        <!-- Artwork from Deadlock; decorative only. -->
+        <img src="https://cdn.fastly.steamstatic.com/apps/deadlock/images/react/cityneversleeps/neutral_barrel_b.png" alt="" aria-hidden="true" class="game-ornament hero-ornament hero-barrel" decoding="async">
+        <img src="https://cdn.fastly.steamstatic.com/apps/deadlock/images/react/cityneversleeps/mustdo_tome.webp" alt="" aria-hidden="true" class="game-ornament hero-ornament hero-tome" decoding="async">
+
         <div class="absolute top-6 right-6 md:top-8 md:right-8 z-20">
             <a href="https://github.com/BDadmehr0/deadlock-persian" target="_blank" class="flex items-center gap-2 text-sm font-bold text-dl_text/70 hover:text-dl_peach transition-colors bg-dl_bg/80 backdrop-blur-sm border border-dl_border px-4 py-2 rounded-sm shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -158,7 +184,10 @@ cd deadlock-persian
             </div>
 
             <div class="lg:col-span-2 mt-6">
-                <h2 class="text-xl font-bold text-dl_text mb-4">تصاویر محیط بازی</h2>
+                <div class="flex items-end justify-between gap-4 mb-4">
+                    <h2 class="text-xl font-bold text-dl_text">تصاویر محیط بازی</h2>
+                    <img src="https://cdn.fastly.steamstatic.com/apps/deadlock/images/react/cityneversleeps/mustdo_snack.webp" alt="" aria-hidden="true" class="game-ornament gallery-snack" loading="lazy" decoding="async">
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
                     <div class="screenshot-thumb border border-dl_border group relative aspect-video overflow-hidden cursor-pointer hover:border-dl_peach transition-colors" data-index="0">
                         <img src="https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/Screenshots/1_hero_switch.png" alt="Screenshot 1" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy">
