@@ -2,6 +2,42 @@
 
 > ترجمهٔ منو هنوز کامل نیست و سازگاری فایل‌ها داخل بازی آزمایش نشده است. پیش از نصب بازی را ببندید.
 
+## نصب و به‌روزرسانی تک‌خطی
+
+> این فرمان‌ها به شاخهٔ `arena/435414a8-deadlock-persian` اشاره دارند و فقط پس از انتشار اسکریپت‌های جدید روی آن شاخه کار می‌کنند. در صورت حذف شاخه باید آدرس‌ها و مرجع شاخه در اسکریپت‌ها به یک شاخهٔ منتشرشده تغییر کنند. قبل از اجرای کد دانلودشده، محتوای آن را بررسی کنید.
+
+بازی را ببندید. در لینوکس به Bash، Git، Python 3 و curl نیاز است. در ویندوز Git for Windows و Python 3 همراه Python Launcher (`py -3`) را نصب کنید و از PowerShell استفاده کنید. سازگاری در ویندوز و داخل بازی هنوز آزمایش نشده است.
+
+### لینوکس (Bash)
+
+نصب:
+```bash
+set -o pipefail; curl -fsSL https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.sh | bash -s -- install
+```
+به‌روزرسانی نصب موجود:
+```bash
+set -o pipefail; curl -fsSL https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.sh | bash -s -- update
+```
+اگر محل بازی متفاوت است، بعد از `install` یا `update` مسیر پوشهٔ citadel را در کوتیشن اضافه کنید: `"/path/to/Deadlock/game/citadel"`.
+
+### ویندوز (PowerShell)
+
+نصب:
+```powershell
+& ([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.ps1').Content)) -Action install
+```
+به‌روزرسانی نصب موجود:
+```powershell
+& ([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.ps1').Content)) -Action update
+```
+نصاب سعی می‌کند بازی را در کتابخانه‌های Steam پیدا کند؛ در صورت نیاز `-GameDir "C:\path\to\Deadlock\game\citadel"` را به انتهای دستور اضافه کنید. برای حذف و بازیابی فایل‌های اصلی:
+```powershell
+py -3 "$env:LOCALAPPDATA\DeadlockPersian\scripts\install_windows.py" uninstall
+```
+در صورت نیاز، `--game-dir "C:\path\to\Deadlock\game\citadel"` را اضافه کنید. برای بازنویسی فایل‌هایی که پس از نصب تغییر کرده‌اند، فقط پس از بررسی و آگاهی از حذف تغییرات بعدی، از `--force` استفاده کنید.
+
+نصاب‌ها فایل‌های اصلی را در `.deadlock-persian-backup` نگه می‌دارند و در صورت تغییر فایل‌های نصب‌شده، به‌روزرسانی و حذف را متوقف می‌کنند. checkout نصب در لینوکس در `${XDG_DATA_HOME:-$HOME/.local/share}/deadlock-persian` و در ویندوز در `%LOCALAPPDATA%\DeadlockPersian` قرار می‌گیرد؛ تغییرات محلی checkout مانع به‌روزرسانی خودکار می‌شوند.
+
 ## نصب و حذف
 
 در ریشهٔ پروژه، منوی ترمینالی را اجرا کنید:

@@ -76,6 +76,10 @@
         @media (prefers-reduced-motion: reduce) {
             .game-ornament { transition: none !important; }
         }
+        .setup-action { border: 1px solid #444; color: #d2d2d2; padding: .6rem 1.2rem; font-size: .875rem; font-weight: 700; transition: background .2s, color .2s, border-color .2s; }
+        .setup-action:hover, .setup-action:focus-visible { border-color: #b377e1; color: #fff; }
+        .setup-action-active { background: #b377e1; border-color: #b377e1; color: #161616; }
+        .setup-action-active:hover, .setup-action-active:focus-visible { color: #161616; }
         #lightbox-thumbs::-webkit-scrollbar { height: 6px; }
         #lightbox-thumbs::-webkit-scrollbar-track { background: #111; }
         #lightbox-thumbs::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
@@ -103,7 +107,7 @@
             </div>
 
             <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6 tracking-tight text-dl_text drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-                فارسی‌ساز کامل
+                فارسی‌ساز Deadlock
             </h1>
             
             <p class="text-lg md:text-xl text-dl_text/80 mb-10 max-w-lg mx-auto font-light drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -124,20 +128,19 @@
                 <div class="absolute top-0 right-0 w-1 h-full bg-dl_olive/20 group-hover:bg-dl_olive transition-colors"></div>
                 <h2 class="text-xl font-bold mb-4 text-dl_olive">اطلاعات کلیدی</h2>
                 <ul class="space-y-3 text-sm text-dl_text/70">
-                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> ترجمه کامل منوها، آیتم‌ها و تنظیمات</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> ترجمهٔ منوها، آیتم‌ها و تنظیمات (در حال تکمیل)</li>
                     <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> پشتیبان‌گیری خودکار از فایل‌های استیم</li>
-                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> سازگار با آخرین آپدیت‌های Valve</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-dl_olive rotate-45"></span> قابل به‌روزرسانی؛ سازگاری با نسخه‌های بازی نیاز به بررسی دارد</li>
                 </ul>
             </div>
 
-            <div class="bg-[url('fairfax_plaza_01.jpg')] bg-cover bg-center border border-dl_border p-8 relative overflow-hidden group hover:border-dl_peach/50 transition-colors flex flex-col justify-center">
-                <div class="absolute inset-0 bg-dl_bg/85 group-hover:bg-dl_bg/75 transition-colors duration-500"></div>
+            <div class="bg-dl_card border border-dl_border p-8 relative overflow-hidden group hover:border-dl_peach/50 transition-colors flex flex-col justify-center">
                 <div class="absolute top-0 right-0 w-1 h-full bg-dl_peach/50 group-hover:bg-dl_peach transition-colors z-10"></div>
                 
                 <div class="relative z-10">
                     <h2 class="text-xl font-bold mb-4 text-dl_peach">پیش‌نیازها</h2>
                     <p class="text-sm text-dl_text/80 mb-6 leading-relaxed">
-                        برای اجرای اسکریپت به <strong class="text-dl_text">Python 3</strong> نیاز دارید. قبل از شروع، مطمئن شوید بازی Deadlock کاملاً بسته است.
+                        برای نصب به <strong class="text-dl_text">Python 3 و Git</strong> نیاز دارید؛ در لینوکس <strong class="text-dl_text">curl</strong> و در ویندوز راه‌انداز <strong class="text-dl_text">py</strong> نیز لازم است. پیش از نصب یا به‌روزرسانی، بازی را کاملاً ببندید.
                     </p>
                     <a href="https://github.com/BDadmehr0/deadlock-persian" target="_blank" class="inline-block bg-dl_bg/50 backdrop-blur-sm border border-dl_peach text-dl_peach hover:bg-dl_peach hover:text-dl_bg font-bold px-6 py-2.5 rounded-sm transition-all text-center text-sm">
                         دریافت سورس کد
@@ -145,8 +148,7 @@
                 </div>
             </div>
 
-            <div id="setup" class="lg:col-span-2 relative mt-6 p-6 md:p-10 border border-dl_purple/40 bg-[url('fairfax_plaza_01.jpg')] bg-cover bg-center overflow-hidden">
-                <div class="absolute inset-0 bg-dl_card/95"></div>
+            <div id="setup" class="lg:col-span-2 relative mt-6 p-6 md:p-10 border border-dl_purple/40 bg-dl_card overflow-hidden">
                 <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-dl_purple z-10"></div>
                 <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-dl_purple z-10"></div>
                 
@@ -155,31 +157,32 @@
                         <h2 class="text-2xl font-bold text-dl_purple inline-block border-b border-dl_purple/30 pb-2 px-4 bg-dl_bg/50 rounded-t-sm">راهنمای نصب و ستاپ</h2>
                     </div>
                     
+                    <div class="flex flex-wrap items-center justify-center gap-2 mb-6" role="group" aria-label="انتخاب عملیات">
+                        <button type="button" class="setup-action setup-action-active" data-action="install" aria-pressed="true">نصب جدید</button>
+                        <button type="button" class="setup-action" data-action="update" aria-pressed="false">به‌روزرسانی</button>
+                    </div>
+                    <p id="setup-action-hint" class="text-center text-sm text-dl_text/65 mb-6" aria-live="polite">دستور سیستم‌عامل خود را کپی و در ترمینال اجرا کنید.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
                         <div id="os-linux" class="bg-dl_bg/90 backdrop-blur-sm border border-dl_border p-6 transition-all duration-500 relative">
                             <span class="detect-badge hidden absolute top-0 left-0 bg-dl_olive text-dl_bg text-xs font-bold px-3 py-1">OS DETECTED</span>
-                            <h3 class="text-lg font-bold text-dl_text mb-4 flex items-center gap-2">
-                                Linux <span class="text-dl_olive text-xl">🐧</span>
-                            </h3>
-                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><span class="text-dl_text/30"># Clone & Run</span>
-git clone https://github.com/BDadmehr0/deadlock-persian.git
-cd deadlock-persian
-<span class="text-dl_olive">bash</span> manage.sh</div>
+                            <h3 class="text-lg font-bold text-dl_text mb-2 flex items-center gap-2">Linux <span class="text-dl_olive text-xl">🐧</span></h3>
+                            <p class="text-xs text-dl_text/50 mb-4">Bash · Git · Python 3 · curl</p>
+                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><code id="linux-command">set -o pipefail; curl -fsSL https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.sh | bash -s -- install</code></div>
+                            <button type="button" class="copy-command mt-4 border border-dl_olive/60 text-dl_olive hover:bg-dl_olive hover:text-dl_bg px-4 py-2 text-sm font-bold transition-colors" data-target="linux-command">کپی دستور</button>
                         </div>
-
                         <div id="os-windows" class="bg-dl_bg/90 backdrop-blur-sm border border-dl_border p-6 transition-all duration-500 relative">
                             <span class="detect-badge hidden absolute top-0 left-0 bg-dl_peach text-dl_bg text-xs font-bold px-3 py-1">OS DETECTED</span>
-                            <h3 class="text-lg font-bold text-dl_text mb-4 flex items-center gap-2">
-                                Windows <span class="text-dl_peach text-xl">🪟</span>
-                            </h3>
-                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><span class="text-dl_text/30"># Clone & Run in Git Bash</span>
-git clone https://github.com/BDadmehr0/deadlock-persian.git
-cd deadlock-persian
-<span class="text-dl_peach">bash</span> manage.sh</div>
+                            <h3 class="text-lg font-bold text-dl_text mb-2 flex items-center gap-2">Windows <span class="text-dl_peach text-xl">🪟</span></h3>
+                            <p class="text-xs text-dl_text/50 mb-4">PowerShell · Git for Windows · Python 3 (py)</p>
+                            <div class="code-block bg-[#111] p-4 text-xs text-dl_text/80 overflow-x-auto whitespace-pre"><code id="windows-command">&amp; ([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/bootstrap.ps1').Content)) -Action install</code></div>
+                            <button type="button" class="copy-command mt-4 border border-dl_peach/60 text-dl_peach hover:bg-dl_peach hover:text-dl_bg px-4 py-2 text-sm font-bold transition-colors" data-target="windows-command">کپی دستور</button>
                         </div>
-
                     </div>
+                    <p id="copy-status" class="text-center text-xs text-dl_text/60 mt-4 min-h-[1.25rem]" role="status" aria-live="polite"></p>
+                    <p class="text-center text-xs text-dl_text/50 mt-2 leading-relaxed">دکمهٔ به‌روزرسانی دستور جدید را نمایش می‌دهد؛ برای اعمال آن، دستور را در ترمینال اجرا کنید. اسکریپت از فایل‌های اصلی پشتیبان می‌گیرد و اگر فایل‌های نصب‌شده تغییر کرده باشند، به‌روزرسانی را متوقف می‌کند.</p>
+                    <p class="text-center text-xs text-dl_text/50 mt-2 leading-relaxed">اگر بازی پیدا نشد، در لینوکس مسیر پوشهٔ citadel را در انتهای دستور داخل کوتیشن اضافه کنید؛ در ویندوز <span dir="ltr">-GameDir "C:\path\to\Deadlock\game\citadel"</span> را به انتهای دستور PowerShell اضافه کنید. جزئیات حذف و بازگردانی در README است.</p>
+                    <p class="text-center text-xs text-dl_text/50 mt-2 leading-relaxed">این دستورها از شاخهٔ فعلی پروژه دریافت می‌شوند و پس از انتشار فایل‌های جدید روی آن شاخه قابل استفاده‌اند؛ حذف شاخه نیز پیوندها را از کار می‌اندازد.</p>
+
                 </div>
             </div>
 
@@ -301,6 +304,37 @@ cd deadlock-persian
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            const bootstrapBase = 'https://raw.githubusercontent.com/BDadmehr0/deadlock-persian/arena/435414a8-deadlock-persian/scripts/';
+            const actionButtons = document.querySelectorAll('.setup-action');
+            const linuxCommand = document.getElementById('linux-command');
+            const windowsCommand = document.getElementById('windows-command');
+            const hint = document.getElementById('setup-action-hint');
+            const status = document.getElementById('copy-status');
+            function selectAction(action) {
+                linuxCommand.textContent = `set -o pipefail; curl -fsSL ${bootstrapBase}bootstrap.sh | bash -s -- ${action}`;
+                windowsCommand.textContent = `& ([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing '${bootstrapBase}bootstrap.ps1').Content)) -Action ${action}`;
+                actionButtons.forEach(button => {
+                    const selected = button.dataset.action === action;
+                    button.classList.toggle('setup-action-active', selected);
+                    button.setAttribute('aria-pressed', String(selected));
+                });
+                hint.textContent = action === 'update'
+                    ? 'برای دریافت آخرین نسخه و به‌روزرسانی نصب موجود، دستور را اجرا کنید.'
+                    : 'دستور سیستم‌عامل خود را کپی و در ترمینال اجرا کنید.';
+                status.textContent = '';
+            }
+            actionButtons.forEach(button => button.addEventListener('click', () => selectAction(button.dataset.action)));
+            document.querySelectorAll('.copy-command').forEach(button => button.addEventListener('click', async () => {
+                const text = document.getElementById(button.dataset.target).textContent;
+                try {
+                    if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard API unavailable');
+                    await navigator.clipboard.writeText(text);
+                    status.textContent = 'دستور کپی شد.';
+                } catch (_) {
+                    status.textContent = 'کپی خودکار در دسترس نیست؛ دستور را دستی انتخاب و کپی کنید.';
+                }
+            }));
+
             const userAgent = navigator.userAgent.toLowerCase();
             const platform = navigator.platform.toLowerCase();
             const isWindows = userAgent.includes("windows") || platform.includes("win");
