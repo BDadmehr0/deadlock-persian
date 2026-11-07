@@ -1,6 +1,6 @@
 ﻿"lang"
 {
-	"Language" "Persian"
+	"Language" "persian"
 	"Tokens"
 	{
 		"Citadel_Dashboard_BuildVersion"	"#{d:buildNumber}"
