@@ -1,0 +1,33 @@
+# Python bytecode, test caches, and local virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local inspection output (the checked-in report/ directory is intentional)
+/deadlock_vpk_report.txt
+
+# Temporary installer, uninstaller, and VPK rebuild files
+.deadlock-persian-backup/
+.deadlock-persian.lock/
+.deadlock-persian-stage.*/
+.deadlock-persian-restore.*/
+.vpk-*
+
+# Locally reconstructed/split game packages: use existing tracked assets only
+/pak[0-9]*_[0-9]*.vpk
+*.vpk.part[0-9]*

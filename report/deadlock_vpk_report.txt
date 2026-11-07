@@ -1,0 +1,805 @@
+Deadlock VPK inventory (filenames and offsets only; no game file contents)
+VPK directory files found: 3
+  pak01_dir.vpk: 158667 entries
+  shaders_pc_dir.vpk: 241 entries
+  shaders_vulkan_dir.vpk: 283 entries
+
+=== Loose localization files ===
+Count: 319
+resource/localization/citadel_attributes/citadel_attributes_brazilian.txt
+resource/localization/citadel_attributes/citadel_attributes_bulgarian.txt
+resource/localization/citadel_attributes/citadel_attributes_czech.txt
+resource/localization/citadel_attributes/citadel_attributes_danish.txt
+resource/localization/citadel_attributes/citadel_attributes_dutch.txt
+resource/localization/citadel_attributes/citadel_attributes_english.txt
+resource/localization/citadel_attributes/citadel_attributes_finnish.txt
+resource/localization/citadel_attributes/citadel_attributes_french.txt
+resource/localization/citadel_attributes/citadel_attributes_german.txt
+resource/localization/citadel_attributes/citadel_attributes_greek.txt
+resource/localization/citadel_attributes/citadel_attributes_hungarian.txt
+resource/localization/citadel_attributes/citadel_attributes_indonesian.txt
+resource/localization/citadel_attributes/citadel_attributes_italian.txt
+resource/localization/citadel_attributes/citadel_attributes_japanese.txt
+resource/localization/citadel_attributes/citadel_attributes_koreana.txt
+resource/localization/citadel_attributes/citadel_attributes_latam.txt
+resource/localization/citadel_attributes/citadel_attributes_norwegian.txt
+resource/localization/citadel_attributes/citadel_attributes_polish.txt
+resource/localization/citadel_attributes/citadel_attributes_portuguese.txt
+resource/localization/citadel_attributes/citadel_attributes_romanian.txt
+resource/localization/citadel_attributes/citadel_attributes_russian.txt
+resource/localization/citadel_attributes/citadel_attributes_schinese.txt
+resource/localization/citadel_attributes/citadel_attributes_spanish.txt
+resource/localization/citadel_attributes/citadel_attributes_swedish.txt
+resource/localization/citadel_attributes/citadel_attributes_tchinese.txt
+resource/localization/citadel_attributes/citadel_attributes_thai.txt
+resource/localization/citadel_attributes/citadel_attributes_turkish.txt
+resource/localization/citadel_attributes/citadel_attributes_ukrainian.txt
+resource/localization/citadel_attributes/citadel_attributes_vietnamese.txt
+resource/localization/citadel_gc/citadel_gc_brazilian.txt
+resource/localization/citadel_gc/citadel_gc_bulgarian.txt
+resource/localization/citadel_gc/citadel_gc_czech.txt
+resource/localization/citadel_gc/citadel_gc_danish.txt
+resource/localization/citadel_gc/citadel_gc_dutch.txt
+resource/localization/citadel_gc/citadel_gc_english.txt
+resource/localization/citadel_gc/citadel_gc_finnish.txt
+resource/localization/citadel_gc/citadel_gc_french.txt
+resource/localization/citadel_gc/citadel_gc_german.txt
+resource/localization/citadel_gc/citadel_gc_greek.txt
+resource/localization/citadel_gc/citadel_gc_hungarian.txt
+resource/localization/citadel_gc/citadel_gc_indonesian.txt
+resource/localization/citadel_gc/citadel_gc_italian.txt
+resource/localization/citadel_gc/citadel_gc_japanese.txt
+resource/localization/citadel_gc/citadel_gc_koreana.txt
+resource/localization/citadel_gc/citadel_gc_latam.txt
+resource/localization/citadel_gc/citadel_gc_norwegian.txt
+resource/localization/citadel_gc/citadel_gc_polish.txt
+resource/localization/citadel_gc/citadel_gc_portuguese.txt
+resource/localization/citadel_gc/citadel_gc_romanian.txt
+resource/localization/citadel_gc/citadel_gc_russian.txt
+resource/localization/citadel_gc/citadel_gc_schinese.txt
+resource/localization/citadel_gc/citadel_gc_spanish.txt
+resource/localization/citadel_gc/citadel_gc_swedish.txt
+resource/localization/citadel_gc/citadel_gc_tchinese.txt
+resource/localization/citadel_gc/citadel_gc_thai.txt
+resource/localization/citadel_gc/citadel_gc_turkish.txt
+resource/localization/citadel_gc/citadel_gc_ukrainian.txt
+resource/localization/citadel_gc/citadel_gc_vietnamese.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_brazilian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_bulgarian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_czech.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_danish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_dutch.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_english.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_finnish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_french.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_german.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_greek.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_hungarian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_indonesian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_italian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_japanese.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_koreana.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_latam.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_norwegian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_polish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_portuguese.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_romanian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_russian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_schinese.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_spanish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_swedish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_tchinese.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_thai.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_turkish.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_ukrainian.txt
+resource/localization/citadel_gc_hero_names/citadel_gc_hero_names_vietnamese.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_brazilian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_bulgarian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_czech.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_danish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_dutch.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_english.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_finnish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_french.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_german.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_greek.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_hungarian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_indonesian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_italian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_japanese.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_koreana.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_latam.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_norwegian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_polish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_portuguese.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_romanian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_russian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_schinese.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_spanish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_swedish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_tchinese.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_thai.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_turkish.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_ukrainian.txt
+resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_vietnamese.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_brazilian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_bulgarian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_czech.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_danish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_dutch.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_english.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_finnish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_french.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_german.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_greek.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_hungarian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_indonesian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_italian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_japanese.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_koreana.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_latam.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_norwegian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_polish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_portuguese.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_romanian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_russian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_schinese.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_spanish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_swedish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_tchinese.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_thai.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_turkish.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_ukrainian.txt
+resource/localization/citadel_generated_vo/citadel_generated_vo_vietnamese.txt
+resource/localization/citadel_heroes/citadel_heroes_brazilian.txt
+resource/localization/citadel_heroes/citadel_heroes_bulgarian.txt
+resource/localization/citadel_heroes/citadel_heroes_czech.txt
+resource/localization/citadel_heroes/citadel_heroes_danish.txt
+resource/localization/citadel_heroes/citadel_heroes_dutch.txt
+resource/localization/citadel_heroes/citadel_heroes_english.txt
+resource/localization/citadel_heroes/citadel_heroes_finnish.txt
+resource/localization/citadel_heroes/citadel_heroes_french.txt
+resource/localization/citadel_heroes/citadel_heroes_german.txt
+resource/localization/citadel_heroes/citadel_heroes_greek.txt
+resource/localization/citadel_heroes/citadel_heroes_hungarian.txt
+resource/localization/citadel_heroes/citadel_heroes_indonesian.txt
+resource/localization/citadel_heroes/citadel_heroes_italian.txt
+resource/localization/citadel_heroes/citadel_heroes_japanese.txt
+resource/localization/citadel_heroes/citadel_heroes_koreana.txt
+resource/localization/citadel_heroes/citadel_heroes_latam.txt
+resource/localization/citadel_heroes/citadel_heroes_norwegian.txt
+resource/localization/citadel_heroes/citadel_heroes_polish.txt
+resource/localization/citadel_heroes/citadel_heroes_portuguese.txt
+resource/localization/citadel_heroes/citadel_heroes_romanian.txt
+resource/localization/citadel_heroes/citadel_heroes_russian.txt
+resource/localization/citadel_heroes/citadel_heroes_schinese.txt
+resource/localization/citadel_heroes/citadel_heroes_spanish.txt
+resource/localization/citadel_heroes/citadel_heroes_swedish.txt
+resource/localization/citadel_heroes/citadel_heroes_tchinese.txt
+resource/localization/citadel_heroes/citadel_heroes_thai.txt
+resource/localization/citadel_heroes/citadel_heroes_turkish.txt
+resource/localization/citadel_heroes/citadel_heroes_ukrainian.txt
+resource/localization/citadel_heroes/citadel_heroes_vietnamese.txt
+resource/localization/citadel_main/citadel_main_brazilian.txt
+resource/localization/citadel_main/citadel_main_bulgarian.txt
+resource/localization/citadel_main/citadel_main_czech.txt
+resource/localization/citadel_main/citadel_main_danish.txt
+resource/localization/citadel_main/citadel_main_dutch.txt
+resource/localization/citadel_main/citadel_main_english.txt
+resource/localization/citadel_main/citadel_main_finnish.txt
+resource/localization/citadel_main/citadel_main_french.txt
+resource/localization/citadel_main/citadel_main_german.txt
+resource/localization/citadel_main/citadel_main_greek.txt
+resource/localization/citadel_main/citadel_main_hungarian.txt
+resource/localization/citadel_main/citadel_main_indonesian.txt
+resource/localization/citadel_main/citadel_main_italian.txt
+resource/localization/citadel_main/citadel_main_japanese.txt
+resource/localization/citadel_main/citadel_main_koreana.txt
+resource/localization/citadel_main/citadel_main_latam.txt
+resource/localization/citadel_main/citadel_main_norwegian.txt
+resource/localization/citadel_main/citadel_main_polish.txt
+resource/localization/citadel_main/citadel_main_portuguese.txt
+resource/localization/citadel_main/citadel_main_romanian.txt
+resource/localization/citadel_main/citadel_main_russian.txt
+resource/localization/citadel_main/citadel_main_schinese.txt
+resource/localization/citadel_main/citadel_main_spanish.txt
+resource/localization/citadel_main/citadel_main_swedish.txt
+resource/localization/citadel_main/citadel_main_tchinese.txt
+resource/localization/citadel_main/citadel_main_thai.txt
+resource/localization/citadel_main/citadel_main_turkish.txt
+resource/localization/citadel_main/citadel_main_ukrainian.txt
+resource/localization/citadel_main/citadel_main_vietnamese.txt
+resource/localization/citadel_mods/citadel_mods_brazilian.txt
+resource/localization/citadel_mods/citadel_mods_bulgarian.txt
+resource/localization/citadel_mods/citadel_mods_czech.txt
+resource/localization/citadel_mods/citadel_mods_danish.txt
+resource/localization/citadel_mods/citadel_mods_dutch.txt
+resource/localization/citadel_mods/citadel_mods_english.txt
+resource/localization/citadel_mods/citadel_mods_finnish.txt
+resource/localization/citadel_mods/citadel_mods_french.txt
+resource/localization/citadel_mods/citadel_mods_german.txt
+resource/localization/citadel_mods/citadel_mods_greek.txt
+resource/localization/citadel_mods/citadel_mods_hungarian.txt
+resource/localization/citadel_mods/citadel_mods_indonesian.txt
+resource/localization/citadel_mods/citadel_mods_italian.txt
+resource/localization/citadel_mods/citadel_mods_japanese.txt
+resource/localization/citadel_mods/citadel_mods_koreana.txt
+resource/localization/citadel_mods/citadel_mods_latam.txt
+resource/localization/citadel_mods/citadel_mods_norwegian.txt
+resource/localization/citadel_mods/citadel_mods_polish.txt
+resource/localization/citadel_mods/citadel_mods_portuguese.txt
+resource/localization/citadel_mods/citadel_mods_romanian.txt
+resource/localization/citadel_mods/citadel_mods_russian.txt
+resource/localization/citadel_mods/citadel_mods_schinese.txt
+resource/localization/citadel_mods/citadel_mods_spanish.txt
+resource/localization/citadel_mods/citadel_mods_swedish.txt
+resource/localization/citadel_mods/citadel_mods_tchinese.txt
+resource/localization/citadel_mods/citadel_mods_thai.txt
+resource/localization/citadel_mods/citadel_mods_turkish.txt
+resource/localization/citadel_mods/citadel_mods_ukrainian.txt
+resource/localization/citadel_mods/citadel_mods_vietnamese.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_brazilian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_bulgarian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_czech.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_danish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_dutch.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_english.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_finnish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_french.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_german.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_greek.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_hungarian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_indonesian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_italian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_japanese.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_koreana.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_latam.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_norwegian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_polish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_portuguese.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_romanian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_russian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_schinese.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_spanish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_swedish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_tchinese.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_thai.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_turkish.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_ukrainian.txt
+resource/localization/citadel_patch_notes/citadel_patch_notes_vietnamese.txt
+resource/localization/citadel_seasonal/citadel_seasonal_brazilian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_bulgarian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_czech.txt
+resource/localization/citadel_seasonal/citadel_seasonal_danish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_dutch.txt
+resource/localization/citadel_seasonal/citadel_seasonal_english.txt
+resource/localization/citadel_seasonal/citadel_seasonal_finnish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_french.txt
+resource/localization/citadel_seasonal/citadel_seasonal_german.txt
+resource/localization/citadel_seasonal/citadel_seasonal_greek.txt
+resource/localization/citadel_seasonal/citadel_seasonal_hungarian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_indonesian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_italian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_japanese.txt
+resource/localization/citadel_seasonal/citadel_seasonal_koreana.txt
+resource/localization/citadel_seasonal/citadel_seasonal_latam.txt
+resource/localization/citadel_seasonal/citadel_seasonal_norwegian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_polish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_portuguese.txt
+resource/localization/citadel_seasonal/citadel_seasonal_romanian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_russian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_schinese.txt
+resource/localization/citadel_seasonal/citadel_seasonal_spanish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_swedish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_tchinese.txt
+resource/localization/citadel_seasonal/citadel_seasonal_thai.txt
+resource/localization/citadel_seasonal/citadel_seasonal_turkish.txt
+resource/localization/citadel_seasonal/citadel_seasonal_ukrainian.txt
+resource/localization/citadel_seasonal/citadel_seasonal_vietnamese.txt
+resource/localization/citadel_vdata/accolades/accolades_brazilian.txt
+resource/localization/citadel_vdata/accolades/accolades_bulgarian.txt
+resource/localization/citadel_vdata/accolades/accolades_czech.txt
+resource/localization/citadel_vdata/accolades/accolades_danish.txt
+resource/localization/citadel_vdata/accolades/accolades_dutch.txt
+resource/localization/citadel_vdata/accolades/accolades_english.txt
+resource/localization/citadel_vdata/accolades/accolades_finnish.txt
+resource/localization/citadel_vdata/accolades/accolades_french.txt
+resource/localization/citadel_vdata/accolades/accolades_german.txt
+resource/localization/citadel_vdata/accolades/accolades_greek.txt
+resource/localization/citadel_vdata/accolades/accolades_hungarian.txt
+resource/localization/citadel_vdata/accolades/accolades_indonesian.txt
+resource/localization/citadel_vdata/accolades/accolades_italian.txt
+resource/localization/citadel_vdata/accolades/accolades_japanese.txt
+resource/localization/citadel_vdata/accolades/accolades_koreana.txt
+resource/localization/citadel_vdata/accolades/accolades_latam.txt
+resource/localization/citadel_vdata/accolades/accolades_norwegian.txt
+resource/localization/citadel_vdata/accolades/accolades_polish.txt
+resource/localization/citadel_vdata/accolades/accolades_portuguese.txt
+resource/localization/citadel_vdata/accolades/accolades_romanian.txt
+resource/localization/citadel_vdata/accolades/accolades_russian.txt
+resource/localization/citadel_vdata/accolades/accolades_schinese.txt
+resource/localization/citadel_vdata/accolades/accolades_spanish.txt
+resource/localization/citadel_vdata/accolades/accolades_swedish.txt
+resource/localization/citadel_vdata/accolades/accolades_tchinese.txt
+resource/localization/citadel_vdata/accolades/accolades_thai.txt
+resource/localization/citadel_vdata/accolades/accolades_turkish.txt
+resource/localization/citadel_vdata/accolades/accolades_ukrainian.txt
+resource/localization/citadel_vdata/accolades/accolades_vietnamese.txt
+
+=== Localization / language files ===
+Count: 1
+pak01_dir.vpk | pak01_208.vpk | resource/localization/items_english.txt | offset=14438176 | bytes=41 | preload=0 | archive=present
+
+=== UI and menu images ===
+Count: 116
+pak01_dir.vpk | pak01_083.vpk | panorama/images/main_menu/play/card_brawl_subject_psd.vtex_c | offset=29834640 | bytes=13068924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_088.vpk | panorama/images/main_menu/pick_screen/smoke_bg_psd.vtex_c | offset=87763136 | bytes=9472052 | preload=0 | archive=present
+pak01_dir.vpk | pak01_089.vpk | panorama/images/main_menu/play/card_brawl_psd.vtex_c | offset=36089440 | bytes=10972828 | preload=0 | archive=present
+pak01_dir.vpk | pak01_092.vpk | panorama/images/main_menu/training_herotesting_psd.vtex_c | offset=101302928 | bytes=1442116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_turkish_png.vtex_c | offset=59074720 | bytes=13307 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_ukrainian_png.vtex_c | offset=59088032 | bytes=10884 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | panorama/images/main_menu/menu_images/bots_easy_png.vtex_c | offset=54238768 | bytes=6821 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | panorama/images/main_menu/menu_images/bots_hard_png.vtex_c | offset=54245600 | bytes=13789 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | panorama/images/main_menu/menu_images/bots_med_png.vtex_c | offset=54259392 | bytes=11166 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/main_menu/play/card_bots_easy_png.vtex_c | offset=65935392 | bytes=5705 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/main_menu/play/card_bots_hard_png.vtex_c | offset=65941104 | bytes=10311 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/main_menu/play/card_bots_med_png.vtex_c | offset=65951424 | bytes=8173 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/main_menu/play/card_bots_sm_psd.vtex_c | offset=65959600 | bytes=1344500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/main_menu/recommended_icon_backer_png.vtex_c | offset=79490976 | bytes=4509 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_brazilian_png.vtex_c | offset=78621104 | bytes=8196 | preload=0 | archive=present
+pak01_dir.vpk | pak01_119.vpk | panorama/images/main_menu/text_speckle_mask_main_psd.vtex_c | offset=100913616 | bytes=482100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_119.vpk | panorama/images/main_menu/training_boteasy_psd.vtex_c | offset=101395728 | bytes=362100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_119.vpk | panorama/images/main_menu/training_guide_psd.vtex_c | offset=101757840 | bytes=362100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_119.vpk | panorama/images/main_menu/training_guided_psd.vtex_c | offset=102119952 | bytes=362100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_121.vpk | panorama/images/shop/catalog/text_images/sticker_sold/sticker_sold_checkmark_png.vtex_c | offset=70780480 | bytes=63854 | preload=0 | archive=present
+pak01_dir.vpk | pak01_145.vpk | panorama/images/main_menu/old_gods_new_blood_png.vtex_c | offset=64442928 | bytes=1786100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_177.vpk | panorama/images/main_menu/pick_screen/ultra_priority_token_psd.vtex_c | offset=81669056 | bytes=1050724 | preload=0 | archive=present
+pak01_dir.vpk | pak01_177.vpk | panorama/images/main_menu/play/card_bots_subject_sm_psd.vtex_c | offset=82719792 | bytes=4894932 | preload=0 | archive=present
+pak01_dir.vpk | pak01_177.vpk | panorama/images/main_menu/play/card_sandbox_subject_psd.vtex_c | offset=87614736 | bytes=2200020 | preload=0 | archive=present
+pak01_dir.vpk | pak01_177.vpk | panorama/images/main_menu/play/play_inactive_psd.vtex_c | offset=89814768 | bytes=6356204 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_brazilian_png.vtex_c | offset=38108192 | bytes=157867 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_czech_png.vtex_c | offset=38266064 | bytes=158303 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_english_png.vtex_c | offset=38424368 | bytes=160693 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_french_png.vtex_c | offset=38585072 | bytes=157736 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_german_png.vtex_c | offset=38742816 | bytes=157199 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_indonesian_png.vtex_c | offset=38900016 | bytes=157556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_italian_png.vtex_c | offset=39057584 | bytes=157293 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_koreana_png.vtex_c | offset=39214880 | bytes=157826 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_latam_png.vtex_c | offset=39372720 | bytes=157587 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_polish_png.vtex_c | offset=39530320 | bytes=157790 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_russian_png.vtex_c | offset=39688112 | bytes=155977 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_schinese_png.vtex_c | offset=39844096 | bytes=159370 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_spanish_png.vtex_c | offset=40003472 | bytes=152842 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_thai_png.vtex_c | offset=40156320 | bytes=157696 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_turkish_png.vtex_c | offset=40314016 | bytes=157274 | preload=0 | archive=present
+pak01_dir.vpk | pak01_223.vpk | panorama/images/npe/text_images/npe_heroes/npe_heroes3_ukrainian_png.vtex_c | offset=40471296 | bytes=156839 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_learn_psd.vtex_c | offset=0 | bytes=10972828 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_learn_subject_psd.vtex_c | offset=10972832 | bytes=13068924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_map_psd.vtex_c | offset=24041760 | bytes=1344484 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_map_subject_psd.vtex_c | offset=25386256 | bytes=2112292 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_play_psd.vtex_c | offset=27498560 | bytes=17861192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_play_subject_psd.vtex_c | offset=45359760 | bytes=16787804 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_ranked_psd.vtex_c | offset=62147568 | bytes=10972828 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_ranked_subject_psd.vtex_c | offset=73120400 | bytes=13068924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_roster_subject_psd.vtex_c | offset=86189328 | bytes=13068924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_224.vpk | panorama/images/main_menu/play/card_sandbox_psd.vtex_c | offset=99258256 | bytes=1275188 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_latam_png.vtex_c | offset=88802080 | bytes=11264 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_polish_png.vtex_c | offset=88813344 | bytes=12768 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_russian_png.vtex_c | offset=88826112 | bytes=13158 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_schinese_png.vtex_c | offset=88839280 | bytes=12221 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_spanish_png.vtex_c | offset=88851504 | bytes=11264 | preload=0 | archive=present
+pak01_dir.vpk | pak01_227.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_thai_png.vtex_c | offset=88862768 | bytes=15147 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_brazilian_png.vtex_c | offset=31813984 | bytes=10459 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_czech_png.vtex_c | offset=31824448 | bytes=11378 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_english_png.vtex_c | offset=31835840 | bytes=14585 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_french_png.vtex_c | offset=31850432 | bytes=11280 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_german_png.vtex_c | offset=31861712 | bytes=8007 | preload=0 | archive=present
+pak01_dir.vpk | pak01_248.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_indonesian_png.vtex_c | offset=31869728 | bytes=16121 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | panorama/images/main_menu/hero_release_vote/vote_counter_backer_psd.vtex_c | offset=77679168 | bytes=142008 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_italian_png.vtex_c | offset=87269232 | bytes=12909 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | panorama/images/hud/text_images/killing_blow/killing_blow_koreana_png.vtex_c | offset=87282144 | bytes=9932 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | panorama/images/main_menu/city_never_sleeps_png.vtex_c | offset=45861760 | bytes=1716374 | preload=0 | archive=present
+pak01_dir.vpk | pak01_272.vpk | panorama/images/main_menu/play/card_cancel_psd.vtex_c | offset=42283792 | bytes=10972828 | preload=0 | archive=present
+pak01_dir.vpk | pak01_272.vpk | panorama/images/main_menu/play/card_cancel_subject_psd.vtex_c | offset=53256624 | bytes=13068924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_272.vpk | panorama/images/main_menu/play/card_custom_psd.vtex_c | offset=66325552 | bytes=1260948 | preload=0 | archive=present
+pak01_dir.vpk | pak01_272.vpk | panorama/images/main_menu/recommend_bg_psd.vtex_c | offset=1967536 | bytes=1365316 | preload=0 | archive=present
+pak01_dir.vpk | pak01_272.vpk | panorama/images/main_menu/recommended_icon_backer_bottom_png.vtex_c | offset=3332864 | bytes=3644 | preload=0 | archive=present
+pak01_dir.vpk | pak01_281.vpk | panorama/images/main_menu/temp/select_play_mode_psd.vtex_c | offset=18769104 | bytes=2402116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_artist_name_psd.vtex_c | offset=16730384 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_artist_psd.vtex_c | offset=16898112 | bytes=1226100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_baba_name_psd.vtex_c | offset=18124224 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_baba_psd.vtex_c | offset=18291952 | bytes=1226100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_chessmaster_name_psd.vtex_c | offset=19518064 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_chessmaster_psd.vtex_c | offset=19685792 | bytes=1226116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_deadpack_name_psd.vtex_c | offset=20911920 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_deadpack_psd.vtex_c | offset=21079648 | bytes=1226116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_nurse_name_psd.vtex_c | offset=22305776 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_nurse_psd.vtex_c | offset=22473504 | bytes=1226100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_ratking_name_psd.vtex_c | offset=23699616 | bytes=167716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_287.vpk | panorama/images/main_menu/hero_release_vote/hero_ratking_psd.vtex_c | offset=23867344 | bytes=1226116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | panorama/images/main_menu/pick_screen/card_backer_psd.vtex_c | offset=51707888 | bytes=111332 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | panorama/images/main_menu/pick_screen/card_border_psd.vtex_c | offset=51819232 | bytes=111332 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | panorama/images/main_menu/pick_screen/priority_high_png.vtex_c | offset=51930576 | bytes=16284 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | panorama/images/main_menu/pick_screen/priority_png.vtex_c | offset=51946864 | bytes=9680 | preload=0 | archive=present
+pak01_dir.vpk | pak01_293.vpk | panorama/images/main_menu/hero_release_vote/text_backer_box_light_psd.vtex_c | offset=106779216 | bytes=1321244 | preload=0 | archive=present
+pak01_dir.vpk | pak01_294.vpk | panorama/images/main_menu/pick_screen/temp/linebreak_psd.vtex_c | offset=19542176 | bytes=82132 | preload=0 | archive=present
+pak01_dir.vpk | pak01_294.vpk | panorama/images/main_menu/pick_screen/temp/play_box_fill_psd.vtex_c | offset=19624320 | bytes=2783724 | preload=0 | archive=present
+pak01_dir.vpk | pak01_294.vpk | panorama/images/main_menu/pick_screen/temp/play_box_psd.vtex_c | offset=22408048 | bytes=2783724 | preload=0 | archive=present
+pak01_dir.vpk | pak01_301.vpk | panorama/images/main_menu/shiv_png.vtex_c | offset=16190480 | bytes=620453 | preload=0 | archive=present
+pak01_dir.vpk | pak01_301.vpk | panorama/images/main_menu/sky_gradient_png.vtex_c | offset=16810944 | bytes=2760970 | preload=0 | archive=present
+pak01_dir.vpk | pak01_301.vpk | panorama/images/main_menu/slate_texture_png.vtex_c | offset=19571920 | bytes=1949152 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | panorama/images/main_menu/play/card_custom_subject_psd.vtex_c | offset=75776768 | bytes=2081012 | preload=0 | archive=present
+pak01_dir.vpk | pak01_306.vpk | panorama/images/main_menu/survey_bg_psd.vtex_c | offset=19394256 | bytes=1365316 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_czech_png.vtex_c | offset=90452800 | bytes=8040 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_french_png.vtex_c | offset=90460848 | bytes=8040 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_german_png.vtex_c | offset=90468896 | bytes=8028 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_italian_png.vtex_c | offset=90476928 | bytes=7845 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_koreana_png.vtex_c | offset=90484784 | bytes=7857 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_polish_png.vtex_c | offset=90492656 | bytes=8098 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_russian_png.vtex_c | offset=90500768 | bytes=8033 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_schinese_png.vtex_c | offset=90508816 | bytes=7460 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_spanish_png.vtex_c | offset=90516288 | bytes=7723 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_thai_png.vtex_c | offset=90524016 | bytes=7415 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_turkish_png.vtex_c | offset=90531440 | bytes=8049 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/images/shop/catalog/text_images/upgrade/sticker_upgrade_ukrainian_png.vtex_c | offset=90539504 | bytes=7961 | preload=0 | archive=present
+pak01_dir.vpk | pak01_317.vpk | panorama/images/main_menu/hero_release_vote/text_speckle_mask_psd.vtex_c | offset=44903056 | bytes=482116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | panorama/images/main_menu/hero_release_vote/hero_vote_lock_psd.vtex_c | offset=5594592 | bytes=362132 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | panorama/images/main_menu/hero_release_vote/text_backer_box_alt_psd.vtex_c | offset=5956736 | bytes=1321244 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | panorama/images/main_menu/hero_release_vote/text_backer_box_psd.vtex_c | offset=7277984 | bytes=1321244 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | panorama/images/main_menu/hero_release_vote/text_backer_box_small_psd.vtex_c | offset=8599232 | bytes=238132 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | panorama/images/main_menu/hero_release_vote/text_backer_box_white_psd.vtex_c | offset=8837376 | bytes=1321244 | preload=0 | archive=present
+
+=== Possible in-map signs / posters ===
+Count: 327
+pak01_dir.vpk | pak01_000.vpk | materials/overlays/graffiti_tags_02_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=49561264 | bytes=2064 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | materials/particle/projected/lash_preview_cone_falloff_projected_decal_preview_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=49187280 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | materials/particle/projected/lash_preview_cone_falloff_projected_decal_preview_vmat_g_tselfillum_670d93d.vtex_c | offset=49189552 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | materials/particle/projected/lash_preview_cone_projected_decal_preview.vmat_c | offset=49191536 | bytes=3287 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | materials/particle/projected/lash_preview_cone_projected_decal_preview_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=49194832 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | materials/particle/projected/lash_preview_cone_projected_decal_preview_vmat_g_tselfillum_670d93d.vtex_c | offset=49197104 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | models/props_structures/materials/teleporter_box_signs.vmat_c | offset=32299968 | bytes=4492 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | models/props_structures/materials/teleporter_box_signs_vmat_g_tcolor_164859dc.vtex_c | offset=32304464 | bytes=2192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_000.vpk | models/props_structures/materials/teleporter_box_signs_vmat_g_tnormalroughness_41105ef.vtex_c | offset=32306656 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_020.vpk | models/broadway/signs/broadway_sign_frame_01.vmat_c | offset=91697920 | bytes=4236 | preload=0 | archive=present
+pak01_dir.vpk | pak01_020.vpk | models/broadway/signs/broadway_sign_generic_01.vmat_c | offset=91702160 | bytes=4589 | preload=0 | archive=present
+pak01_dir.vpk | pak01_027.vpk | models/billboard/prop_billboard_lamp_bulb_03_vmat_g_tcolor_cf22b472.vtex_c | offset=7255200 | bytes=2256 | preload=0 | archive=present
+pak01_dir.vpk | pak01_027.vpk | models/billboard/prop_billboard_lamp_bulb_03_vmat_g_tnormalroughness_151129e7.vtex_c | offset=7257456 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_027.vpk | models/billboard/prop_billboard_lamp_bulb_03_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=7259776 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_027.vpk | models/billboard/prop_billboard_lamp_bulb_03_vmat_g_ttintmask_73100e5a.vtex_c | offset=7261808 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | materials/overlays/graffiti_tags_04_color_psd_f80c5fcb.vtex_c | offset=16698320 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_color_psd_c3cf35f4.vtex_c | offset=35425664 | bytes=526372 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_npr.vmat_c | offset=35952048 | bytes=5325 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_npr_vmat_g_tambientocclusion_9782fd5c.vtex_c | offset=35957376 | bytes=1992 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_npr_vmat_g_tnproutlinemask_2b2ebb3f.vtex_c | offset=35959376 | bytes=1992 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_npr_vmat_g_tnprtransmissivecolor_e6db66fc.vtex_c | offset=35961376 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_npr_vmat_g_ttintmaskrimlightmask_4ea53fc4.vtex_c | offset=35963376 | bytes=2224 | preload=0 | archive=present
+pak01_dir.vpk | pak01_032.vpk | models/match_intro/materials/voting_machine_sign_roughness_psd_2ea7541.vtex_c | offset=35965600 | bytes=701204 | preload=0 | archive=present
+pak01_dir.vpk | pak01_060.vpk | materials/overlays/graffiti_tags_04_vmat_g_tselfillumtintmask_e68fb04c.vtex_c | offset=81370208 | bytes=2224 | preload=0 | archive=present
+pak01_dir.vpk | pak01_060.vpk | materials/overlays/graffiti_tags_05.vmat_c | offset=81372432 | bytes=3703 | preload=0 | archive=present
+pak01_dir.vpk | pak01_060.vpk | materials/particle/projected/cone_generic_projected_decal_90.vmat_c | offset=80629456 | bytes=3376 | preload=0 | archive=present
+pak01_dir.vpk | pak01_060.vpk | materials/particle/projected/cone_generic_projected_decal_90_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=80632832 | bytes=2288 | preload=0 | archive=present
+pak01_dir.vpk | pak01_060.vpk | materials/particle/projected/cone_generic_projected_decal_90_vmat_g_tselfillum_670d93d.vtex_c | offset=80635120 | bytes=1992 | preload=0 | archive=present
+pak01_dir.vpk | pak01_064.vpk | models/props_market/materials/sign_light_01_mask2_png_97877bbe.vtex_c | offset=80521392 | bytes=2798236 | preload=0 | archive=present
+pak01_dir.vpk | pak01_077.vpk | materials/decaltests/runtime_decal_material_splatter.vmat_c | offset=55611152 | bytes=3422 | preload=0 | archive=present
+pak01_dir.vpk | pak01_092.vpk | models/props_street/materials/sign_02_structure_normal_psd_9fc48fae.vtex_c | offset=60151984 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01.vmat_c | offset=60773840 | bytes=5004 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | models/props_street/materials/sign_03_glow_vmat_g_tcolor_da1b8c9e.vtex_c | offset=60538304 | bytes=2192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | models/props_street/materials/sign_03_glow_vmat_g_tselfillummask_e47b8db2.vtex_c | offset=60540496 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_099.vpk | models/props_street/materials/sign_03_glow_vmat_g_ttintmask_73100e5a.vtex_c | offset=60542480 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | materials/flat/flat_generic_sign_dark_01_layer_vmat_g_tcolor1_ef8a35db.vtex_c | offset=79593856 | bytes=2192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_101.vpk | materials/flat/flat_generic_sign_dark_01_layer_vmat_g_tnormalroughness1_9b6baee2.vtex_c | offset=79596048 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_108.vpk | materials/overlays/graffiti_tags_05_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=61557376 | bytes=2112 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/decal1_color_tga_f565e62f.vtex_c | offset=77896544 | bytes=351636 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/dirt_rocks_01_decal_color_psd_57f3e283.vtex_c | offset=78248192 | bytes=351636 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/dirt_rocks_01_decal_normal_psd_f44a41f7.vtex_c | offset=78599840 | bytes=351716 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/dirt_rocks_decal.vmat_c | offset=78951568 | bytes=3191 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/door_molding1_decal.vmat_c | offset=84569152 | bytes=3319 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/door_molding1_decal_color_psd_268ac421.vtex_c | offset=84572480 | bytes=89476 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/door_molding1_decal_normal_tga_94833f2.vtex_c | offset=84661968 | bytes=89556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/grunge_01_decal.vmat_c | offset=96671152 | bytes=3159 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/runtime_decal_sheet_normal.vtex_c | offset=39333776 | bytes=100328 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | materials/decaltests/the_end_decal.vmat_c | offset=40143952 | bytes=3175 | preload=0 | archive=present
+pak01_dir.vpk | pak01_116.vpk | models/props_market/materials/sign_entry_light_01_color_png_23624db7.vtex_c | offset=33739248 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_117.vpk | models/props_street/materials/sign_vertical_ill_psd_d4b8b0be.vtex_c | offset=103384176 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_117.vpk | models/props_street/materials/sign_vertical_normal_psd_336f5802.vtex_c | offset=106182432 | bytes=5594580 | preload=0 | archive=present
+pak01_dir.vpk | pak01_118.vpk | materials/overlays/graffiti_tags_05_color_psd_34374142.vtex_c | offset=55691392 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_122.vpk | materials/factory/factory_meat_market_sign_01.vmat_c | offset=16976304 | bytes=3805 | preload=0 | archive=present
+pak01_dir.vpk | pak01_122.vpk | materials/factory/factory_meat_market_sign_01_color_tga_7ae821d5.vtex_c | offset=16980112 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_122.vpk | materials/factory/factory_meat_market_sign_01_color_tga_a401e795.vtex_c | offset=22574656 | bytes=5594628 | preload=0 | archive=present
+pak01_dir.vpk | pak01_122.vpk | models/factory/factory_fairfax_sign_01.vmat_c | offset=11208384 | bytes=4364 | preload=0 | archive=present
+pak01_dir.vpk | pak01_125.vpk | materials/overlays/graffiti_tags_01_normal_psd_a05f3531.vtex_c | offset=63290368 | bytes=22371748 | preload=0 | archive=present
+pak01_dir.vpk | pak01_128.vpk | models/halloween/halloween_01_board_sign_01.vmat_c | offset=46143232 | bytes=3917 | preload=0 | archive=present
+pak01_dir.vpk | pak01_128.vpk | models/halloween/halloween_01_board_sign_01_psd_fe8925a9.vtex_c | offset=46147152 | bytes=1400164 | preload=0 | archive=present
+pak01_dir.vpk | pak01_128.vpk | models/halloween/halloween_01_board_sign_01_vmat_g_tpacked1_25541e43.vtex_c | offset=47547328 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_decal_normal_tga_3b25182.vtex_c | offset=98839376 | bytes=351700 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal01.vmat_c | offset=99191088 | bytes=3239 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal01_color_psd_8cda575f.vtex_c | offset=99194336 | bytes=1400212 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal01_normal_psd_345ac819.vtex_c | offset=100594560 | bytes=1400292 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal02.vmat_c | offset=101994864 | bytes=3319 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal02_color_psd_a2864f83.vtex_c | offset=101998192 | bytes=351620 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal02_normal_psd_4ad59994.vtex_c | offset=102349824 | bytes=351700 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal03.vmat_c | offset=102701536 | bytes=3319 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal03_color_psd_7f2d310.vtex_c | offset=102704864 | bytes=176868 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal03_normal_psd_60c629f5.vtex_c | offset=102881744 | bytes=176948 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal04.vmat_c | offset=103058704 | bytes=3319 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal04_color_psd_9b25b729.vtex_c | offset=103062032 | bytes=351620 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/paint_peel_decal04_normal_psd_3df4eedd.vtex_c | offset=103413664 | bytes=351700 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/plaster012a_decal.vmat_c | offset=103765376 | bytes=3271 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/plaster012a_decal_color_psd_f8f6caa7.vtex_c | offset=103768656 | bytes=176868 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/decaltests/plaster012a_decal_normal_psd_1e97ee4b.vtex_c | offset=103945536 | bytes=176948 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/overlays/graffiti_tags_05_vmat_g_tselfillumtintmask_e68fb04c.vtex_c | offset=33582400 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/overlays/graffiti_truck_01_color_psd_51e9e64b.vtex_c | offset=33588528 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_129.vpk | materials/overlays/graffiti_truck_01_rough_psd_fc00f9f6.vtex_c | offset=39183104 | bytes=5594660 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_market/materials/sign_entry_light_01_mask_png_3b4a36cd.vtex_c | offset=8392784 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_market/materials/sign_entry_light_01_normal_png_6ec905b6.vtex_c | offset=11191040 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_market/materials/sign_light_01_color_png_be71c0a6.vtex_c | offset=0 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_market/materials/sign_light_01_mask1_png_1c604f74.vtex_c | offset=5594528 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_street/materials/sign_03_structure_color_psd_cd296ca7.vtex_c | offset=40068960 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_street/materials/sign_03_structure_normal_psd_ae046d60.vtex_c | offset=45663488 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_130.vpk | models/props_street/materials/sign_03_structure_vmat_g_tselfillummask_73100e5a.vtex_c | offset=51258096 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/circular_generic_projected_decal.vmat_c | offset=357088 | bytes=3239 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/circular_generic_projected_decal_psd_48e0061d.vtex_c | offset=360336 | bytes=1400180 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/circular_generic_projected_decal_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=1760528 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/circular_generic_projected_decal_vmat_g_tselfillum_670d93d.vtex_c | offset=1762800 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/cone_generic_projected_decal.vmat_c | offset=1764784 | bytes=3223 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/cone_generic_projected_decal_psd_59f3f854.vtex_c | offset=1768016 | bytes=1400180 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/cone_generic_projected_decal_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=3168208 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_131.vpk | materials/particle/projected/cone_generic_projected_decal_vmat_g_tselfillum_670d93d.vtex_c | offset=3170480 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_145.vpk | models/props_market/materials/sign_post_base_01_color_png_b89fda9e.vtex_c | offset=11189104 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_145.vpk | models/props_market/materials/sign_post_base_01_normal_png_5fb4c883.vtex_c | offset=16783632 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_152.vpk | materials/decaltests/rubble_floor_01_decal.vmat_c | offset=105373776 | bytes=3335 | preload=0 | archive=present
+pak01_dir.vpk | pak01_152.vpk | materials/decaltests/rubble_floor_01_decal_color_psd_a87a06dc.vtex_c | offset=105377120 | bytes=1400244 | preload=0 | archive=present
+pak01_dir.vpk | pak01_152.vpk | materials/decaltests/rubble_floor_01_decal_color_psd_c4576607.vtex_c | offset=106777376 | bytes=1400212 | preload=0 | archive=present
+pak01_dir.vpk | pak01_152.vpk | materials/decaltests/rubble_floor_01_decal_normal_psd_1a503dab.vtex_c | offset=108177600 | bytes=1400292 | preload=0 | archive=present
+pak01_dir.vpk | pak01_152.vpk | materials/overlays/poster_test_color_psd_2cdc25a7.vtex_c | offset=25534512 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_154.vpk | materials/overlays/signs_composite03a_psd_359de13d.vtex_c | offset=35352768 | bytes=5594580 | preload=0 | archive=present
+pak01_dir.vpk | pak01_158.vpk | models/hideout/materials/rem_poster.vmat_c | offset=15213808 | bytes=4684 | preload=0 | archive=present
+pak01_dir.vpk | pak01_158.vpk | models/hideout/materials/rem_poster_vmat_g_tmetalness_e9052f71.vtex_c | offset=15218496 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_158.vpk | models/hideout/materials/rem_poster_vmat_g_tnormalroughness_8293ac16.vtex_c | offset=15220528 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_158.vpk | models/props_structures/materials/caldera_intergallactic_neon_sign.vmat_c | offset=14852816 | bytes=4636 | preload=0 | archive=present
+pak01_dir.vpk | pak01_158.vpk | models/props_structures/materials/caldera_intergallactic_neon_sign_color_psd_3f264d3b.vtex_c | offset=14857456 | bytes=351824 | preload=0 | archive=present
+pak01_dir.vpk | pak01_160.vpk | models/props_structures/materials/caldera_fishmarket_signs.vmat_c | offset=90442400 | bytes=4284 | preload=0 | archive=present
+pak01_dir.vpk | pak01_160.vpk | models/props_structures/materials/caldera_fishmarket_signs_color_psd_f7d803ca.vtex_c | offset=90446688 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_160.vpk | models/props_structures/materials/caldera_fishmarket_signs_normal_psd_e088976e.vtex_c | offset=96041216 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_01.vmat_c | offset=28145984 | bytes=4604 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_01_vmat_g_tcolor_e5bab9b0.vtex_c | offset=28150592 | bytes=2224 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_01_vmat_g_tnormalroughness_151129e7.vtex_c | offset=28152816 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_01_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=28155136 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_01_vmat_g_ttintmask_73100e5a.vtex_c | offset=28157168 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_02.vmat_c | offset=28159200 | bytes=4508 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_02_vmat_g_tcolor_eda73842.vtex_c | offset=28163712 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_02_vmat_g_tnormalroughness_151129e7.vtex_c | offset=28165952 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_02_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=28168272 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_02_vmat_g_ttintmask_73100e5a.vtex_c | offset=28170304 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_161.vpk | models/billboard/prop_billboard_lamp_bulb_03.vmat_c | offset=28172336 | bytes=4572 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite04a.vmat_c | offset=0 | bytes=3655 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite04a_color_psd_4f64da51.vtex_c | offset=3664 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite04a_rough_tga_1cafae08.vtex_c | offset=5598176 | bytes=5594628 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite05a.vmat_c | offset=11192816 | bytes=3655 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite05a_color_psd_81fcbc8c.vtex_c | offset=11196480 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite05a_rough_tga_4944ceee.vtex_c | offset=16790992 | bytes=5594628 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite06a.vmat_c | offset=22385632 | bytes=3703 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite06a_color_psd_5ed2546b.vtex_c | offset=22389344 | bytes=5594548 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | materials/overlays/signs_composite06a_mask_tga_e9188235.vtex_c | offset=27983904 | bytes=5594672 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | models/props_street/materials/sign_02_letter_color_psd_d9f01401.vtex_c | offset=39176560 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_162.vpk | models/props_street/materials/sign_vertical_color_psd_9bab58cd.vtex_c | offset=33582048 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | materials/overlays/graffiti_tags_04_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=75539344 | bytes=2064 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01_color_psd_d62228ed.vtex_c | offset=39163648 | bytes=5594548 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01_mask_psd_f5934ef5.vtex_c | offset=44758208 | bytes=45756 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01_normal_psd_dd5c5416.vtex_c | offset=44803968 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01_vmat_g_tambientocclusion_9782fd5c.vtex_c | offset=50398576 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_163.vpk | models/props_gameplay/shop/materials/shop_signs_glass_01_vmat_g_tglass_2b2ebb3f.vtex_c | offset=50400560 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_165.vpk | models/props_market/materials/sign_entry_light_01_mask_2_png_6f38ee2c.vtex_c | offset=8394768 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_170.vpk | materials/overlays/midboss_graffiti_01.vmat_c | offset=69498320 | bytes=3767 | preload=0 | archive=present
+pak01_dir.vpk | pak01_176.vpk | models/props_gameplay/shop/materials/shop_signs_01_color_psd_4127b05b.vtex_c | offset=0 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_176.vpk | models/props_gameplay/shop/materials/shop_signs_01_mask_psd_93e9b77b.vtex_c | offset=5594528 | bytes=2798268 | preload=0 | archive=present
+pak01_dir.vpk | pak01_180.vpk | materials/overlays/graffiti_tags_03_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=39273824 | bytes=2064 | preload=0 | archive=present
+pak01_dir.vpk | pak01_180.vpk | models/props_structures/materials/caldera_apartment_a_signs.vmat_c | offset=67250752 | bytes=4332 | preload=0 | archive=present
+pak01_dir.vpk | pak01_180.vpk | models/props_structures/materials/caldera_apartment_a_signs_color_tga_3aa1c56d.vtex_c | offset=67255088 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_180.vpk | models/props_structures/materials/caldera_apartment_a_signs_normal_tga_39f33a28.vtex_c | offset=72849632 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_183.vpk | materials/decaltests/runtime_decal_sheet_splatter.vtex_c | offset=46533728 | bytes=346744 | preload=0 | archive=present
+pak01_dir.vpk | pak01_183.vpk | materials/particle/blood_decal/blood_decal.vtex_c | offset=9744 | bytes=691016 | preload=0 | archive=present
+pak01_dir.vpk | pak01_183.vpk | materials/store_sign/shop_sign_mildred_visions_color_tga_73e90180.vtex_c | offset=3536160 | bytes=701172 | preload=0 | archive=present
+pak01_dir.vpk | pak01_186.vpk | materials/overlays/graffiti_tags_02_color_psd_479e007e.vtex_c | offset=97095888 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_186.vpk | materials/overlays/graffiti_tags_03_color_psd_ae4c4b17.vtex_c | offset=102690416 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_188.vpk | materials/decaltests/runtime_decal_sheet_albedo.vtex_c | offset=96690848 | bytes=5534104 | preload=0 | archive=present
+pak01_dir.vpk | pak01_197.vpk | materials/decaltests/plaster_crack_decal.vmat_c | offset=717680 | bytes=3143 | preload=0 | archive=present
+pak01_dir.vpk | pak01_197.vpk | materials/decaltests/red_paint_decal.vmat_c | offset=2685280 | bytes=3223 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/decaltests/yellow_green_decal.vmat_c | offset=66228864 | bytes=3392 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/dev/shadow_decal.vmat_c | offset=66515184 | bytes=1564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/graffiti_composite_01.vmat_c | offset=65852256 | bytes=3719 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/graffiti_tags_02.vmat_c | offset=65944672 | bytes=3655 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/graffiti_tags_03.vmat_c | offset=65962960 | bytes=3639 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/graffiti_tags_04.vmat_c | offset=65829808 | bytes=3735 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/midboss_graffiti_02.vmat_c | offset=65870864 | bytes=3703 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/poster_test.vmat_c | offset=65999328 | bytes=3607 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/signs_bodega01a.vmat_c | offset=65952000 | bytes=3655 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/signs_bodega02a.vmat_c | offset=66002944 | bytes=3607 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/overlays/signs_composite01a.vmat_c | offset=65904176 | bytes=3687 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/abilities/astro/astro_barrel_projected_decal_psd_d964fb34.vtex_c | offset=43776256 | bytes=1400196 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/projected/astro_bounce_projected_decal.vmat_c | offset=66337712 | bytes=3111 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/projected/lash_preview_cone_falloff_projected_decal_preview.vmat_c | offset=66252528 | bytes=3351 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/projected/lash_preview_cone_projected_decal.vmat_c | offset=66299088 | bytes=3271 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/projected/lash_preview_cone_projected_decal_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=65097248 | bytes=2256 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/particle/projected/lash_preview_cone_projected_decal_vmat_g_tselfillum_670d93d.vtex_c | offset=65099504 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | materials/signage/signs_broadway_01.vmat_c | offset=65527856 | bytes=4061 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/architecture/arch_danas_01/arch_dana_sign_light_01.vmat_c | offset=63963360 | bytes=4540 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/architecture/arch_danas_01/arch_dana_sign_neon_01.vmat_c | offset=63858512 | bytes=4559 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/architecture/arch_nursery/arch_nursery_front_sign_01.vmat_c | offset=65788320 | bytes=3783 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/npc/t2_clock_tower/materials/t2_clock_tower_sign_shape.vmat_c | offset=63881312 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_gameplay/shop/materials/shop_sign.vmat_c | offset=99776640 | bytes=4588 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_gameplay/shop/materials/shop_signs_01.vmat_c | offset=99781232 | bytes=4460 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_market/materials/sign_beetle_01_base.vmat_c | offset=63642880 | bytes=4604 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_market/materials/sign_light_01.vmat_c | offset=63799104 | bytes=4572 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_market/materials/sign_post_base_01.vmat_c | offset=64619152 | bytes=4364 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_market/materials/sign_post_frame_01.vmat_c | offset=63803680 | bytes=4572 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_market/materials/sign_post_text_01.vmat_c | offset=63908672 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_02_letters.vmat_c | offset=63917792 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_02_structure.vmat_c | offset=64067760 | bytes=4524 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_03_glow.vmat_c | offset=63922352 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_03_letters.vmat_c | offset=99749408 | bytes=4492 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_03_structure.vmat_c | offset=99753904 | bytes=4588 | preload=0 | archive=present
+pak01_dir.vpk | pak01_200.vpk | models/props_street/materials/sign_vertical.vmat_c | offset=64252192 | bytes=4476 | preload=0 | archive=present
+pak01_dir.vpk | pak01_203.vpk | panorama/images/items/seasonal/voting_poster_psd.vtex_c | offset=45438736 | bytes=29924 | preload=0 | archive=present
+pak01_dir.vpk | pak01_210.vpk | materials/signage/signs_broadway_01_psd_e9c4ad49.vtex_c | offset=0 | bytes=22371748 | preload=0 | archive=present
+pak01_dir.vpk | pak01_210.vpk | materials/signage/signs_broadway_01_vmat_g_tpacked1_cff4743e.vtex_c | offset=22371760 | bytes=2224 | preload=0 | archive=present
+pak01_dir.vpk | pak01_216.vpk | materials/overlays/graffiti_tags_01_color_psd_1422e8a.vtex_c | offset=34985152 | bytes=22371732 | preload=0 | archive=present
+pak01_dir.vpk | pak01_217.vpk | materials/overlays/graffiti_composite_01_mask_psd_4c0992b2.vtex_c | offset=73048400 | bytes=5594704 | preload=0 | archive=present
+pak01_dir.vpk | pak01_217.vpk | materials/overlays/graffiti_composite_01_psd_b35110f1.vtex_c | offset=78643104 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_217.vpk | materials/overlays/graffiti_composite_01_rough_psd_754b3222.vtex_c | offset=84237680 | bytes=5594660 | preload=0 | archive=present
+pak01_dir.vpk | pak01_218.vpk | models/architecture/arch_hotel_uptown_01/materials/hotel_sign_tintable_illum_01_vmat_g_tnormalroughness_a1e47e21.vtex_c | offset=63710704 | bytes=2272 | preload=0 | archive=present
+pak01_dir.vpk | pak01_218.vpk | models/architecture/arch_hotel_uptown_01/materials/hotel_sign_tintable_illum_01_vmat_g_ttintmask_2b2ebb3f.vtex_c | offset=63712976 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_221.vpk | models/props_gameplay/shop/materials/shop_signs_01_normal_psd_bf12754e.vtex_c | offset=58848240 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_221.vpk | models/props_market/materials/sign_light_01_normal_png_ac581b5d.vtex_c | offset=81228528 | bytes=5594580 | preload=0 | archive=present
+pak01_dir.vpk | pak01_228.vpk | materials/overlays/signs_composite03a_rough_tga_6c1fc155.vtex_c | offset=63063936 | bytes=5594644 | preload=0 | archive=present
+pak01_dir.vpk | pak01_229.vpk | materials/overlays/graffiti_tags_02_mask_psd_b248d8a7.vtex_c | offset=93035920 | bytes=5594688 | preload=0 | archive=present
+pak01_dir.vpk | pak01_229.vpk | materials/overlays/graffiti_tags_03_mask_psd_491758.vtex_c | offset=98630608 | bytes=5594688 | preload=0 | archive=present
+pak01_dir.vpk | pak01_232.vpk | materials/overlays/signs_bodega02a_color_psd_1acaf31e.vtex_c | offset=22386064 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_232.vpk | materials/overlays/signs_bodega02a_rough_png_7db3e920.vtex_c | offset=27980640 | bytes=5594644 | preload=0 | archive=present
+pak01_dir.vpk | pak01_233.vpk | materials/overlays/signs_bodega01a_color_png_93bba988.vtex_c | offset=11202512 | bytes=5594580 | preload=0 | archive=present
+pak01_dir.vpk | pak01_233.vpk | materials/overlays/signs_bodega01a_color_png_d5c7e675.vtex_c | offset=16797104 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_233.vpk | materials/overlays/signs_bodega01a_rough_png_bc79e4e9.vtex_c | offset=22391680 | bytes=5594660 | preload=0 | archive=present
+pak01_dir.vpk | pak01_239.vpk | materials/overlays/midboss_graffiti_01_color_psd_490dbc68.vtex_c | offset=14014992 | bytes=22371780 | preload=0 | archive=present
+pak01_dir.vpk | pak01_239.vpk | materials/overlays/midboss_graffiti_01_mask_psd_a936e0ba.vtex_c | offset=36386784 | bytes=22371920 | preload=0 | archive=present
+pak01_dir.vpk | pak01_239.vpk | materials/overlays/midboss_graffiti_01_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=58758704 | bytes=2112 | preload=0 | archive=present
+pak01_dir.vpk | pak01_240.vpk | models/props_street/materials/sign_03_letter_color_psd_4bd27104.vtex_c | offset=64296288 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_240.vpk | models/props_street/materials/sign_03_letter_illum_psd_b5660979.vtex_c | offset=69890832 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_241.vpk | materials/tile/subway_mosaic_signs.vmat_c | offset=81135952 | bytes=3773 | preload=0 | archive=present
+pak01_dir.vpk | pak01_241.vpk | materials/tile/subway_mosaic_signs_color_png_9074c014.vtex_c | offset=81139728 | bytes=22371780 | preload=0 | archive=present
+pak01_dir.vpk | pak01_245.vpk | models/props_street/materials/sign_03_letter_normal_psd_a8b2347d.vtex_c | offset=0 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_01.vmat_c | offset=16742128 | bytes=3719 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_01_color_psd_6b2405a9.vtex_c | offset=16745856 | bytes=5594548 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_01_selfillum_mask_psd_9d8f0143.vtex_c | offset=22340416 | bytes=5507172 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_02.vmat_c | offset=27847600 | bytes=3671 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_02_trans_psd_7435e476.vtex_c | offset=27851280 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_02_vmat_g_tselfillumtintmask_ff0d0451.vtex_c | offset=33445792 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_03.vmat_c | offset=33447792 | bytes=3671 | preload=0 | archive=present
+pak01_dir.vpk | pak01_246.vpk | materials/overlays/chinatown_signs_03_vmat_g_tselfillumtintmask_a2ed44a.vtex_c | offset=33451472 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_light_01_vmat_g_tcolor_b8474d94.vtex_c | offset=77617920 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_light_01_vmat_g_tnormalroughness_151129e7.vtex_c | offset=77620160 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_light_01_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=77622480 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_light_01_vmat_g_ttintmask_2b2ebb3f.vtex_c | offset=77624512 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_neon_01_vmat_g_tcolor_5d4a9dd6.vtex_c | offset=77626544 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_neon_01_vmat_g_tnormalroughness_151129e7.vtex_c | offset=77628784 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_neon_01_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=77631104 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_249.vpk | models/architecture/arch_danas_01/arch_dana_sign_neon_01_vmat_g_ttintmask_2b2ebb3f.vtex_c | offset=77633136 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_254.vpk | materials/particle/projected/fathom_preview_cone_projected_decal.vmat_c | offset=98693632 | bytes=3239 | preload=0 | archive=present
+pak01_dir.vpk | pak01_254.vpk | materials/particle/projected/fathom_preview_cone_projected_decal_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=98696880 | bytes=2256 | preload=0 | archive=present
+pak01_dir.vpk | pak01_254.vpk | materials/particle/projected/fathom_preview_cone_projected_decal_vmat_g_tselfillum_670d93d.vtex_c | offset=98699136 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_255.vpk | materials/particle/abilities/tengu/tengu_ground_decal_selfillum_mask_psd_acc2b4df.vtex_c | offset=71948608 | bytes=701116 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | materials/decaltests/runtime_decal_material.vmat_c | offset=90393216 | bytes=3102 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | materials/store_sign/store_sign_mildred_visions_01_layer.vmat_c | offset=90285280 | bytes=3917 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_02_glow.vmat_c | offset=89130320 | bytes=4508 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_02_glow_vmat_g_tcolor_da1b8c9e.vtex_c | offset=89134832 | bytes=2192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_02_glow_vmat_g_tselfillummask_e47b8db2.vtex_c | offset=89137024 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_02_glow_vmat_g_ttintmask_73100e5a.vtex_c | offset=89139008 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_vertical_glow.vmat_c | offset=89140976 | bytes=4508 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_vertical_glow_vmat_g_tcolor_f4223f9f.vtex_c | offset=89145488 | bytes=2192 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_vertical_glow_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=89147680 | bytes=1976 | preload=0 | archive=present
+pak01_dir.vpk | pak01_258.vpk | models/props_street/materials/sign_vertical_glow_vmat_g_ttintmask_73100e5a.vtex_c | offset=89149664 | bytes=1960 | preload=0 | archive=present
+pak01_dir.vpk | pak01_259.vpk | materials/overlays/midboss_graffiti_02_color_psd_15ffd570.vtex_c | offset=33579856 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_259.vpk | materials/overlays/midboss_graffiti_02_mask_psd_226745d2.vtex_c | offset=39174432 | bytes=5594704 | preload=0 | archive=present
+pak01_dir.vpk | pak01_259.vpk | materials/overlays/midboss_graffiti_02_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=44769136 | bytes=2112 | preload=0 | archive=present
+pak01_dir.vpk | pak01_259.vpk | materials/overlays/signs_composite01a_color_png_71a07c2b.vtex_c | offset=22390608 | bytes=5594564 | preload=0 | archive=present
+pak01_dir.vpk | pak01_259.vpk | materials/overlays/signs_composite01a_rough_png_c2c38502.vtex_c | offset=27985184 | bytes=5594660 | preload=0 | archive=present
+pak01_dir.vpk | pak01_261.vpk | models/props_market/materials/sign_beetle_01_base_color_png_2401b37c.vtex_c | offset=69937168 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_261.vpk | models/props_market/materials/sign_beetle_01_base_normal_png_c0f8d86c.vtex_c | offset=75531696 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_261.vpk | models/props_market/materials/sign_beetle_01_base_selfillum_png_8c45207b.vtex_c | offset=81126304 | bytes=2798268 | preload=0 | archive=present
+pak01_dir.vpk | pak01_262.vpk | materials/flat/flat_generic_sign_dark_01_layer.vmat_c | offset=79767728 | bytes=4221 | preload=0 | archive=present
+pak01_dir.vpk | pak01_262.vpk | models/props_street/materials/sign_02_letters_vmat_g_tselfillummask_2b2ebb3f.vtex_c | offset=80085552 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_264.vpk | models/props_market/materials/arcade_sign_01_color_png_66583221.vtex_c | offset=41962208 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_264.vpk | models/props_market/materials/arcade_sign_01_mask_png_8995bc1c.vtex_c | offset=47556720 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_264.vpk | models/props_market/materials/arcade_sign_01_normal_png_b5a4973c.vtex_c | offset=50354976 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_276.vpk | models/props_structures/materials/caldera_apartment_b_signs.vmat_c | offset=11260592 | bytes=4348 | preload=0 | archive=present
+pak01_dir.vpk | pak01_276.vpk | models/props_structures/materials/caldera_apartment_b_signs_color_tga_7da001da.vtex_c | offset=11264944 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_276.vpk | models/props_structures/materials/caldera_apartment_b_signs_normal_tga_2325ee57.vtex_c | offset=16859488 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | materials/overlays/signs_composite02a.vmat_c | offset=89588128 | bytes=3687 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | materials/overlays/signs_composite02a_color_png_872fe03f.vtex_c | offset=89591824 | bytes=5594580 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | materials/overlays/signs_composite02a_rough_png_70dbb3d3.vtex_c | offset=95186416 | bytes=5594644 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | materials/overlays/signs_composite03a.vmat_c | offset=100781072 | bytes=3639 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | models/props_market/materials/sign_beetle_01_bug.vmat_c | offset=44796256 | bytes=4380 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | models/props_market/materials/sign_beetle_01_bug_color_png_643dc973.vtex_c | offset=44800640 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | models/props_market/materials/sign_beetle_01_bug_normal_png_f02357a0.vtex_c | offset=50395184 | bytes=5594596 | preload=0 | archive=present
+pak01_dir.vpk | pak01_277.vpk | models/props_market/materials/sign_entry_light_01.vmat_c | offset=55989792 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | models/architecture/arch_nursery/arch_nursery_front_sign_01_color_psd_7f09c608.vtex_c | offset=67279040 | bytes=1400276 | preload=0 | archive=present
+pak01_dir.vpk | pak01_291.vpk | models/architecture/arch_nursery/arch_nursery_front_sign_01_mask_psd_fdb0e115.vtex_c | offset=68679328 | bytes=1400400 | preload=0 | archive=present
+pak01_dir.vpk | pak01_294.vpk | models/props_signage/materials/teleporter_signs_mask_tga_404ceca5.vtex_c | offset=38440528 | bytes=351572 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | materials/particle/projected/fencer_preview_line_projected_decal.vmat_c | offset=63537376 | bytes=3328 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | materials/particle/projected/fencer_preview_line_projected_decal_vmat_g_tnormalroughness_a27ea1b2.vtex_c | offset=63540704 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | materials/particle/projected/fencer_preview_line_projected_decal_vmat_g_tselfillum_670d93d.vtex_c | offset=63543024 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | models/backdrop/signs/backdrop_sign_lit_01_vmat_g_tcolor_498635a.vtex_c | offset=17073392 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | models/backdrop/signs/backdrop_sign_lit_01_vmat_g_tnormalroughness_a1e47e21.vtex_c | offset=17075632 | bytes=2320 | preload=0 | archive=present
+pak01_dir.vpk | pak01_295.vpk | models/backdrop/signs/backdrop_sign_lit_01_vmat_g_ttintmask_2b2ebb3f.vtex_c | offset=17077952 | bytes=2024 | preload=0 | archive=present
+pak01_dir.vpk | pak01_296.vpk | materials/overlays/graffiti_tags_06.vmat_c | offset=22434048 | bytes=3671 | preload=0 | archive=present
+pak01_dir.vpk | pak01_296.vpk | materials/overlays/graffiti_tags_06_color_psd_723fa8fa.vtex_c | offset=22437728 | bytes=5594548 | preload=0 | archive=present
+pak01_dir.vpk | pak01_296.vpk | materials/overlays/graffiti_tags_06_vmat_g_tnormalroughness_f0e7c394.vtex_c | offset=28032288 | bytes=2096 | preload=0 | archive=present
+pak01_dir.vpk | pak01_296.vpk | materials/overlays/graffiti_tags_06_vmat_g_tselfillumtintmask_e68fb04c.vtex_c | offset=28034384 | bytes=2224 | preload=0 | archive=present
+pak01_dir.vpk | pak01_296.vpk | materials/overlays/graffiti_truck_01.vmat_c | offset=28036608 | bytes=3687 | preload=0 | archive=present
+pak01_dir.vpk | pak01_298.vpk | models/props_market/materials/arcade_sign_01.vmat_c | offset=95915424 | bytes=4572 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal.vmat_c | offset=50948640 | bytes=3223 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal02.vmat_c | offset=50951872 | bytes=3239 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal02_color_psd_f82d6531.vtex_c | offset=50955120 | bytes=176836 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal02_normal_psd_2db67c14.vtex_c | offset=51131968 | bytes=176916 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal03.vmat_c | offset=51308896 | bytes=3239 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal03_color_psd_e285ab5.vtex_c | offset=51312144 | bytes=176836 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal03_normal_psd_afbd4797.vtex_c | offset=51488992 | bytes=176916 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal04.vmat_c | offset=51665920 | bytes=3271 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal04_color_psd_a076d481.vtex_c | offset=51669200 | bytes=351620 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal04_normal_psd_119cc245.vtex_c | offset=52020832 | bytes=351700 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal_color_psd_b2930c5.vtex_c | offset=52372544 | bytes=701156 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal_color_psd_f3aab1bf.vtex_c | offset=53073712 | bytes=701172 | preload=0 | archive=present
+pak01_dir.vpk | pak01_303.vpk | materials/decaltests/wood01_decal_normal_psd_da423f88.vtex_c | offset=53774896 | bytes=701236 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/overlays/graffiti_tag_barrel.vmat_c | offset=93032704 | bytes=3751 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/overlays/graffiti_tag_barrel_color_tga_dba87ff6.vtex_c | offset=93036464 | bytes=89540 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/overlays/graffiti_tag_barrel_vmat_g_tnormalroughness_6d44f7d7.vtex_c | offset=93126016 | bytes=2128 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/overlays/graffiti_tag_barrel_vmat_g_tselfillumtintmask_e68fb04c.vtex_c | offset=93128144 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/overlays/graffiti_tags_01.vmat_c | offset=93130384 | bytes=3719 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | materials/particle/glyphs/zodiac_signs.vtex_c | offset=101234752 | bytes=68104 | preload=0 | archive=present
+pak01_dir.vpk | pak01_304.vpk | models/backdrop/signs/backdrop_sign_lit_01.vmat_c | offset=91082832 | bytes=4492 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_frame_01_color_png_b0646e42.vtex_c | offset=92727920 | bytes=1400228 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_frame_01_mask_png_c8ea2a38.vtex_c | offset=94128160 | bytes=701100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_frame_01_normal_png_71ac3c1a.vtex_c | offset=94829264 | bytes=1400292 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_text_01_color_png_a4fe8622.vtex_c | offset=96229568 | bytes=1400228 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_text_01_mask_png_d55c664.vtex_c | offset=97629808 | bytes=701100 | preload=0 | archive=present
+pak01_dir.vpk | pak01_305.vpk | models/props_market/materials/sign_post_text_01_normal_png_17ab8e10.vtex_c | offset=98330912 | bytes=1400292 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_bell_tower_sign_01.vmat_c | offset=68851232 | bytes=4556 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_bell_tower_sign_01_color_psd_adea7b88.vtex_c | offset=68855792 | bytes=1400276 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_01.vmat_c | offset=51025648 | bytes=3735 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_01_vmat_g_tselfillumtintmask_ff0d0451.vtex_c | offset=62737152 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_01b.vmat_c | offset=62739152 | bytes=3735 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_01b_vmat_g_tselfillumtintmask_a2ed44a.vtex_c | offset=62742896 | bytes=2000 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_emissive_01.vmat_c | offset=62858592 | bytes=4701 | preload=0 | archive=present
+pak01_dir.vpk | pak01_307.vpk | models/architecture/arch_chinatown_01/chinatown_sign_neon_generic_01.vmat_c | offset=64170080 | bytes=4637 | preload=0 | archive=present
+pak01_dir.vpk | pak01_309.vpk | materials/overlays/poster_test_vmat_g_tselfillumtintmask_da2cb330.vtex_c | offset=36474704 | bytes=2240 | preload=0 | archive=present
+pak01_dir.vpk | pak01_317.vpk | models/architecture/arch_hotel_uptown_01/materials/hotel_sign_tintable_illum_01.vmat_c | offset=0 | bytes=4636 | preload=0 | archive=present
+pak01_dir.vpk | pak01_318.vpk | materials/decaltests/decal1_trans_tga_5cfa7307.vtex_c | offset=64809712 | bytes=351604 | preload=0 | archive=present
+pak01_dir.vpk | pak01_321.vpk | models/props_street/materials/sign_02_structure_color_psd_e00609d6.vtex_c | offset=63955056 | bytes=5594532 | preload=0 | archive=present
+pak01_dir.vpk | pak01_321.vpk | models/props_street/materials/sign_02_structure_illum_psd_df5ffcab.vtex_c | offset=69549600 | bytes=2798252 | preload=0 | archive=present
+pak01_dir.vpk | pak01_325.vpk | models/architecture/arch_chinatown_01/chinatown_sign_01_trans_psd_48e332a2.vtex_c | offset=55892560 | bytes=5594500 | preload=0 | archive=present
+pak01_dir.vpk | pak01_326.vpk | materials/store_sign/store_sign_01_color_tga_daee91c9.vtex_c | offset=0 | bytes=5594516 | preload=0 | archive=present
+pak01_dir.vpk | pak01_326.vpk | materials/store_sign/store_sign_01_layer.vmat_c | offset=5594528 | bytes=4013 | preload=0 | archive=present
+
+=== Menu layout / script candidates ===
+Count: 22
+pak01_dir.vpk | pak01_107.vpk | panorama/styles/popups/popup_settings.vcss_c | offset=43041856 | bytes=170408 | preload=0 | archive=present
+pak01_dir.vpk | pak01_225.vpk | panorama/layout/popups/popup_settings.vxml_c | offset=48385840 | bytes=32797 | preload=0 | archive=present
+pak01_dir.vpk | pak01_225.vpk | panorama/layout/popups/popup_settings_share.vxml_c | offset=49354576 | bytes=4719 | preload=0 | archive=present
+pak01_dir.vpk | pak01_225.vpk | panorama/styles/popups/popup_settings_share.vcss_c | offset=49359296 | bytes=21581 | preload=0 | archive=present
+pak01_dir.vpk | pak01_225.vpk | panorama/styles/settings_keybinder.vcss_c | offset=48979664 | bytes=27259 | preload=0 | archive=present
+pak01_dir.vpk | pak01_269.vpk | panorama/layout/settings_enemy_healthbar_preview.vxml_c | offset=17739152 | bytes=1899 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/popup_hero_settings_notice.vxml_c | offset=43724272 | bytes=2423 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/popup_settings_reset.vxml_c | offset=44066320 | bytes=2631 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/popup_settings_share_preview.vxml_c | offset=44103472 | bytes=3611 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/settings_color_slider.vxml_c | offset=44136352 | bytes=1869 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/settings_enum.vxml_c | offset=44149040 | bytes=1542 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/settings_slider.vxml_c | offset=44152768 | bytes=1756 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/layout/popups/settings_toggle.vxml_c | offset=44161440 | bytes=1533 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/styles/popups/popup_settings_reset.vcss_c | offset=44068960 | bytes=9082 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/styles/popups/settings_color_slider.vcss_c | offset=44138224 | bytes=10815 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/styles/popups/settings_enum.vcss_c | offset=44150592 | bytes=2167 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/styles/popups/settings_slider.vcss_c | offset=44154528 | bytes=6899 | preload=0 | archive=present
+pak01_dir.vpk | pak01_285.vpk | panorama/styles/popups/settings_toggle.vcss_c | offset=44162976 | bytes=2528 | preload=0 | archive=present
+pak01_dir.vpk | pak01_288.vpk | panorama/styles/popups/popup_hero_settings_notice.vcss_c | offset=81537776 | bytes=7561 | preload=0 | archive=present
+pak01_dir.vpk | pak01_288.vpk | panorama/styles/popups/popup_settings_share_preview.vcss_c | offset=81291360 | bytes=11170 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/layout/settings_keybinder.vxml_c | offset=16258368 | bytes=2659 | preload=0 | archive=present
+pak01_dir.vpk | pak01_310.vpk | panorama/styles/settings_enemy_healthbar_preview.vcss_c | offset=16257088 | bytes=1279 | preload=0 | archive=present
