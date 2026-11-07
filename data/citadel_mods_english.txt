@@ -1,0 +1,1008 @@
+"lang"
+{
+    "Language"      "persian"
+    "Tokens"
+    {
+
+        //-----------------------------------------------------------------------------
+        // Upgrades: Weapon
+        //-----------------------------------------------------------------------------
+
+        //Ammo Scavenger
+        "upgrade_ammo_scavenger_desc"       "‏هر بار که از یک موجودیت، روحی را تأیید یا انکار کنید، <span class=\"highlight\">مهمات پس می‌گیرید</span> و <span class=\"highlight\">قدرت روح</span> استک به دست می‌آورید.<br>‏‏در حداکثر انباشت‌ها، سرعت دویدن اضافه دریافت می‌کنید."
+        "AmmoPerSoul_prefix"                "+"
+        "AmmoPerSoul_label"                 "‏مهمات به ازای هر روح"
+        "AmmoPerSoul_postvalue_label"       "‏مهمات به ازای هر روح"
+        "SpiritPowerPerSoul_prefix"         "+"
+        "SpiritPowerPerSoul_label"          "‏قدرت روح به ازای هر روح"
+        "SpiritPowerPerSoul_postvalue_label" "‏قدرت روح به ازای هر روح"
+        "AmmoScavengerDuration_label"       "‏مدت زمان"
+        "AmmoScavengerDuration_postvalue_label" "‏مدت زمان"
+        "AmmoScavengerDuration_postfix"     "s"
+
+        //Melee Lifesteal
+        "upgrade_lifestrike_gauntlets_desc" "‏حمله <span class=\"highlight\">ضربه نزدیک</span> بعدی شما، <span class=\"highlight\">شما را درمان می‌کند</span>. <span class=\"diminish\"><br><br>‏‏میزان این درمان در برابر غیر هیرو‌ها {s:NonHeroHealPct}% است. <br>‏‏زمان بازیابی برای ضربات ضربه نزدیک سبک {s:LightMeleeCooldownMult} برابر بیشتر است.</span>"
+        "LifestrikeHeal_label"              "‏درمان با ضربه نزدیک"
+        "LifestrikeHeal_postvalue_label"    "‏درمان با ضربه نزدیک"
+
+        //Tesla Bullets
+        "upgrade_chain_lightning_desc"      "‏گلوله‌های شما شانس این را دارند که هدف را <span class=\"highlight\">شوک</span> کنند. <span class=\"highlight\">شوک</span> به یک دشمن مجاور می‌پرد."
+
+        //Galvanic Storm
+        "GalvanicBuffDuration_label"        "‏مدت زمان"
+        "GalvanicBuffDuration_postvalue_label" "‏مدت زمان"
+        "GalvanicBuffDuration_postfix"      "s"
+
+        //Silence Glyph
+        "upgrade_targeted_silence_desc"     "‏یک پرتابه تونلی پرتاب می‌کنید که دشمنان را برای مدت کوتاهی <span class=\"highlight\">سکوت</span> می‌کند و آسیب برخوردی وارد می‌کند.<br><br><span class=\"diminish\">‏‏سکوت ابیلیتی‌های درحال اجرا را قطع نمی‌کند.</span>"
+        "ResistReductionDuration_label"     "‏مدت کاهش مقاومت"
+        "ResistReductionDuration_postvalue_label" "‏مدت کاهش مقاومت"
+        "ResistReductionDuration_postfix"   "s"
+
+        //EMP Bullets
+        "upgrade_proc_silence_desc"         "‏گلوله‌های شما به یک <span class=\"highlight\">سکوت</span> منجر می‌شوند. قربانیان به مدت <span class=\"highlight\">{s:ImmunityDuration}s</span> پس از پایان سکوت در برابر سکوت مجدد مصون هستند."
+        "upgrade_proc_silence_debuff_desc"  "‏گلوله‌های شما <span class=\"highlight\">آسیب روح خروجی</span> هدف را کاهش می‌دهند."
+        "proc_silence_buildup"              "‏در حال ایجاد سکوت..."
+        "modifier_citadel_silence_proc_tech_damage_reduction" "‏کاهش آسیب روح"
+
+        //Silencer
+        "upgrade_silencer_active"           "‏برای {s:AbilityDuration}s بعدی، <span class=\"highlight\">همه گلوله‌های شما فوراً سکوت اعمال می‌کنند</span>. سکوت از استفاده هدف از ابیلیتی‌ها جلوگیری می‌کند."
+
+        //Slowing Bullets
+        "upgrade_slowing_bullets_desc"      "‏گلوله‌های شما بر روی دشمنان <span class=\"highlight\">کندی حرکت</span> ایجاد می‌کنند."
+        "upgrade_slowing_bullets/modifier_slowing_bullets_proc/modifier_slow_base" "‏کند شده"
+
+        //Inhibitor
+        "upgrade_inhibitor_desc"            "‏گلوله‌های شما انباشته می‌شوند تا <span class=\"highlight\">آسیب خروجی</span> هدف را کاهش دهند و <span class=\"highlight\">کاهش درمان</span> اعمال کنند."
+        "OutgoingDamagePenaltyPercent_label"    "‏کاهش آسیب"
+        "OutgoingDamagePenaltyPercent_postvalue_label" "‏کاهش آسیب"
+        "OutgoingDamagePenaltyPercent_postfix"  "%"
+
+        //Hunter's Aura
+        "upgrade_bullet_armor_reduction_aura_desc" "‏<span class=\"highlight\">مقاومت گلوله و سرعت شلیک</span> دشمنان نزدیک را کاهش می‌دهد. اگر فقط یک قهرمان دشمن در نزدیکی باشد، این <span class=\"highlight\">اثر دو برابر می‌شود</span>."
+
+        //Heroic Aura
+        "upgrade_dps_aura_active_desc"      "‏به شما و هم‌تیمی نزدیک <span class=\"highlight\">{g:citadel_inline_attribute:'MoveSpeed'}</span> و <span class=\"highlight\">{g:citadel_inline_attribute:'FireRate'}</span> می‌دهد. <span class=\"highlight\">سرباز</span>ها دو برابر مقدار را دریافت می‌کنند."
+        "upgrade_dps_aura_desc"             "‏به واحدهای تیم شما (هیرو و شخصیت غیرقابل‌بازی) <span class=\"highlight\">مقاومت گلوله</span> می‌دهد."
+        "modifier_dps_aura_active"          "‏فعال قهرمانانه"
+        "modifier_dps_aura_player"          "‏سرعت شلیک قهرمانانه"
+
+        "BonusBaseDamage_postfix"           "%"
+
+        //Warp Stone
+        "upgrade_warp_stone_desc"           "‏مستقیماً به جلو <span class=\"highlight\">انتقال</span> کنید و <span class=\"highlight\">مقاومت گلوله</span> کسب کنید."
+        "WarpStoneRange_label"              "‏برد انتقال"
+        "WarpStoneRange_postvalue_label"    "‏برد انتقال"
+        "WarpStoneRange_postfix"            "m"
+        "CasterBuffDuration_label"          "‏مدت اثر مثبت"
+        "CasterBuffDuration_postvalue_label" "‏مدت اثر مثبت"
+        "CasterBuffDuration_postfix"        "s"
+        "CasterSlowPercent_postfix"         "%"
+
+        //Torment Pulse
+        "upgrade_tech_damage_pulse_desc"    "‏به طور دوره‌ای به دو دشمن نزدیک‌ترین مجاور، {g:citadel_inline_attribute:'SpiritDamage'} وارد می‌کند."
+
+        //Mystic Burst
+        "upgrade_magic_burst_desc"          "‏به مرور زمان با {g:citadel_inline_attribute:'BonusSpiritDamage'} شارژ می‌شود و باعث می‌شود ابیلیتی‌هایی که بیش از <span class=\"highlight\">{s:MinimumDamage}</span> آسیب وارد می‌کنند، آسیب اضافی وارد کنند."
+        "MagicBurstDamage_label"            "‏آسیب اضافی"
+        "MagicBurstDamage_postvalue_label"  "‏آسیب اضافی"
+
+        //Improved Burst Tankbuster
+        "upgrade_magic_shock_desc"          "‏به مرور زمان با {g:citadel_inline_attribute:'BonusSpiritDamage'} شارژ می‌شود و باعث می‌شود ابیلیتی‌هایی که بیش از <span class=\"highlight\">{s:MinimumDamage}</span> دمیج وارد می‌کنند، دمیج اضافی وارد کنند. <span class=\"highlight\">مقاومت روح را نادیده می‌گیرد.</span>"
+        "MagicShockDamage_label"            "‏آسیب اضافی بر اساس جان فعلی"
+        "MagicShockDamage_postvalue_label"  "‏آسیب اضافی بر اساس جان فعلی"
+        "MagicShockDamage_postfix"          "%"
+
+        //Mystic Reverb
+        "upgrade_tech_bleed_desc"           "‏یک ابیلیتی را با <span class=\"highlight\">سرقت جان</span> تقویت می‌کند تا بر روی هدف برخورد کرده <span class=\"highlight\">کندی</span> اعمال کند و پس از یک تاخیر کوتاه، <span class=\"highlight\">درصد اضافی از آسیب واردشده</span> را به خود هدف و دشمنان اطراف هدف وارد کند."
+
+        //Toxic Bullets
+        "upgrade_toxic_bullets_desc"        "‏گلوله‌های شما بر روی دشمنان یک <span class=\"highlight\">خون ریزی</span> ایجاد می‌کنند که باعث می‌شود آنها به مرور زمان <span class=\"highlight\">درصدی</span> از <span class=\"highlight\">حداکثر جان</span> خود را از دست بدهند. همچنین بر روی هدف خونریزی‌کننده <span class=\"highlight\">کاهش درمان</span> اعمال می‌کند."
+        "upgrade_toxic_bullets_buildup"     "‏در حال انباشت سم..."
+        "upgrade_bleeding_bullets_buildup"  "‏در حال انباشت اثر دندانه‌دار..."
+        "modifier_item_burning_bullets_damageovertime" "‏خونریزی"
+        "upgrade_hemorrhage/modifier_item_hemorrhage/modifier_hemorrhage" "‏خونریزی"
+
+        // Weighted Shots
+        "upgrade_weighted_shots_desc"       "‏گلوله‌های شما بر روی دشمنان <span class=\"highlight\">کندی حرکت</span> ایجاد می‌کنند."
+
+        //Spiritual Overflow
+        "upgrade_tech_overflow_desc"        "‏با <span class=\"highlight\">شارژ شدن</span> هنگام برخورد تیر به قهرمان های دشمن فعال میشود،<br>‏‏با فعال شدن، <span class=\"highlight\">سرعت شلیک</span>، <span class=\"highlight\">قدرت روح</span> و <span class=\"highlight\">سرقت جان با روح</span> اضافه کسب می‌کنید."
+        "modifier_tech_overflow_building"   "‏در حال انباشت سرریز روح..."
+        "OverflowTechPower_label"           "‏قدرت روح"
+        "OverflowTechPower_postvalue_label" "‏قدرت روح"
+        "OverflowBonusDamage_postfix"       "%"
+
+        //Ricochet
+        "upgrade_ricochet_desc"             "‏گلوله‌های شما بعد از برخورد به هدف به اهداف نزدیک آن <span class=\"highlight\">کمانه</span> می‌کنند، <span class=\"highlight\">هر گونه فعال‌سازی گلوله را اعمال</span> کرده و <span class=\"highlight\">درصدی از آسیب اصلی را وارد می‌کنند.</span>"
+        "RicochetTargetsTooltipOnly_label"  "‏اهداف کمانه"
+        "RicochetTargetsTooltipOnly_postvalue_label" "‏اهداف کمانه"
+        "RicochetDamagePercent_label"       "‏آسیب کمانه"
+        "RicochetDamagePercent_postvalue_label" "‏آسیب کمانه"
+        "RicochetDamagePercent_postfix"     "%"
+        "RicochetRadius_label"              "‏برد کمانه"
+        "RicochetRadius_postvalue_label"    "‏برد کمانه"
+        "RicochetRadius_postfix"            "m"
+
+        "ModelScaleGrowthTooltip_label"     "‏اندازه مدل"
+        "ModelScaleGrowthTooltip_postvalue_label" "‏اندازه مدل"
+        "ModelScaleGrowthTooltip_postfix"   "%"
+
+        "ShrinkDuration_label"              "‏مدت کوچک شدن"
+        "ShrinkDuration_postvalue_label"    "‏مدت کوچک شدن"
+        "ShrinkDuration_postfix"            "s"
+
+        "BonusBaseHealth_prefix"            "+"
+        "BonusBaseHealth_label"             "‏جان پایه"
+        "BonusBaseHealth_postvalue_label"   "‏جان پایه"
+        "BonusBaseHealth_postfix"           "%"
+
+        //Close Quarters
+        "upgrade_close_range_desc"          "‏زمانی که <span class=\"highlight\"> نزدیک</span> هدف خود هستید، <span class=\"highlight\">آسیب سلاح</span> اضافی وارد می‌کنید."
+        "upgrade_close_quarter_combat/modifier_cqc_proc/modifier_slow_base" "‏کند شده"
+
+        //Long Range
+        "upgrade_long_range_desc"           "‏زمانی که <span class=\"highlight\">بیش از فاصله حداقل</span> از هدف خود هستید، <span class=\"highlight\">آسیب سلاح</span> اضافی وارد می‌کنید."
+
+        //Mystic Shot
+        "upgrade_crackshot_desc"            "‏گلوله بعدی شما {g:citadel_inline_attribute:'SpiritDamage'} اضافه وارد می‌کند."
+        "ProcBonusMagicDamage_prefix"       "{s:sign}"
+        "ProcBonusMagicDamage_label"        "‏آسیب روح"
+        "ProcBonusMagicDamage_postvalue_label" "‏آسیب روح"
+
+        //Ethereal Bullets
+        "upgrade_ethereal_bullets_desc"     "‏ابیلیتی تقویت‌شده شما به مرور زمان با <br>‏‏ {g:citadel_inline_attribute:'BonusSpiritDamage'}، {g:citadel_inline_attribute:'BonusFireRate'} شارژ شده و در زمان استفاده، <span class=\"highlight\">خشاب را خشاب‌گذاری</span> می‌کند. تا خشاب‌گذاری بعدی شما، <span class=\"highlight\">گلوله‌های شما بر اساس قدرت روح شما، {g:citadel_inline_attribute:'BonusSpiritDamage'}</span> وارد می‌کنند."
+        "BulletsBonusMagicDamage_label"     "‏آسیب پایه گلوله"
+        "BulletsBonusMagicDamage_postvalue_label" "‏آسیب پایه گلوله"
+        "BulletsBonusMagicDamage_prefix"    "+"
+        "BulletsBonusMagicDamage_postfix"   "%"
+
+        //Restorative Shot
+        "upgrade_medic_bullets_desc"        "‏گلوله بعدی شما بر اساس هدفی که به آن برخورد می‌کند، شما را <span class=\"highlight\">درمان</span> می‌کند."
+        "HealFromHero_label"                "‏درمان از قهرمانان"
+        "HealFromHero_postvalue_label"      "‏درمان از قهرمانان"
+        "HealFromNPC_label"                 "‏درمان از شخصیت‌های غیرقابل‌بازی / گوی‌ها"
+        "HealFromNPC_postvalue_label"       "‏درمان از شخصیت‌های غیرقابل‌بازی / گوی‌ها"
+
+        //Point Blank
+        "upgrade_close_quarter_combat_desc" "‏زمانی که <span class=\"highlight\">نزدیک</span> هدف خود هستید، <span class=\"highlight\">آسیب سلاح</span> می‌دهید و گلوله‌های شما یک <span class=\"highlight\">کندی حرکت</span> اعمال می‌کنند."
+
+        //Headshot Booster
+        "upgrade_headshot_booster_desc"     "‏<span class=\"highlight\">هدشات</span> بعدی شما در برابر یک قهرمان دشمن، {g:citadel_inline_attribute:'BonusWeaponDamage'} وارد می‌کند."
+
+        //Weakening Headshot
+        "upgrade_headshot_booster2_desc"    "‏برخورد یک <span class=\"highlight\">هدشات</span>، <span class=\"highlight\">مقاومت گلوله</span> آنها را کاهش می‌دهد."
+
+        //Sharpshooter
+        "upgrade_sharpshooter_desc"         "‏زمانی که <span class=\"highlight\">بیش از فاصله حداقل</span> از هدف خود هستید، <span class=\"highlight\">آسیب سلاح</span> اضافی وارد می‌کنید."
+
+        //Headhunter
+        "upgrade_headhunter_desc"           "‏<span class=\"highlight\">هدشات</span> بعدی شما در برابر یک قهرمان دشمن، {g:citadel_inline_attribute:'BonusWeaponDamage'} وارد می‌کند، {g:citadel_inline_attribute:'Heal'} می‌کند و به شما {g:citadel_inline_attribute:'BonusMoveSpeed'} می‌دهد."
+        "HealPercentPerHeadshot_label"      "‏درمان به ازای هدشات"
+        "HealPercentPerHeadshot_postvalue_label" "‏درمان به ازای هدشات"
+        "HealPercentPerHeadshot_postfix"    "%"
+        "BaseHealOnHeadshot_label"          "‏درمان به ازای هدشات"
+        "BaseHealOnHeadshot_postvalue_label" "‏درمان به ازای هدشات"
+
+        //Spellslinger Headshots
+        "upgrade_spellslinger_headshots_part1_desc" "‏گلوله‌های شما یک اثر منفی اعمال می‌کنند که <span class=\"highlight\">مقاومت روح</span> هدف را کاهش داده و به شما و هم‌تیمیتون در برابر آنها <span class=\"highlight\">سرقت جان با روح</span> می‌دهد."
+        "upgrade_spellslinger_headshots_part2_desc" "‏برخورد <span class=\"highlight\">هدشات</span> به هدف، <span class=\"highlight\">مقاومت روح</span> آنها را به صورت استکی کاهش می‌دهد."
+        "SpiritPowerGainPct_label"          "‏قدرت روح"
+        "SpiritPowerGainPct_postvalue_label" "‏قدرت روح"
+        "SpiritPowerGainPct_postfix"        "%"
+        "SpellSlingerHeadshots_SpiritShredPerStack_label" "‏مقاومت روح با هدشات"
+        "SpellSlingerHeadshots_SpiritShredPerStack_postvalue_label" "‏مقاومت روح با هدشات"
+        "SpellSlingerHeadshots_SpiritShredPerStack_postfix" "%"
+
+        //Crippling Headshot
+        "upgrade_banshee_slugs_headshots_desc" "‏برخورد یک <span class=\"highlight\">هدشات</span>، <span class=\"highlight\">گلوله و مقاومت روح</span> آنها را کاهش داده و <span class=\"highlight\">کاهش درمان</span> اعمال می‌کند."
+
+        //Berserker
+        "upgrade_berserker_desc"            "‏<span class=\"highlight\">آسیب سلاح</span> شما با دریافت آسیب به صورت استکی افزایش می‌یابد."
+
+        //Frenzy
+        "upgrade_fervor_passive"            "‏زمانی که <span class=\"highlight\">زیر {s:LowHealthThreshold}% جان</span> هستید، برای مدتی باف اضافه میگیرید و اثر منفی های موجود روی شما کاهش می‌یابند."
+        "FervorTechResist_postfix"          "%"
+        "modifier_fervor_aura_active"       "‏خشمگین"
+        "FervorBulletResist_label"          "‏مقاومت در برابر گلوله"
+        "FervorBulletResist_postvalue_label" "‏مقاومت در برابر گلوله"
+        "FervorBulletResist_prefix"         "+"
+        "FervorBulletResist_postfix"        "%"
+
+        //Soul Shredder Bullets
+        "upgrade_tech_defense_shredders_desc" "‏گلوله‌های شما یک اثر منفی اعمال می‌کنند که <span class=\"highlight\">مقاومت روح</span> هدف را کاهش داده و به شما و هم‌تیمیتون در برابر آنها <span class=\"highlight\">سرقت جان با روح</span> می‌دهد."
+        "ShreddersTechAmp_label"            "‏تقویت آسیب روح"
+        "ShreddersTechAmp_postvalue_label"  "‏تقویت آسیب روح"
+        "ShreddersTechAmp_postfix"          "%"
+
+        //Hollow Point Ward
+        "upgrade_hollow_point_rounds_desc"  "‏زمانی که <span class=\"highlight\">بالای {s:LifeThreshold}% جان</span> دارید، <span class=\"highlight\">آسیب سلاح</span> اضافی وارد می‌کنید و گلوله‌های شما <span class=\"highlight\">مقاومت گلوله</span> دشمن را کاهش می‌دهند."
+
+        // Pristine Emblem
+        "upgrade_pristine_emblem_desc"      "‏دمیج شما در برابر <span class=\"highlight\">دشمنان با جان بالای {s:EnemyLifeThreshold}%</span>، <span class=\"highlight\">آسیب سلاح</span> اضافی دارد."
+        "BaseAttackDamagePercentBonus_label"    "‏آسیب سلاح"
+        "BaseAttackDamagePercentBonus_postvalue_label" "‏آسیب سلاح"
+        "BaseAttackDamagePercentBonus_prefix"   "+"
+        "BaseAttackDamagePercentBonus_postfix"  "%"
+
+        //Glass Cannon
+        "upgrade_glass_cannon_desc"         "‏هر کشتن قهرمان، <span class=\"highlight\">سرعت شلیک دائمی</span> می‌دهد (حداکثر {s:MaxStacks} بار). مرگ منجر به از دست دادن 1 انباشت می‌شود."
+        "GlassCannon_SlowPercent_label"     "‏فعال‌سازی کندی با گلوله"
+        "GlassCannon_SlowPercent_postvalue_label" "‏فعال‌سازی کندی با گلوله"
+        "GlassCannon_SlowPercent_postfix"   "%"
+        "GlassCannon_SlowPercent_prefix"    "+"
+        "upgrade_glass_cannon_plus1"        "‏توپ شیشه‌ای +۱"
+
+        //Fury Trance
+        "upgrade_fury_trance_active"        "‏<span class=\"highlight\">سرعت شلیک</span>، <span class=\"highlight\">مقاومت روح</span> و <span class=\"highlight\">سرعت حرکت</span> می‌دهد و پنالتی <span class=\"highlight\">سرعت حرکت</span> در هنگام تیراندازی را حذف می‌کند، اما شما را <span class=\"highlight\">سکوت</span> کرده و <span class=\"highlight\">استفاده و بازیابی استقامت را غیرفعال</span> می‌کند."
+
+        //Vampiric Burst
+        "upgrade_surging_power_active"      "‏<span class=\"highlight\">سرقت جان</span>، <span class=\"highlight\">سرعت شلیک</span> و <span class=\"highlight\">مهمات</span> می‌دهد. این مهمات اضافه شده توسط حداکثر اندازه خشاب شما محدود نمی‌شود."
+        "ActiveBonusLifesteal_label"        "‏سرقت جان با گلوله"
+        "ActiveBonusLifesteal_postvalue_label" "‏سرقت جان با گلوله"
+        "ActiveBonusLifesteal_postfix"      "%"
+
+        //Siphon Bullets
+        "upgrade_siphon_bullets_desc_passive2" "‏گلوله‌های شما به طور موقت <span class=\"highlight\">حداکثر جان</span> را از دشمنان می‌دزدند. دشمنان زمانی که اثر منفی منقضی شود، جان دزدیده شده خود را بازمی‌یابند."
+        "HealthSteal_label"                 "‏سرقت حداکثر جان به ازای هر گلوله"
+        "HealthSteal_postvalue_label"       "‏سرقت حداکثر جان به ازای هر گلوله"
+        "SiphonBullets_HealthStealPctHero_label" "‏سرقت حداکثر جان"
+        "SiphonBullets_HealthStealPctHero_postvalue_label" "‏سرقت حداکثر جان"
+        "SiphonBullets_HealthStealPctHero_postfix" "%"
+
+        //Overdrive Clip
+        "BonusReloadSpeed_label"            "‏زمان خشاب‌گذاری"
+        "BonusReloadSpeed_postvalue_label"  "‏زمان خشاب‌گذاری"
+        "BonusReloadSpeed_Postfix"          "%"
+        "OverdriveClipDuration_Postfix"     "s"
+
+        //Burst Fire Actuator
+        "BurstFireShotsFromClipPercent_Postfix" "%"
+        "BonusHeadshotDamage_label"         "‏آسیب اضافی هدشات"
+        "BonusHeadshotDamage_postvalue_label" "‏آسیب اضافی هدشات"
+        "BonusHeadshotDamage_postfix"       "%"
+        "BaseBonusWeaponPower_prefix"       "+"
+
+        //Lifestrike
+        "upgrade_boxing_glove_desc"         "‏<span class=\"highlight\">حمله نزدیک</span> شما <span class=\"highlight\">کندی حرکت</span> اعمال کرده و به اندازه درصدی از <span class=\"highlight\">آسیب ضربه نزدیک</span> واردشده به علاوه مقدار ثابت، <span class=\"highlight\">شما را درمان می‌کند</span>. <span class=\"diminish\"><br><br>‏‏میزان این درمان در برابر غیر هیرو‌ها {s:NonHeroHealPct}% است. <br>‏‏زمان بازیابی برای ضربات ضربه نزدیک سبک {s:LightMeleeCooldownMult} برابر بیشتر است.</span>"
+        "BonusMeleeSpeed_prefix"            "+"
+        "BonusMeleeSpeed_postfix"           "%"
+        "DisarmDuration_label"              "‏مدت خلع سلاح"
+        "DisarmDuration_postvalue_label"    "‏مدت خلع سلاح"
+        "DisarmDuration_postfix"            "s"
+        "LifestealHeal_label"               "‏درمان با ضربه نزدیک"
+        "LifestealHeal_postvalue_label"     "‏درمان با ضربه نزدیک"
+        "LifestealHealPercent_label"        "‏درمان با ضربه نزدیک"
+        "LifestealHealPercent_postvalue_label" "‏درمان با ضربه نزدیک"
+        "LifestealHealPercent_postfix"      "%"
+
+        "MeleeLifesteal_label"              "‏سرقت جان با ضربه نزدیک"
+        "MeleeLifesteal_postvalue_label"    "‏سرقت جان با ضربه نزدیک"
+        "MeleeLifesteal_postfix"            "%"
+
+        //Belt-Fed Magazine
+        "SpinUpTime_postfix"                "s"
+        "InitialFireRateDecrease_prefix"    "-"
+        "InitialFireRateDecrease_postfix"   "%"
+        "MaxFireRateIncrease_prefix"        "+"
+        "MaxFireRateIncrease_postfix"       "%"
+        "BonusReloadTime_postfix"           "s"
+
+        //Stabilizing Tripod
+        "StationaryRecoilReduction_postfix" "%"
+        "StationaryWeaponPower_prefix"      "+"
+        "CasterHealthPercent_postfix"       "%"
+
+        //Burst Fire
+        "upgrade_burst_fire_desc"           "‏زمانی که یکی از گلوله‌های شما به یک قهرمان دشمن برخورد می‌کند، <span class=\"highlight\">سرعت شلیک</span> و <span class=\"highlight\">سرعت حرکت</span> کسب می‌کنید."
+
+        //Intensifying Magazine
+        "upgrade_intensifying_clip_desc"    "‏با شلیک مداوم ،<span class=\"highlight\">آسیب سلاح</span> افزایش پیدا میکند."
+        "BaseAttackDamagePercentAtMaxDuration_label" "‏حداکثر آسیب سلاح"
+        "BaseAttackDamagePercentAtMaxDuration_postvalue_label" "‏حداکثر آسیب سلاح"
+        "BaseAttackDamagePercentAtMaxDuration_postfix" "%"
+        "ShootDurationForMax_label"         "‏زمان رسیدن به حداکثر آسیب"
+        "ShootDurationForMax_postvalue_label" "‏زمان رسیدن به حداکثر آسیب"
+        "ShootDurationForMax_postfix"       "s"
+
+        //Escalating Resilience
+        "upgrade_reinforcing_casings_desc"  "‏زمانی که گلوله‌های شما به یک قهرمان دشمن برخورد می‌کند، <span class=\"highlight\">مقاومت گلوله</span> می‌دهد. <span class=\"highlight\">هر شلیک فقط می‌تواند یک انباشت بدهد.</span>"
+        "MaxArmorStacks_label"              "‏حداکثر مقاومت در برابر گلوله"
+        "MaxArmorStacks_postvalue_label"    "‏حداکثر مقاومت در برابر گلوله"
+        "MaxArmorStacks_postfix"            "%"
+        "BulletResistPerStack_label"        "‏مقاومت گلوله به ازای هر انباشت"
+        "BulletResistPerStack_postvalue_label" "‏مقاومت گلوله به ازای هر انباشت"
+        "BulletResistPerStack_postfix"      "%"
+        "BulletResistDuration_label"        "‏مدت انباشت"
+        "BulletResistDuration_postvalue_label" "‏مدت انباشت"
+        "BulletResistDuration_postfix"      "s"
+
+        //Lucky Shot
+        "upgrade_critshot_desc"             "‏گلوله‌های شما شانس دارند که تقویت شوند و در برخورد <span class=\"highlight\">آسیب سلاح اضافه</span> وارد کنند.<br>‏‏<span class=\"diminish\">‏‏آسیب اضافه نمی‌تواند ضربه بحرانی کند.</span>"
+        "CritDamagePercent_prefix"          "+"
+        "CritDamagePercent_label"           "‏آسیب اضافی سلاح"
+        "CritDamagePercent_postvalue_label" "‏آسیب اضافی سلاح"
+        "CritDamagePercent_postfix"         "%"
+
+        //Veil Walker
+        "upgrade_veil_walker_desc"          "‏عبور از یک <span class=\"highlight\">دیوار کیهانی</span> شما را <span class=\"highlight\">نامرئی میکند</span> و به شما <span class=\"highlight\">درمان</span> و <span class=\"highlight\">سرعت حرکت</span> افزایشی می‌دهد."
+        "VeilWalker_MoveSpeed_label"        "‏سرعت حرکت در حالت نامرئی"
+        "VeilWalker_MoveSpeed_postvalue_label" "‏سرعت حرکت در حالت نامرئی"
+        "VeilWalker_MoveSpeed_postfix"      "m"
+        "VeilWalker_Heal_label"             "‏درمان"
+        "VeilWalker_Heal_postvalue_label"   "‏درمان"
+        "VeilWalker_Heal_postfix"           ""
+
+        //Glass Cannon2
+        "upgrade_glass_cannon2_desc"        "‏هر کشتن هیرو، <span class=\"highlight\">آسیب سلاح دائمی</span> (حداکثر {s:MaxStacks} بار) می‌دهد. مرگ باعث از دست دادن 1 انباشت می‌شود."
+
+        //Split Shot
+        "upgrade_split_shot_desc"           "‏گان خود را به حالت <span class=\"highlight\">چندگانه شلیک</span> درآورید. <br><br> برخورد به بیش از قهرمان در هر سری، یک <span class=\"highlight\">آسیب سلاح اضافی به صورت استک</span> می‌دهد. <br><br><span class=\"diminish\">‏‏اهداف فقط می‌توانند یک بار در هر چندگانه شلیک مورد اصابت قرار گیرند.</span>"
+        "upgrade_split_shot_desc_02"        "‏اضافی چند ضربه‌ای شلیک چندگانه"
+        "SpecialShotsBonusFireRate_label"   "‏سرعت شلیک هنگام شلیک چندگانه"
+        "SpecialShotsBonusFireRate_postvalue_label" "‏سرعت شلیک هنگام شلیک چندگانه"
+        "SpecialShotsBonusFireRate_postfix" "%"
+        "SpecialShotsBonusFireRate_prefix"  "+"
+        "SplitShotWeaponDuration_label"     "‏مدت انباشت"
+        "SplitShotWeaponDuration_postvalue_label" "‏مدت انباشت"
+        "SplitShotWeaponDuration_prefix"    ""
+        "SplitShotWeaponDuration_postfix"   "s"
+
+        //Blood Tribute
+        "upgrade_blood_tribute_desc"        "‏تغییر وضعیت: به طور مداوم جان را قربانی کنید تا {g:citadel_inline_attribute:'FireRate'}، <span class=\"highlight\">اثر منفی مقاومت</span> و <span class=\"highlight\">سرعت حرکت</span> را افزایش دهید."
+
+        //Cultist Sacrifice
+        "upgrade_non_player_bonus_sacrifice_desc" "‏یک شخصیت غیرقابل‌بازی دشمن را هدف قرار داده و آن را درجا بکشید تا <span class=\"highlight\">{s:BonusSoulsPct}% روح‌ها اضافه</span> دریافت کنید و یک اثر مثبت قدرتمند و طولانی‌مدت به دست آورید."
+
+        //Capacitor
+        "upgrade_capacitor_desc"            "‏یک پرتابه پرتاب می‌کنید که <span class=\"highlight\">{g:citadel_inline_attribute:'SpiritIcon'}آسیب</span> وارد می‌کند، یک کندی قوی اعمال می‌کند که به مرور زمان بهبود می‌یابد، <span class=\"highlight\">از استفاده از استقامت جلوگیری می‌کند</span> و <span class=\"highlight\">سکوت</span> بر روی <span class=\"highlight\">آیتم‌ها و ابیلیتی‌های مبتنی بر حرکت</span> آنها اعمال می‌کند."
+
+        //Enchanted Holsters
+        "upgrade_enchanted_holsters_desc"   "‏در حین نبرد، هر بار که یک ابیلیتی یا آیتم استفاده می‌کنید، یک اثر مثبت استک‌شونده دریافت می‌کنید که سرعت شلیک و سرعت خشاب‌گذاری را بهبود می‌بخشد. <br><span class=\"diminish\">‏‏هر انباشت مدت زمان اثر را تازه می‌کند.</span>"
+
+        //Stalker
+        "upgrade_weapon_backstabber_desc"   "‏وارد کردن {g:citadel_inline_attribute:'WeaponDamage'} در برد نزدیک، یک زخم باز کرده و به شما {g:citadel_inline_attribute:'BonusMoveSpeed'} می‌دهد. <br><br>‏‏دشمنان زخمی، {g:citadel_inline_attribute:'SpiritDPS'} دریافت کرده، <span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">{g:citadel_inline_attribute:'BulletResist'}</span> آن‌ها کاهش یافته و <span class=\"highlight\">از پشت دیوار</span> قابل مشاهده هستند."
+        "BackstabberRadius_label"           "‏شعاع اضافی"
+        "BackstabberRadius_postvalue_label" "‏شعاع اضافی"
+        "BackstabberRadius_prefix"          ""
+        "BackstabberRadius_postfix"         "m"
+        "ProcRadius_label"                  "‏برد نزدیک"
+        "ProcRadius_postvalue_label"        "‏برد نزدیک"
+        "ProcRadius_postfix"                "m"
+
+        //Express Shot
+        "upgrade_express_shot_desc"         "‏حمله بعدی شما، <span class=\"highlight\">دو بار</span> پشت سر هم با <span class=\"highlight\">آسیب و سرعت بیشتر</span> شلیک می‌کند. این حمله، مهمات اضافی مصرف می‌کند."
+        "ProcAmmoConsumed_label"            "‏مهمات اضافی مصرف‌شده"
+        "ProcAmmoConsumed_postvalue_label"  "‏مهمات اضافی مصرف‌شده"
+        "ProcAmmoConsumed_postfix"          ""
+
+        //Melee Charge
+        "upgrade_melee_charge_desc"         "‏<span class=\"highlight\">ضربه نزدیک سنگین</span> بعدی شما به یک دشمن، <span class=\"highlight\">آسیب اضافه</span> وارد می‌کند."
+        "MeleeDistanceScale_label"          "‏مسافت ضربه نزدیک سنگین"
+        "MeleeDistanceScale_postvalue_label" "‏مسافت ضربه نزدیک سنگین"
+        "MeleeDistanceScale_prefix"         "+"
+        "MeleeDistanceScale_postfix"        "%"
+        "BonusHeavyMeleeDamage_prefix"      "+"
+        "BonusHeavyMeleeDamage_label"       "‏آسیب سنگین اضافی"
+        "BonusHeavyMeleeDamage_postvalue_label" "‏آسیب سنگین اضافی"
+        "BonusHeavyMeleeDamage_postfix"     "%"
+
+        //Crushing Fists
+        "upgrade_crushing_fists_desc"       "‏<span class=\"highlight\"><span class=\"inline-attribute-label MeleeDamage\" style=\"color: #EC9719;\">{g:citadel_inline_attribute:'MeleeDamage'}</span></span> شما <span class=\"highlight\">تیر را بازیابی</span> کرده و یک <span class=\"highlight\">اثر منفی استک‌شونده مقاومت گلوله</span> روی دشمنان اعمال می‌کند. ضربه نزدیک سنگین دو استک اعمال می‌کند. <br><br>‏‏اگر هدف به حداکثر انباشت برسد، <span class=\"highlight\">گیجی</span> می‌شود."
+        "notification_crushing_fists_stun"  "‏مشت‌های کوبنده - گیجی!"
+
+        //-----------------------------------------------------------------------------
+        // Upgrades: Tech
+        //-----------------------------------------------------------------------------
+
+        //Mystic Regeneration
+        "upgrade_mystic_regeneration_desc"  "‏وارد کردن {g:citadel_inline_attribute:'SpiritDamage'} به قهرمان های دشمن، به شما {g:citadel_inline_attribute:'Regen'} اضافه می‌دهد. با وارد کردن آسیب به قهرمان های مختلف، انباشت می‌شود."
+
+        //Spirit Lifesteal
+        "NonHeroAbilityLifestealTooltipOnly_postfix" "%"
+
+        //Mystic Vulnerability
+        "upgrade_magic_vulnerability_desc"  "‏زمانی که یک دشمن {g:citadel_inline_attribute:'SpiritDamage'} دریافت می‌کند، <span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">{g:citadel_inline_attribute:'SpiritResist'}</span> آنها کاهش می‌یابد."
+
+        //Healbane
+        "upgrade_healbane_desc"             "‏{g:citadel_inline_attribute:'SpiritDamage'} شما <span class=\"highlight\">کاهش درمان</span> اعمال می‌کند. اگر یک قهرمان دشمن تحت این اثر بمیرد، یک درمان بزرگ دریافت می‌کنید."
+        "HealOnKill_label"                  "‏درمان با کشتن قهرمان"
+        "HealOnKill_postvalue_label"        "‏درمان با کشتن قهرمان"
+
+        //Mystic Slow
+        "upgrade_magic_slow_desc"           "‏زمانی که هدف {g:citadel_inline_attribute:'SpiritDamage'} دریافت می‌کند، <span class=\"highlight\">سرعت حرکت</span> آنها کاهش می‌یابد."
+
+        //Escalating Exposure
+        "upgrade_escalating_exposure_desc"  "‏وارد کردن {g:citadel_inline_attribute:'SpiritDamage'} یک <span class=\"highlight\">روح تقویت</span> استک‌شونده اعمال می‌کند که {g:citadel_inline_attribute:'SpiritDamage'} شما به هدف را افزایش می‌دهد."
+        "EscalatingExposureProcCooldown_label" "‏حداکثر دفعات برای هر هدف"
+        "EscalatingExposureProcCooldown_postvalue_label" "‏حداکثر دفعات برای هر هدف"
+        "EscalatingExposureProcCooldown_postfix" "s"
+        "EscalatingExposureTechArmorDamageReduction_label" "‏مقاومت روح با دریافت آسیب روح"
+        "EscalatingExposureTechArmorDamageReduction_postvalue_label" "‏مقاومت روح با دریافت آسیب روح"
+        "EscalatingExposureTechArmorDamageReduction_postfix" "%"
+
+        //Mystic Reach
+        "upgrade_magic_reach_desc"          "‏یک ابیلیتی را برای افزایش <span class=\"highlight\">برد</span> و <span class=\"highlight\">شعاع اثر</span> آن تقویت می‌کند."
+
+        //Improved Reach
+        "upgrade_tech_range_desc"           "‏<span class=\"highlight\">برد</span> و <span class=\"highlight\">شعاع اثر</span> ابیلیتی‌ها و آیتم‌های شما را افزایش می‌دهد."
+
+        //Omni Spirit
+        "upgrade_long_range_slowing_tech/modifier_long_range_slowing_tech_proc/modifier_slow_base" "‏کند شده"
+
+        //Improved Cooldown
+        "upgrade_magic_tempo_desc"          "‏یک ابیلیتی را برای کاهش <span class=\"highlight\">زمان بازیابی</span> آن تقویت می‌کند."
+
+        //Superior Cooldown
+        "upgrade_cooldown_reduction_desc"   "‏<span class=\"highlight\">زمان بازیابی</span> ابیلیتی‌های شما را کاهش می‌دهد."
+
+        //Transcendent Cooldown
+        "upgrade_transcendent_cooldown_desc" "‏<span class=\"highlight\">زمان بازیابی</span> ابیلیتی‌ها و آیتم‌های شما را کاهش می‌دهد."
+
+        //Extra Charge
+        "BonusSpiritForChargedAbilities_prefix" "+"
+        "BonusSpiritForChargedAbilities_label"  "‏قدرت روح اضافی برای توانایی‌های شارژی"
+        "BonusSpiritForChargedAbilities_postvalue_label" "‏قدرت روح اضافی برای توانایی‌های شارژی"
+
+        //Rapid Recharge
+        "CooldownReductionOnChargedAbilities_label" "‏کاهش زمان بازیابی توانایی‌های شارژی"
+        "CooldownReductionOnChargedAbilities_postvalue_label" "‏کاهش زمان بازیابی توانایی‌های شارژی"
+        "CooldownReductionOnChargedAbilities_postfix" "%"
+        "CooldownReductionOnChargedAbilities_prefix" "+"
+
+        //Alchemical Fire
+        "upgrade_thermal_detonator_desc"    "‏یک فلاسک پرتاب کنید که در برخورد منفجر شده و منطقه‌ای ایجاد می‌کند که {g:citadel_inline_attribute:'SpiritDamage'} <span class=\"highlight\">در هر ثانیه</span> به صورت افزایشی وارد کرده و <span class=\"highlight\">مقاومت گلوله</span> دشمن را کاهش می‌دهد.<br><br>‏‏در برابر غیر هیرو‌ها {s:NonHeroReductionPercent}% کمتر موثر است."
+        "BonusBaseWeaponDamageTaken_prefix" "+"
+        "BonusBaseWeaponDamageTaken_label"  "‏آسیب سلاح"
+        "BonusBaseWeaponDamageTaken_postvalue_label" "‏آسیب سلاح"
+        "BonusBaseWeaponDamageTaken_postfix" "%"
+
+        //Fleetfoot
+        "upgrade_fleetfoot_boots_active_desc" "‏<span class=\"highlight\">سرعت حرکت</span> و <span class=\"highlight\">کندی مقاومت</span> اضافه کسب می‌کنید."
+        "upgrade_fleetfoot_boots_passive_desc" "‏پنالتی <span class=\"highlight\">سرعت حرکت</span> در هنگام تیراندازی را حذف می‌کند."
+
+        //Kinetic Dash
+        "upgrade_kinetic_sash_desc"         "‏زمانی که <span class=\"highlight\">پرش جهشی</span> می‌کنید، تا خشاب‌گذاری بعدی خود <span class=\"highlight\">سرعت شلیک</span> و <span class=\"highlight\">مهمات</span> اضافه کسب می‌کنید. تا {s:AbilityDuration}s ادامه دارد."
+
+        //Arcane Surge
+        "upgrade_arcane_surge_desc"         "‏پس از <span class=\"highlight\">پرش جهشی</span>، <span class=\"highlight\">ابیلیتی بعدی که در عرض {s:ArcaneSurgeWindow}s استفاده می‌کنید</span> دارای <span class=\"highlight\">برد، مدت زمان،</span> و <span class=\"highlight\">قدرت روح</span> اضافه خواهد بود."
+        "modifier_arcane_surge_triggered"   "‏خیزش جادویی!"
+        "modifier_arcane_surge_ability"     "‏توانایی تقویت شد!"
+        "ArcaneSurgeWindow_label"           "‏بازه اجرای توانایی"
+        "ArcaneSurgeWindow_postvalue_label" "‏بازه اجرای توانایی"
+        "ArcaneSurgeWindow_postfix"         "s"
+
+        //Active Reload
+        "upgrade_active_reload_desc"        "‏در حین <span class=\"highlight\">خشاب‌گذاری</span>، فشار دادن {g:citadel_binding:'Reload'} در بخش برجسته‌شده، <span class=\"highlight\">خشاب‌گذاری شما را فوراً به پایان رسانده</span> و به شما <span class=\"highlight\">سرعت شلیک</span>، <span class=\"highlight\">سرقت جان با گلوله</span> و <span class=\"highlight\">سرعت حرکت</span> می‌دهد."
+
+        //Slowing Hex
+        "upgrade_containment_desc"          "‏حرکت هدف دشمن را <span class=\"highlight\">کند می‌کند</span>. همچنین <span class=\"highlight\">آیتم‌ها و ابیلیتی‌های مبتنی بر حرکت</span> آنها را <span class=\"highlight\">سکوت</span> می‌کند.<br><span class=\"diminish\">‏‏گرانش هدف را افزایش می‌دهد.<br>‏‏بر استفاده از استقامت هدف تأثیری ندارد.</span>"
+
+        //Spirit Sap
+        "upgrade_spirit_sap_desc"           "‏یک دشمن را هدف قرار دهید تا <span class=\"highlight\">مقاومت روح</span> و <span class=\"highlight\">قدرت روح</span> آنها را کاهش دهید."
+
+        //Focus Lens
+        "upgrade_focus_lens_desc"           "‏یک دشمن را هدف قرار دهید تا <span class=\"highlight\">سکوت</span> کنید. زمانی که سکوت از بین می‌رود، بخشی از <span class=\"highlight\">همه آسیب واردشده</span> در طول سکوت به هدف اعمال می‌شود."
+        "PercentDamage_label"               "‏آسیب هنگام پایان اثر"
+        "PercentDamage_postvalue_label"     "‏آسیب هنگام پایان اثر"
+        "PercentDamage_postfix"             "%"
+
+        //Withering Whip
+        "upgrade_withering_whip_desc"       "‏یک دشمن را هدف قرار دهید تا <span class=\"highlight\">سرعت شلیک</span> و <span class=\"highlight\">مقاومت گلوله</span> آنها را کاهش دهید."
+        "modifier_withering_whip_debuff"    "‏کاهش سرعت شلیک"
+        "MagicAmp_label"                    "‏تقویت آسیب روح"
+        "MagicAmp_postvalue_label"          "‏تقویت آسیب روح"
+        "MagicAmp_postfix"                  "%"
+        "WitheringWhipDisarmDuration_label" "‏مدت زمان"
+        "WitheringWhipDisarmDuration_postvalue_label" "‏مدت زمان"
+        "WitheringWhipDisarmDuration_postfix" "s"
+        "SpiritPower_label"                 "‏قدرت روح"
+        "SpiritPower_postvalue_label"       "‏قدرت روح"
+        "SpiritPower_prefix"                "+"
+
+        //Disarming Hex
+        "upgrade_greater_withering_whip_desc" "‏دشمن را <span class=\"highlight\">خلع سلاح</span> می‌کند و <span class=\"highlight\">مقاومت گلوله</span> آنها را کاهش می‌دهد."
+        "upgrade_greater_withering_whip_debuff" "‏خلع سلاح شده"
+
+        //Ethereal Shift
+        "upgrade_self_bubble_desc"          "‏وارد حالت خلأ شده و برای مدت کوتاهی <span class=\"highlight\">غیرقابل هدف و شکست‌ناپذیر</span> می‌شوید، در این مدت به آرامی شناور شده و نمی‌توانید اقدامی انجام دهید. پس از آن <span class=\"highlight\">قدرت روح، سرعت حرکت و مقاومت روح</span> کسب می‌کنید.<br>‏‏قابل لغو زودهنگام.<br><span class=\"diminish\">‏‏فعال‌سازی، هر ابیلیتی فعال را لغو می‌کند.</span>"
+        "ShiftingVeil_channel_desc"         "‏آسیب‌ناپذیر"
+        "ShiftingVeilDuration_label"        "‏مدت زمان"
+        "ShiftingVeilDuration_postvalue_label" "‏مدت زمان"
+        "ShiftingVeilDuration_postfix"      "s"
+        "BonusSpiritDuration_label"         "‏مدت اضافی اثر روح"
+        "BonusSpiritDuration_postvalue_label" "‏مدت اضافی اثر روح"
+        "BonusSpiritDuration_postfix"       "s"
+        "BonusTechPower_prefix"             "{s:sign}"
+        "BonusTechPower_label"              "‏قدرت روح"
+        "BonusTechPower_postvalue_label"    "‏قدرت روح"
+        "shifting_veil_bonus"               "‏قدرت روح، سرعت و مقاومت روح"
+
+        //Rescue Beam
+        "upgrade_rescue_beam_desc"          "‏یک قهرمان هم‌تیمی هدف و خودتان را به اندازه درصدی از <span class=\"highlight\">حداکثر جان</span> <span class=\"highlight\">هیل</span> می‌کند. یک بار در حین درمان، می‌توانید هدف را به سمت خود <span class=\"highlight\">بکشید</span>. قابل استفاده روی خودتان."
+        "SelfModifier_postfix"              "%"
+        "upgrade_rescue_beam_pull"          "‏کشیدن هدف"
+
+        //Slowing Spirit
+        "upgrade_slowing_tech/modifier_slowing_tech_proc/modifier_slow_base" "‏کند شده"
+
+        //Refresher
+        "upgrade_ability_refresher_desc"    "‏<span class=\"highlight\">زمان بازیابی</span> همه ابیلیتی‌های شما را <span class=\"highlight\">بازنشانی کرده</span> و <span class=\"highlight\">همه شارژهای شما را بازیابی</span> می‌کند."
+
+        //Cold Front
+        "upgrade_cold_front_desc"           "‏یک انفجار یخی منبسط‌شونده آزاد می‌کنید که به اهداف برخورد کرده {g:citadel_inline_attribute:'SpiritDamage'} وارد کرده و آنها را <span class=\"highlight\">کند</span> می‌کند."
+
+        //Arctic Blast
+        "upgrade_arctic_blast_desc"         "‏یک انفجار یخی منبسط‌شونده آزاد می‌کنید که به اهداف برخورد کرده {g:citadel_inline_attribute:'SpiritDamage'} وارد کرده، آنها را <span class=\"highlight\">انجماد</span> و سپس <span class=\"highlight\">کند</span> می‌کند.<br><br>‏‏اهداف کندشده، <span class=\"highlight\">بازیابی استقامت یخ‌زده</span> دارند."
+        "ArcticBlastSlowDuration_label"     "‏مدت کندی"
+        "ArcticBlastSlowDuration_postvalue_label" "‏مدت کندی"
+        "ArcticBlastSlowDuration_postfix"   "s"
+        "ArcticBlastPercentDamage_label"    "‏آسیب اضافی به هدف منجمد"
+        "ArcticBlastPercentDamage_postvalue_label" "‏آسیب اضافی به هدف منجمد"
+        "ArcticBlastPercentDamage_postfix"  "%"
+
+        //Knockdown
+        "upgrade_target_stun_desc"          "‏پس از <span class=\"highlight\">{s:StunDelay}s</span> یک <span class=\"highlight\">گیجی</span> اعمال می‌کند. مدت گیجی در برابر اهداف <span class=\"highlight\">هوایی</span> افزایش می‌یابد.<br><br><span class=\"diminish\">‏‏در طول مدت گیجی، گرانش هدف را افزایش می‌دهد.</span>"
+
+        //Vortex Web
+        "upgrade_aoe_root_active"           "‏یک نارنجک <span class=\"highlight\">مکنده</span> پرتاب می‌کنید که همه دشمنان را به یک منطقه کوچک می‌کشد و <span class=\"highlight\">طلسم کندکننده</span> اعمال می‌کند. <span class=\"diminish\"><br><br>‏‏برای هدف‌گیری مستقیم واحد، Alt اجرا کنید.</span>"
+
+        //Curse
+        "upgrade_glitch_desc"               "‏یک دشمن را نفرین می‌کند - <span class=\"highlight\">همه چیز رو قطع میکنه, سکوت, خلع سلاح</span> کرده و <span class=\"highlight\">از استفاده از آیتم جلوگیری</span> می‌کند. <span class=\"highlight\">همه اثر مثبت های غیر آلتیمیت را حذف</span> می‌کند.<br><br>‏‏<span class=\"highlight\">خروجی آسیب</span> خودتان در طول مدت کاهش می‌یابد."
+        "modifier_glitch_debuff"            "‏نفرین‌شده!"
+        "modifier_glitch_self_penalty"      "‏بازتاب نفرین"
+
+        //Bullet Resist Shredder
+        "upgrade_bullet_resist_shredder_desc" "‏زمانی که {g:citadel_inline_attribute:'SpiritDamage'} وارد می‌کنید، <span class=\"highlight\">مقاومت گلوله</span> دشمنان را کاهش می‌دهد."
+        "upgrade_bullet_resist_shredder/modifier_bullet_armor_shredder_proc/modifier_bullet_armor_shredder" "‏زره گلوله کاهش‌یافته"
+
+        //Echo Shard
+        "upgrade_ability_power_shard_active" "‏<span class=\"highlight\">زمان بازیابی</span> ابیلیتی غیر آلتیمیت تقویت‌شده را <span class=\"highlight\">بازنشانی</span> می‌کند.<br><br>‏‏زمان بازیابی این آیتم به اندازه <span class=\"highlight\">زمان بازیابی ابیلیتی تقویت‌شده</span> افزایش می‌یابد."
+
+        //Duration Extender
+        "upgrade_arcane_extension_desc"     "‏یک ابیلیتی را برای افزایش <span class=\"highlight\">مدت زمان</span> آن تقویت می‌کند."
+
+        //Superior Duration
+        "upgrade_imbued_duration_extender_desc" "‏<span class=\"highlight\">مدت زمان</span> ابیلیتی‌ها و آیتم‌های شما را افزایش می‌دهد."
+
+        //Diviner's Kevlar
+        "upgrade_diviners_kevlar_desc"      "‏پس از استفاده از یک <span class=\"highlight\">آلتیمیت</span>، یک <span class=\"highlight\">مانع</span> و <span class=\"highlight\">قدرت روح</span> موقت کسب می‌کنید."
+        "BonusChannelTechPower_prefix"      "+"
+        "BonusChannelTimePercentage_label"  "‏مدت آماده‌سازی"
+        "BonusChannelTimePercentage_postvalue_label" "‏مدت آماده‌سازی"
+        "BonusChannelTimePercentage_prefix" "+"
+        "BonusChannelTimePercentage_postfix" "%"
+
+        "MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE_label" "‏مدت آماده‌سازی"
+        "MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE_postvalue_label" "‏مدت آماده‌سازی"
+        "MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE_prefix" "+"
+        "MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE_postfix" "%"
+
+        //Infuser
+        "upgrade_infuser_desc"              "‏<span class=\"highlight\">سرقت جان با روح</span> و <span class=\"highlight\">قدرت روح</span> کسب می‌کنید."
+
+        //Spirit Strike
+        "upgrade_acolytes_glove_desc"       "‏زمانی که یک <span class=\"highlight\">سبک یا ضربه نزدیک سنگین</span> را روی یک قهرمان انجام می‌دهید، با آن، {g:citadel_inline_attribute:'SpiritDamage'} اضافی وارد کرده و <span class=\"highlight\">مقاومت روح</span> هدف را کاهش می‌دهید.<span class=\"diminish\"><br><br>‏‏زمان بازیابی برای ضربات ضربه نزدیک سبک {s:LightMeleeCooldownMult} برابر بیشتر است.</span>"
+        "SpiritDamage_label"                "‏آسیب روح"
+        "SpiritDamage_postvalue_label"      "‏آسیب روح"
+
+        //Spirit Snatch
+        "upgrade_spirit_snatch_desc"        "‏زمانی که یک <span class=\"highlight\">سبک یا ضربه نزدیک سنگین</span> را روی یک قهرمان انجام می‌دهید، {g:citadel_inline_attribute:'SpiritDamage'} اضافی وارد کرده و <span class=\"highlight\">مقاومت روح</span> و <span class=\"highlight\">قدرت روح</span> را می‌دزدد.<span class=\"diminish\"><br><br>‏‏اثرات برای ضربات ضربه نزدیک سبک {s:LightMeleeReduction}% کاهش می‌یابد.</span>"
+        "SpiritSnatch_TechArmorSteal_label" "‏سرقت مقاومت روح"
+        "SpiritSnatch_TechArmorSteal_postvalue_label" "‏سرقت مقاومت روح"
+        "SpiritSnatch_TechArmorSteal_postfix" "%"
+        "SpiritSnatch_TechPowerSteal_label" "‏سرقت قدرت روح"
+        "SpiritSnatch_TechPowerSteal_postvalue_label" "‏سرقت قدرت روح"
+
+        //Surge of Power
+        "upgrade_magic_storm_desc"          "‏یک ابیلیتی را با <span class=\"highlight\">قدرت روح دائمی</span> تقویت می‌کند. زمانی که آن ابیلیتی استفاده شود، <span class=\"highlight\">سرعت حرکت</span> اضافه کسب کرده و در حین حمله، سرعت کامل را حفظ می‌کنید."
+
+        //Suppressor
+        "upgrade_suppressor_desc"           "‏زمانی که به دشمنان {g:citadel_inline_attribute:'SpiritDamage'} وارد می‌کنید، <span class=\"highlight\">سرعت شلیک</span> آنها را نیز کاهش می‌دهید."
+        "suppressor_debuff"                 "‏کاهش سرعت شلیک"
+
+        //Quicksilver Reload
+        "upgrade_quick_silver_desc"         "‏ابیلیتی تقویت‌شده شما به مرور زمان با {g:citadel_inline_attribute:'BonusSpiritDamage'}، {g:citadel_inline_attribute:'BonusFireRate'} شارژ شده و در زمان استفاده، <span class=\"highlight\">خشاب را خشاب‌گذاری</span> می‌کند."
+
+        //Resonant Healing
+        "upgrade_resonant_healing_desc"     "‏وارد کردن {g:citadel_inline_attribute:'SpiritDamage'} به قهرمان های دشمن، به شما {g:citadel_inline_attribute:'Regen'} اضافه می‌دهد. با وارد کردن آسیب به قهرمان های مختلف، انباشت می‌شود."
+        "HealingPerCast_Label"              "‏درمان هنگام اجرای توانایی"
+        "HealingPerCast_postvalue_label"    "‏درمان هنگام اجرای توانایی"
+
+        // Magic Carpet
+        "upgrade_magic_carpet_desc"         "‏یک فرش جادویی (قالیچه حضرت سلیمان) احضار کنید که شما را <span class=\"highlight\">پرواز</span> می‌دهد. در حین پرواز در برابر کندی‌ها مصون هستید و انجام هر اقدامی فرش را منحل می‌کند. <span class=\"diminish\"><br>‏‏در حال احضار فرش نمی‌توانید از ابیلیتی‌ها استفاده کنید.</span>"
+        "modifier_summon_magiccarpet"       "‏در حال احضار قالیچه جادویی"
+        "MagicCarpetMoveSpeed_prefix"       "+"
+        "MagicCarpetMoveSpeed_label"        "‏سرعت پرواز اضافی"
+        "MagicCarpetMoveSpeed_postvalue_label" "‏سرعت پرواز اضافی"
+        "MagicCarpetMoveSpeed_postfix"      "m"
+        "MagicCarpetShieldDuration_label"   "‏مدت سپر"
+        "MagicCarpetShieldDuration_postvalue_label" "‏مدت سپر"
+        "MagicCarpetShieldDuration_postfix" "s"
+        "MagicCarpetSummoning_channel"      "‏در حال احضار"
+
+        // Hex-Sealed Knuckles
+        "upgrade_superacolytes_glove_desc"  "‏پس از وارد کردن <span class=\"highlight\">{s:StoredSpiritDamage}</span> آسیب روح انباشته شده، <span class=\"highlight\">ضربه نزدیک سنگین حمله</span> بعدی شما <span class=\"highlight\">{s:StoredSpiritDamage} آسیب روح</span> اضافی وارد می‌کند."
+        "StoredSpiritDamage_label"          "‏آسیب روح ذخیره‌شده"
+        "StoredSpiritDamage_postvalue_label" "‏آسیب روح ذخیره‌شده"
+        "upgrade_superacolytes_glove/modifier_superacoloytes_glove" "‏مشت‌ها آزاد شدند!"
+
+        //SpiritBurn
+        "upgrade_spirit_burn_desc"          "‏وارد کردن {g:citadel_inline_attribute:'SpiritDamage'} قابل توجه به یک دشمن در عرض {s:DamageThresholdDuration}s باعث انفجاری می‌شود که به آن دشمن آسیب زده و آن را می‌سوزاند. در حین سوختن، دشمنان به مرور زمان آسیب می‌بینند و <span class=\"highlight\">درمان</span> کمتری دریافت می‌کنند.<br><span class=\"diminish\">‏‏زمان بازیابی این اثر به ازای هر دشمن محاسبه می‌شود، بنابراین هر هدف فقط یک بار در هر زمان بازیابی می‌تواند بسوزد. آسیب آن روی غیر هیرو‌ها نصف می‌شود.</span>"
+        "modifier_spirit_burn_immunity"     "‏مصون از سوختگی روح"
+        "MinDPS_label"                      "‏حداقل آسیب در ثانیه"
+        "MinDPS_postvalue_label"            "‏حداقل آسیب در ثانیه"
+
+        //Lightning Scroll
+        "upgrade_ultimate_burst_desc"       "‏دمیج خوردن از توانایی نهایی شما یک {g:citadel_inline_attribute:'Stun'} اعمال کرده و پس از یک تاخیر کوتاه، {g:citadel_inline_attribute:'BonusSpiritDamage'} وارد می‌کند."
+        "upgrade_ultimate_burst_upgrade"    "‏<span class=\"highlight\">اثرات جادویی کندی</span>"
+        "upgrade_ultimate_burst_hint"       "‏<span class=\"diminish\">‏‏این اثر فقط یک بار در هر توانایی نهایی به ازای هر هدف می‌تواند فعال شود.</span>"
+        "LightningScrollMysticSlow_label"   "‏سرعت حرکت با آسیب روح"
+        "LightningScrollMysticSlow_postvalue_label" "‏سرعت حرکت با آسیب روح"
+        "LightningScrollMysticSlow_prefix"  "-"
+        "LightningScrollMysticSlow_postfix" "%"
+        "DelayBeforeStun_label"             "‏تأخیر پیش از اثر"
+        "DelayBeforeStun_postvalue_label"   "‏تأخیر پیش از اثر"
+        "DelayBeforeStun_postfix"           "s"
+
+        "MaxHealthDamage_label"             "‏آسیب بر اساس حداکثر جان"
+        "MaxHealthDamage_postvalue_label"   "‏آسیب بر اساس حداکثر جان"
+        "MaxHealthDamage_postfix"           "%"
+
+        "CurrentHealthDamage_label"         "‏آسیب بر اساس جان فعلی"
+        "CurrentHealthDamage_postvalue_label" "‏آسیب بر اساس جان فعلی"
+        "CurrentHealthDamage_postfix"       "%"
+
+        "UltimateTechPower_label"           "‏قدرت روح توانایی نهایی"
+        "UltimateTechPower_postvalue_label" "‏قدرت روح توانایی نهایی"
+
+        //Corpse Explosion
+        "upgrade_corpse_explosion_desc"     "‏کشتن یا کمک باعث ایجاد یک <span class=\"highlight\">انفجار</span> در محل مرگ قربانی می‌شود. کشتن علیه هیروان شعاع و آسیب بیشتری دارند."
+        "HeroMultiplier_label"              "‏ضریب انفجار قهرمان"
+        "HeroMultiplier_postvalue_label"    "‏ضریب انفجار قهرمان"
+        "HeroMultiplier_postfix"            "%"
+
+        //Golden Goose Egg
+        "upgrade_goose_egg_desc"            "‏تا زمانی که زنده هستید، <span class=\"highlight\">به مرور زمان روح</span> کسب می‌کنید."
+        "upgrade_goose_egg_active_desc"     "‏تخم را بشکنید <span class=\"highlight\">روح</span> و <span class=\"highlight\">اثر مثبتهای دائمی</span> دریافت کنید.<br><br>‏‏ارزش تخم با مدت زمان نگهداری آن افزایش می‌یابد.<br><br><span class=\"diminish\">‏‏به ازای هر {s:BonusBuffsPerGold} روح جمع‌آوری شده هنگام شکستن، یک اثر مثبت دائمی دریافت کنید.</span>"
+        "upgrade_goose_egg_stacklabel"      "‏روح‌های قابل دریافت"
+        "GoldPerMinute_postvalue_label"     "‏روح در دقیقه"
+        "GoldPerMinute_prefix"              "{s:sign}"
+        "BonusGoldPerMinute_postvalue_label" "‏ارزش روح در دقیقه"
+
+        "SellBonusSouls_label"              "‏روح اضافی فروش:"
+
+        //-----------------------------------------------------------------------------
+        // Upgrades: Armor
+        //-----------------------------------------------------------------------------
+
+        //Healing Rite
+        "upgrade_health_stimpak_desc"       "‏به هدف <span class=\"highlight\">بازسازی</span> و <span class=\"highlight\">سرعت دویدن</span> می‌دهد. اگر از بازیکنان یا اهداف دشمن آسیب دریافت کنید، از بین می‌رود. قابل استفاده روی خودتان."
+
+        //Shrink Ray
+        "upgrade_shrink_ray_desc"           "‏<span class=\"highlight\">اندازه مدل</span> را کاهش داده و به هدف <span class=\"highlight\">سرعت حرکت</span> می‌دهد. در این حالت، <span class=\"highlight\">استفاده از تونل‌ها</span> را امکان‌پذیر می‌کند. قابل استفاده روی خودتان."
+
+        //Guardian Ward
+        "upgrade_guardian_ward_desc"        "‏به هدف یک <span class=\"highlight\">مانع</span> و <span class=\"highlight\">سرعت حرکت</span> موقت می‌دهد. <span class=\"diminish\"><br>‏‏قابل استفاده روی خودتان.<br>‏‏زمانی که روی شخص دیگری استفاده شود، زمان بازیابی نصف می‌شود.</span>"
+
+        //Divine Barrier
+        "upgrade_divine_barrier_desc"       "‏<span class=\"highlight\">همه اثر منفی های غیر از گیجی را از هدف حذف</span> کرده و به آنها یک <span class=\"highlight\">مانع</span> و <span class=\"highlight\">سرعت حرکت</span> می‌دهد. <span class=\"diminish\"><br>‏‏قابل استفاده روی خودتان. زمانی که روی شخص دیگری استفاده شود، زمان بازیابی نصف می‌شود.</span>"
+
+        //Restorative Locket
+        "upgrade_restorative_locket_active_desc" "‏زمانی که یک دشمن در محدوده {s:Radius}m از شما از یک ابیلیتی استفاده می‌کند، یک <span class=\"highlight\">انباشت</span> ذخیره کنید. <br><br>‏‏با فعال کردن آن همه انباشت ها را مصرف کنید تا <span class=\"highlight\">خود را درمان کنید</span> و بر اساس تعداد انباشت هایی که دارید، <span class=\"highlight\">تا {s:MaxStaminaRestore} استقامت</span> را بازیابی کنید."
+        "HealPerStack_label"                "‏درمان به ازای هر انباشت"
+        "MinStaminaRestore_label"           "‏حداقل استقامت بازیابی‌شده"
+        "MinStaminaRestore_postvalue_label" "‏حداقل استقامت بازیابی‌شده"
+        "MaxStaminaRestore_label"           "‏حداکثر استقامت بازیابی‌شده"
+        "MaxStaminaRestore_postvalue_label" "‏حداکثر استقامت بازیابی‌شده"
+        "HealPerStack_postvalue_label"      "‏درمان به ازای هر انباشت"
+
+        //Cheat Death
+        "upgrade_cheat_death_unkillable_passive" "‏زمانی که قرار است آسیب کشنده دریافت کنید، به جای آن، به طور موقت <span class=\"highlight\">در برابر مرگ مصون</span> شده و <span class=\"highlight\">همه اثر منفی های غیر از گیجی را حذف</span> می‌کنید. <br><br>‏‏در طول مصونیت از مرگ، <span class=\"highlight\">آسیب کمتری </span> وارد کرده و <span class=\"highlight\">درمان کمتری</span> دارید."
+        "DeathImmunityDuration_label"       "‏مدت مصونیت از مرگ"
+        "DeathImmunityDuration_postvalue_label" "‏مدت مصونیت از مرگ"
+        "DeathImmunityDuration_postfix"     "s"
+        "DeathImmunityDamageReduction_label" "‏کاهش آسیب"
+        "DeathImmunityDamageReduction_postvalue_label" "‏کاهش آسیب"
+        "DeathImmunityDamageReduction_postfix" "%"
+
+        //Healing Booster
+        "upgrade_healing_booster_desc"      "‏اثربخشی <span class=\"highlight\">درمان</span> شما را افزایش می‌دهد."
+
+        //Debuff Reducer
+        "upgrade_debuff_reducer_desc"       "‏<span class=\"highlight\">مدت زمان</span> تمام اثر منفی اعمال‌شده بر روی شما را کاهش می‌دهد."
+
+        //Debuff Remover
+        "upgrade_reduce_debuff_duration_active_desc" "‏<span class=\"highlight\">همه اثر منفی غیر آلتیمیت</span> که در حال حاضر روی شما اعمال شده‌اند را <span class=\"highlight\">پاک میکنید</span>. اگر اثری حذف شد، <span class=\"highlight\">خود را درمان می‌کنید</span> و یک <span class=\"highlight\">اضافی سرعت حرکت</span> دریافت می‌کنید. <br><span class=\"diminish\">‏‏در حالت گیجی یا خواب قابل استفاده نیست.</span>"
+        "HealOnActivate_label"              "‏جان بازیابی‌شده هنگام فعال‌سازی"
+        "HealOnActivate_postvalue_label"    "‏جان بازیابی‌شده هنگام فعال‌سازی"
+        "damage_reduction_postfix"          "%"
+
+        //Decay
+        "upgrade_rupture_desc"              "‏به یک هدف <span class=\"highlight\">آسیب در طول زمان</span> وارد می‌کنید که بر اساس جان فعلی آنها است.<br>‏‏دمیج فرسایش کشنده نیست و فعال‌سازی آیتم‌ها را اعمال نمی‌کند."
+        "HealReductionDuration_label"       "‏مدت کاهش درمان"
+        "HealReductionDuration_postvalue_label" "‏مدت کاهش درمان"
+        "HealReductionDuration_postfix"     "s"
+
+        //Discord
+        "upgrade_discord_desc"              "‏<span class=\"highlight\">مقاومت روح</span>، <span class=\"highlight\">اثر منفی مقاومت</span> و یک هاله بر روی یک هدف هم تیمی اعمال می‌کند که به دشمنان به نسبت حداکثر جان آنها <span class=\"highlight\">{g:citadel_inline_attribute:'SpiritIcon'}آسیب</span> وارد می‌کند. اثر منفی های موجود روی هدف کاهش می‌یابند.<br>‏‏قابل استفاده روی خودتان."
+        "MaxHealthPercentAsDPS_label"       "‏حداکثر جان در ثانیه"
+        "MaxHealthPercentAsDPS_postvalue_label" "‏حداکثر جان در ثانیه"
+        "MaxHealthPercentAsDPS_postfix"     "%"
+
+        //Fortitude
+        "upgrade_chonky_desc"               "‏پس از مدتی عدم دریافت دمیج، بازسازی جان کسب می‌کنید."
+        "upgrade_chonky_high_health_passive_desc" "‏زمانی که <span class=\"highlight\">بالای {s:HealthThreshold}% جان</span> دارید، <span class=\"highlight\">سرعت حرکت</span> اضافه دریافت میکنید."
+
+        //Leech
+        "upgrade_damage_recycler_desc"      "‏اثر <span class=\"highlight\">کاهش درمان</span> اعمال‌شده توسط دشمن را کاهش می‌دهد."
+        "LeechHealOnKill_prefix"            "+"
+        "LeechHealOnKill_label"             "‏درمان بر اساس حداکثر جان با کشتن"
+        "LeechHealOnKill_postvalue_label"   "‏درمان بر اساس حداکثر جان با کشتن"
+        "LeechHealOnKill_postfix"           "%"
+
+        //Rebirth
+        "upgrade_personal_rejuvenator_desc" "‏قهرمان را در نقطه‌ای که مرده است، دوباره زنده می‌کند."
+        "RespawnDelay_postfix"              "s"
+        "SpawnTimePenalty_prefix"           "+"
+        "SpawnTimePenalty_label"            "‏افزایش زمان بازگشت"
+        "SpawnTimePenalty_postvalue_label"  "‏افزایش زمان بازگشت"
+        "SpawnTimePenalty_postfix"          "s"
+
+        //Phantom Strike
+        "upgrade_phantom_strike_desc"       "‏به یک هدف دشمن <span class=\"highlight\">انتقال</span> کنید و آنها را به زمین بکشید. <span class=\"highlight\">آسیب</span>، کاهش <span class=\"highlight\">سرعت حرکت</span> و <span class=\"highlight\">خلع سلاح</span> وارد می‌کند."
+        "PhantomStrikeDebuffDuration_label" "‏مدت اثر منفی"
+        "PhantomStrikeDebuffDuration_postvalue_label" "‏مدت اثر منفی"
+        "PhantomStrikeDebuffDuration_postfix" "s"
+        "modifier_phantom_strike_bulletshield" "‏سپر گلوله"
+
+        //Soul Rebirth
+        "upgrade_rebirth_passive"           "‏اگر بمیرید، پس از {s:RespawnDelay}s با مقداری جان در <span class=\"highlight\">محل مرگ خود بازگشت</span> می‌شوید."
+
+        //Return Fire
+        "upgrade_return_fire_desc"          "‏به طور خودکار به سمت هر مهاجمی که با ابیلیتی‌ها یا گان خود به شما آسیب وارد می‌کند، <span class=\"highlight\">یک گلوله شلیک کنید</span>."
+        "ActiveFireRate_label"              "‏سرعت شلیک"
+        "ActiveFireRate_postvalue_label"    "‏سرعت شلیک"
+        "ActiveFireRate_postfix"            "%"
+
+        //Metal Skin
+        "upgrade_metal_skin_desc"           "‏در برابر گلوله‌ها <span class=\"highlight\">مصون</span> می‌شوید."
+        "AbilityApplyDelay_postfix"         "s"
+
+        //Battle Vest
+        "upgrade_regenerating_bullet_shield_desc" "‏زمانی که <span class=\"highlight\">بالای {s:LifeThreshold}% جان</span> هستید، <span class=\"highlight\">{g:citadel_inline_attribute:'WeaponDamage'}</span> و <span class=\"highlight\">{g:citadel_inline_attribute:'BonusFireRate'}</span> کسب می‌کنید."
+
+        //Enchanter's Emblem
+        "upgrade_magic_shield_desc"         "‏زمانی که <span class=\"highlight\">بالای {s:LifeThreshold}% جان</span> هستید، <span class=\"highlight\">{g:citadel_inline_attribute:'Spirit'}</span> و <span class=\"highlight\">کاهش زمان بازیابی</span> اضافه کسب می‌کنید."
+
+        //Weapon Shielding
+        "upgrade_weapon_shielding_desc"     "‏هر زمان که در یک بازه زمانی کوتاه، {g:citadel_inline_attribute:'WeaponDamage'} قابل توجهی از قهرمان های دشمن دریافت می‌کنید، یک <span class=\"highlight\">مانع</span> کسب می‌کنید."
+        "DamageWindow_label"                "‏بازه زمانی"
+        "DamageWindow_postvalue_label"      "‏بازه زمانی"
+        "DamageWindow_postfix"              "s"
+
+        //Spirit Bubble
+        "upgrade_spirit_bubble_desc"        "‏هر زمان که در یک بازه زمانی کوتاه، {g:citadel_inline_attribute:'SpiritDamage'} قابل توجهی از قهرمان های دشمن دریافت می‌کنید، یک <span class=\"highlight\">مانع</span> کسب می‌کنید."
+
+        //Grit
+        "upgrade_grit_desc"                 "‏برای مدت کوتاهی یک <span class=\"highlight\">مانع</span> کسب می‌کنید."
+
+        //Unstoppable
+        "upgrade_unstoppable_desc"          "‏به طور موقت <span class=\"highlight\">اثرات وضعیت منفی</span> را سرکوب کرده و در برابر <span class=\"highlight\">گیجی، سکوت، خواب، ریشه و خلع سلاح</span> <span class=\"highlight\">مصون</span> می‌شوید. <br>‏‏در حالت <span class=\"highlight\">گیجی</span> یا <span class=\"highlight\">خواب</span> قابل استفاده نیست."
+
+        //Colossus
+        "upgrade_colossus_desc"             "‏<span class=\"highlight\">بزرگ‌تر</span> می‌شوید و <span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">{g:citadel_inline_attribute:'BulletResist'}</span>، <span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">{g:citadel_inline_attribute:'SpiritResist'}</span> و <span class=\"inline-attribute-label MeleeDamage\" style=\"color: #EC9719;\">{g:citadel_inline_attribute:'MeleeDamage'}</span> کسب می‌کنید. <br><br>‏‏دشمنان نزدیک دچار <span class=\"inline-attribute-label Slow\">{g:citadel_inline_attribute:'Slow'}</span> شده و <span class=\"highlight\">سرعت جهش</span> کمتری دارند."
+        "BuffBulletResist_label"            "‏مقاومت در برابر گلوله"
+        "BuffBulletResist_postvalue_label"  "‏مقاومت در برابر گلوله"
+        "BuffBulletResist_postfix"          "%"
+        "BuffTechResist_label"              "‏مقاومت در برابر روح"
+        "BuffTechResist_postvalue_label"    "‏مقاومت در برابر روح"
+        "BuffTechResist_postfix"            "%"
+
+        //Rebuttal
+        "upgrade_melee_rebuttal_desc"       "‏پس از یک <span class=\"highlight\">دفع ضربه</span> موفق در برابر یک قهرمان دشمن، به اندازه آسیب دفع شده <span class=\"highlight\">درمان</span> می‌شوید و آن آسیب به هدف بازگردانده می‌شود و به طور موقت <span class=\"highlight\">آسیب</span> افزایشی کسب می‌کنید."
+
+        //Counterspell
+        "upgrade_counterspell_desc"         "‏دفع ضربه بعدی شما، <span class=\"highlight\">شما را از آسیب و اثرات ابیلیتی‌ها و آیتم‌های دشمن محافظت می‌کند</span>. در صورت موفقیت‌آمیز بودن دفع اسپل {g:citadel_inline_attribute:'Heal'} دریافت کرده و {g:citadel_inline_attribute:'MoveSpeed'} و {g:citadel_inline_attribute:'Spirit'} کسب می‌کنید."
+        "ParrySuccessHealPercentage_label"  "‏درمان بر اساس آسیب دفع‌شده"
+        "ParrySuccessHealPercentage_postvalue_label" "‏درمان بر اساس آسیب دفع‌شده"
+        "ParrySuccessHealPercentage_postfix" "%"
+
+        //Spellbreaker
+        "upgrade_spellbreaker_desc"         "‏دریافت {g:citadel_inline_attribute:'SpiritDamage'} زیاد به طور قابل توجهی کاهش می‌یابد."
+        "SpiritDamageReductionProc_label"   "‏کاهش آسیب روح"
+        "SpiritDamageReductionProc_postvalue_label" "‏کاهش آسیب روح"
+        "SpiritDamageReductionProc_postfix" "%"
+
+        //Juggernaut
+        "upgrade_juggernaut_slow_desc"      "‏دشمنانی که به شما شلیک می‌کنند، <span class=\"highlight\">سرعت شلیک</span> آن‌ها کاهش می‌یابد."
+        "FireRateSlowDuration_label"        "‏مدت زمان"
+        "FireRateSlowDuration_postvalue_label" "‏مدت زمان"
+        "FireRateSlowDuration_postfix"      "s"
+
+        //Trophy Collector
+        "upgrade_trophy_collector_desc"     "‏هر بار که <span class=\"highlight\">کمک یا کشتن</span> بگیرید، <span class=\"highlight\">سرعت دویدن</span>، <span class=\"highlight\">برد ابیلیتی</span> و <span class=\"highlight\">تولید منفعل روح</span> اضافی کسب می‌کنید. این اثر استک و پس از مرگ نیز باقی می‌ماند."
+        "StackingGoldPerMinute_label"       "‏روح در دقیقه"
+        "StackingGoldPerMinute_postvalue_label" "‏روح در دقیقه"
+
+        //Indomitable
+        "upgrade_upgrade_auto_cleanse_desc" "‏<span class=\"highlight\">گیجی، زنجیره، بی‌حرکتی، خواب یا سکوت</span> بعدی به طور خودکار پاک می‌شود. هنگامی که این اتفاق می‌افتد، یک <span class=\"highlight\">مانع</span> کسب کرده و <span class=\"highlight\">همه زمان بازیابی ابیلیتی‌های</span> شما {s:CooldownReductionOnProc}% کاهش می‌یابد."
+
+        //-----------------------------------------------------------------------------
+        // Upgrades: Utility
+        //-----------------------------------------------------------------------------
+
+        //Superior Stamina
+        "upgrade_superior_stamina_passive"  "‏استفاده اضافی از <span class=\"highlight\">هوا پرش</span> یا <span class=\"highlight\">هوا جهش</span> را قبل از فرود امکان‌پذیر می‌کند."
+
+        //Enduring Speed
+        "upgrade_cardio_calibrator_desc"    "‏اثر پنالتی‌های <span class=\"highlight\">سرعت حرکت</span> دشمن را کاهش می‌دهد."
+
+        //Health Nova
+        "upgrade_health_nova_desc"          "‏خود و هم‌تیمی نزدیک را <span class=\"highlight\">درمان</span> کنید."
+
+        //Shadow Weave
+        "upgrade_cloaking_device_active_desc" "‏<span class=\"highlight\">مخفی</span> می‌شوید. هر زمان که در حالت مخفی کاری آسیب دریافت کنید، آشکار می‌شوید."
+        "upgrade_cloaking_device_active_ambush_desc" "‏<br>‏‏حمله یا استفاده از یک ابیلیتی، مخفی کاری شما را پایان داده و یک <span class=\"highlight\">کمین</span> را آغاز می‌کند که به طور موقت به شما <span class=\"highlight\">سرعت شلیک</span>، <span class=\"highlight\">قدرت روح</span> و <span class=\"highlight\">آسیب ضربه نزدیک</span> اضافه می‌دهد."
+        "modifier_cloaking_device_active_stealth" "‏بافت سایه - مخفی‌کاری"
+        "modifier_cloaking_device_active_ambush" "‏بافت سایه - کمین"
+        "AmbushBonusTechPower_prefix"       "+"
+        "AmbushBonusTechPower_label"        "‏قدرت روح کمین"
+        "AmbushBonusTechPower_postvalue_label" "‏قدرت روح کمین"
+        "AmbushBonusFireRate_prefix"        "+"
+        "AmbushBonusFireRate_label"         "‏سرعت شلیک کمین"
+        "AmbushBonusFireRate_postvalue_label" "‏سرعت شلیک کمین"
+        "AmbushBonusFireRate_postfix"       "%"
+        "AmbushBonusMeleeDamage_label"      "‏آسیب نزدیک کمین"
+        "AmbushBonusMeleeDamage_postvalue_label" "‏آسیب نزدیک کمین"
+        "AmbushBonusMeleeDamage_postfix"    "%"
+        "AmbushDuration_label"              "‏مدت کمین"
+        "AmbushDuration_postvalue_label"    "‏مدت کمین"
+        "AmbushDuration_postfix"            "s"
+        "StealthDuration_label"             "‏مدت مخفی‌کاری"
+        "StealthDuration_postvalue_label"   "‏مدت مخفی‌کاری"
+        "StealthDuration_postfix"           "s"
+        "SpottedRadius_label"               "‏شعاع شناسایی"
+        "SpottedRadius_postvalue_label"     "‏شعاع شناسایی"
+        "SpottedRadius_postfix"             "m"
+
+        //Majestic Leap
+        "upgrade_rocket_booster_desc"       "‏خود را به هوا <span class=\"highlight\">پرتاب</span> کرده و یک <span class=\"highlight\">مانع</span> به خود می‌دهید. در هوا، می‌توانید دوباره از فعال استفاده کنید تا سریع‌تر پایین بیایید.<br><br><span class=\"diminish\">‏‏در صورت حمله قهرمان دشمن، به مدت {s:InterruptCooldown}s قابل استفاده نیست.</span>"
+        "upgrade_rocket_booster_drop_down"  "‏پایین افتادن"
+
+        //Drain Will
+        "SpiritStealDuration_postfix"       "s"
+
+        //Reactive Barrier
+        "upgrade_vex_barrier_desc"          "‏زمانی که <span class=\"highlight\">گیجی، زنجیره، بی‌حرکتی، خواب یا سکوت</span> می‌شوید، یک <span class=\"highlight\">مانع</span> کسب می‌کنید."
+
+        //Spell Shield
+        "upgrade_spellshield_desc"          "‏{g:citadel_inline_attribute:'SpiritDamage'} یا <span class=\"highlight\">اثر منفی</span> بعدی را مسدود کرده و از اثرات آن جلوگیری می‌کند. فقط در خارج از نبرد بازتولید می‌شود."
+        "upgrade_spellshield_shield"        "‏نشان ضد روح"
+        "upgrade_spellshield/modifier_spellshield_linger_buff" "‏محافظ هگزا‌فویل شکسته شد!"
+        "SpellShieldFlavorText_label"       "‏برچسب!"
+        "SpellShieldFlavorText_postvalue_label" "‏برچسب!"
+
+        //Heal On Level
+        "upgrade_heal_on_level_desc"        "‏زمانی که یک <span class=\"highlight\">موهبت</span> دریافت می‌کنید، به طور خودکار <span class=\"highlight\">درمان</span> می‌شوید."
+        "upgrade_heal_on_level_buff"        "‏درمان هنگام افزایش سطح"
+        "HealOnlevelHealAmount_label"       "‏مقدار درمان"
+        "HealOnlevelHealAmount_postvalue_label" "‏مقدار درمان"
+        "upgrade_heal_on_level/heal_on_level_buff" "‏درمان هنگام افزایش سطح"
+
+        //Absorbing Armor
+        "upgrade_absorbing_armor_desc"      "‏دریافت ضربات سنگین {g:citadel_inline_attribute:'SpiritDamage'} از یک دشمن، یک <span class=\"highlight\">زمان بازیابی تصادفی از ابیلیتی‌ها</span> را کاهش می‌دهد."
+
+        //Healing Buff
+        "upgrade_healbuff_desc"             "‏اعمال {g:citadel_inline_attribute:'Heal'} به خود یا یک هم‌تیمی، به هدف {g:citadel_inline_attribute:'BonusFireRate'} و {g:citadel_inline_attribute:'BonusMoveSpeed'} می‌دهد.<br><br><span class=\"diminish\">‏‏روی بازسازی ذاتی یا سرقت جان پسیو گلوله/روح اعمال نمی‌شود.</span>"
+
+        //Infinite Magazine
+        "upgrade_infinitemagazine_desc"     "‏<span class=\"highlight\">گلوله بی‌نهایت</span> و {g:citadel_inline_attribute:'BonusFireRate'} دریافت می‌کنید."
+
+        //APRounds
+        "upgrade_aprounds_desc"             "‏گلوله‌های شما شانس دارند غیرقابل اجتناب شوند، از دشمنان <span class=\"highlight\">عبور کرده</span> و <span class=\"highlight\">مقاومت گلوله آن‌ها را نادیده بگیرند</span>."
+
+        //Deflecting Armor
+        "upgrade_deflecting_armor_desc"     "‏شانسی برای دفع گلوله‌های ورودی، جلوگیری از تمام {g:citadel_inline_attribute:'WeaponDamage'} یا جلوگیری از تمام <span class=\"highlight\">اثرات هنگام برخورد</span> گلوله‌ها بدست آورید."
+        "DeflectionPercent_label"           "‏درصد انحراف"
+        "DeflectionPercent_postvalue_label" "‏درصد انحراف"
+        "DeflectionPercent_postfix"         "%"
+        "BulletProcDeflectionPercent_label" "‏درصد جلوگیری از اثر هنگام اصابت"
+        "BulletProcDeflectionPercent_postvalue_label" "‏درصد جلوگیری از اثر هنگام اصابت"
+        "BulletProcDeflectionPercent_postfix" "%"
+
+        //Shadow Step Active
+        "upgrade_shadow_step_desc"          "‏مستقیماً به جلو <span class=\"highlight\">انتقال</span> کنید."
+
+        //Shadow Step Passive
+        "upgrade_shadow_step_passive_desc"  "‏به طور دوره‌ای به همه دشمنان نزدیک {g:citadel_inline_attribute:'SpiritDamage'} وارد می‌کند."
+
+        //Haunting Scream
+        "upgrade_haunting_scream_desc"      "‏یک پرتابه منبسط‌شونده پرتاب می‌کنید که دشمنان را برای مدت کوتاهی <span class=\"highlight\">نفرین</span> می‌کند."
+
+        //Apex Combat
+        "upgrade_apex_combat_desc"          "‏گلوله‌های شما بر روی دشمنان نزدیک به هدف <span class=\"highlight\">کمانه</span> می‌کنند، <span class=\"highlight\">هر گونه فعال‌سازی گلوله را اعمال</span> کرده و <span class=\"highlight\">درصدی از آسیب اصلی را وارد می‌کنند.</span>"
+
+        //Aerial Supremacy
+        "upgrade_aerial_supremacy_passive"  "‏استفاده <span class=\"highlight\">نامحدود</span> از <span class=\"highlight\">هوا پرش</span> یا <span class=\"highlight\">هوا جهش</span> را قبل از فرود امکان‌پذیر می‌کند."
+
+        //Infinite Rounds
+        "upgrade_infinite_rounds_desc"      "‏شما <span class=\"highlight\">گلوله بی‌نهایت</span> دارید."
+
+        //Ballistic Enchantment
+        "upgrade_bulletshredimbue_desc"     "‏<span class=\"highlight\">برد</span> یک ابیلیتی را افزایش میدهد. وارد کردن آسیب با آن ابیلیتی، به ازای هر <span class=\"highlight\">برخورد منحصر به فرد با هیرو</span>، <span class=\"highlight\">آسیب سلاح</span> شما را افزایش می‌دهد. اثر آن روی غیر هیرو‌ها کاهش می‌یابد."
+
+        //Recharging Bullets
+        "upgrade_rechargingbullets_desc"    "‏وارد کردن {g:citadel_inline_attribute:'WeaponDamage'} قابل توجه، یک شارژ برای <span class=\"highlight\">هر یک از ابیلیتی‌های دارای شارژ شما</span> را بازیابی می‌کند."
+        "CooldownReductionOnProc_postvalue_label" "‏کاهش زمان بازیابی"
+        "CooldownReductionOnProc_label"     "‏کاهش زمان بازیابی"
+        "CooldownReductionOnProc_postfix"   "s"
+        "CooldownReductionOnProc_prefix"    "{s:sign}"
+
+        //-----------------------------------------------------------------------------
+        // Street Brawl Tier5
+        //-----------------------------------------------------------------------------
+        "upgrade_icarus_wings_desc"         "‏هنگام پرواز، آسیب بیشتری وارد کرده و آسیب کمتری دریافت می‌کنید. امکان <span class=\"highlight\">نامحدود</span> هوا جهش و پرش را فراهم می‌کند."
+        "upgrade_mystical_piano_desc"       "‏پس از یک تاخیر کوتاه، دشمنان در منطقه هدف، گیجی شده و استقامت آن‌ها تخلیه می‌شود. پس از گیجی، به طور موقت گیج‌شده می‌شوند."
+        "upgrade_nullification_aura_desc"   "‏هر گونه اثر مثبت مبرخورد را حذف کرده و از مصرف استقامت و اثرات درمان روی دشمنان جلوگیری می‌کند."
+        "upgrade_nullification_aura_deathdamage_desc" "‏پس از مرگ شما، دمیج سنگین روح وارد می‌کند."
+        "upgrade_celestial_guidance_desc"   "‏یک پاک‌سازی بسیار قدرتمند اعمال می‌کند که هم‌تیمی شما را در کل نقشه بازیابی می‌کند."
+        "upgrade_eternal_gift_desc"         "‏به طور دوره‌ای یک اثر مثبت آماری دائمی تصادفی دریافت می‌کنید."
+        "upgrade_eternal_gift_respawn_desc" "‏زمان بازگشت مرگ بعدی شما را کاهش می‌دهد."
+        "upgrade_patrons_blessing_desc"     "‏به خود و هم‌تیمی یک هاله قدرتمند متمرکز بر روح می‌دهد. مقادیر آن روی هم‌تیمی کاهش می‌یابد."
+        "upgrade_patrons_blessing_proc_desc" "‏وارد کردن <span class=\"highlight\">آسیب</span> قابل توجه به یک هیرو دشمن در عرض {s:DamageThresholdDuration}s باعث می‌شود خود و هم‌تیمی نزدیک را درمان کنید."
+
+        "AllyPercentage_postvalue_label"    "‏درصد متحد"
+        "AllyPercentage_label"              "‏درصد متحد"
+        "AllyPercentage_postfix"            "%"
+        "AllyPercentage_prefix"             "{s:sign}"
+        "RespawnTime_postvalue_label"       "‏زمان بازگشت"
+        "RespawnTime_label"                 "‏زمان بازگشت"
+        "RespawnTime_postfix"               "%"
+        "RespawnTime_prefix"                "{s:sign}"
+
+        "upgrade_eldritch_shot_desc"        "‏گلوله بعدی شما یک اثر منفی قدرتمند اعمال می‌کند که آسیب خروجی، درمان و سرعت حرکت دشمن را کاهش می‌دهد. همچنین بر اساس جان فعلی هدف، {g:citadel_inline_attribute:'BonusSpiritDamage'} وارد می‌کند. <br><br>‏‏گلوله بزرگتر است و از اهداف عبور می‌کند."
+        "upgrade_cloak_of_opportunity_desc" "‏اثر منفی بعدی که باعث <span class=\"highlight\">قفل حرکت، گیجی، زنجیرشده، بی‌حرکتی، یا خواب</span> می‌شود را مسدود کرده و <span class=\"highlight\">توقف‌ناپذیر</span> می‌شوید. همچنین یک <span class=\"highlight\">مانع</span> و {g:citadel_inline_attribute:'MoveSpeed'} اضافی دریافت می‌کنید."
+        "upgrade_runed_gauntlets_desc"      "‏از دفع ضربه عبور می‌کند."
+        "upgrade_runed_gauntlets_parry_desc" "‏از دفع ضربه عبور می‌کند."
+        "upgrade_electric_slippers_desc"    "‏هنگام سر خوردن، از گلوله‌ها طفره رفته، سرعت شلیک دریافت کرده و به دشمنان اطراف خود آسیب وارد می‌کنید. <span class=\"diminish\"><br><br>‏‏زمان بازیابی به ازای هر هدف محاسبه می‌شود.</span>"
+        "upgrade_prism_blast_desc"          "‏برای مدت کوتاهی وارد حالت خلأ شده و <span class=\"highlight\">هدف‌پذیر و شکست‌ناپذیر</span> می‌شوید، در طی آن لیزرها از شما خارج شده و به دور شما می‌چرخند."
+        "upgrade_unstable_concoction_desc"  "‏یک معجون مصرف می‌کنید که به شما <span class=\"highlight\">توقف‌ناپذیر</span> و افزایش <span class=\"highlight\">سرعت، جان، روح و آسیب سلاح</span> می‌دهد. پس از مدت کوتاهی <span class=\"highlight\">می‌میرید و منفجر می‌شوید</span>، دشمنان نزدیک را گیج کرده و بر اساس حداکثر جان خود آسیب وارد می‌کنید. مرگ به این روش، زمان بازگشت شما را <span class=\"highlight\">{s:RespawnTimeMod}%</span> کاهش می‌دهد."
+        "upgrade_shivas_bracelet_desc"      "‏ابیلیتی تزریق شده، <span class=\"highlight\">زمان بازیابی کاهش یافته</span> و <span class=\"highlight\">قدرت روح</span> دریافت می‌کند. وقتی ابیلیتی آسیب وارد می‌کند، هدف را <span class=\"highlight\">منجمد</span> کرده و <span class=\"highlight\">آسیب اضافی</span> وارد می‌کند. <span class=\"diminish\"><br><br>‏‏زمان بازیابی به ازای هر هدف محاسبه می‌شود.</span>"
+        "upgrade_shadow_strike_desc"        "‏با <span class=\"highlight\">مصرف استقامت</span> بدون برد تشخیص، <span class=\"highlight\">نامرئی</span> می‌شوید. انجام یک <span class=\"highlight\">حمله ضربه نزدیک</span> در حالت نامرئی بودن باعث می‌شود <span class=\"highlight\">گلوله و مقاومت روح</span> آن‌ها را بدزدید و <span class=\"highlight\">آسیب به مرور زمان</span> وارد کنید."
+        "upgrade_omnicharge_pendant_desc"   "‏هر ابیلیتی فعال غیر آلتیمیت را با <span class=\"highlight\">شارژ ابیلیتی اضافه</span> تقویت می‌کند. ابیلیتی‌های از پیش شارژشده، شارژ اضافه بیشتری دریافت می‌کنند."
+        "upgrade_omnicharge_pendant_charges" "‏شارژهای اضافی"
+
+        //-----------------------------------------------------------------------------
+        // Cosmetic
+        //-----------------------------------------------------------------------------
+        "cosmetic_item_snowball"            "‏گلوله برفی"
+        "cosmetic_item_snowball_desc"       "‏به دوستان و دشمنان خود گلوله‌های برفی پرتاب کنید. با پیشرفت در <span class=\"highlight\">چالش تعطیلات ۲۰۲۵</span> برد و سایر ویژگی‌ها بهبود می‌یابند.<br><br><span class=\"diminish\">‏‏پرتاب گلوله برفی به سمت هم‌تیمی آسیبی وارد نمی‌کند و زمان بازیابی آن ریست می‌شود.</span>"
+        "SnowballSpeed_label"               "‏سرعت پرتاب"
+        "SnowballSpeed_postvalue_label"     "‏سرعت"
+        "SnowballSpeed_postfix"             "m/s"
+        "SnowballCount_label"               "‏گلوله‌های برفی پرتاب‌شده"
+        "SnowballCount_postvalue_label"     "‏پرتابه‌ها"
+        "cosmetic_item_voting_poster"       "‏قرار دادن پوستر"
+
+        // --- InlineAttribute NBSP Overrides (prevents line wrapping) ---
+        "InlineAttribute_FireRate"              "‏سرعت شلیک"
+        "InlineAttribute_BonusFireRate"         "‏سرعت شلیک اضافی"
+        "InlineAttribute_ReducedFireRate"       "‏سرعت شلیک کاهش‌یافته"
+        "InlineAttribute_MoveSpeed"             "‏سرعت حرکت"
+        "InlineAttribute_SpiritDamage"          "‏آسیب روح"
+        "InlineAttribute_BonusSpiritDamage"     "‏آسیب روح اضافی"
+        "InlineAttribute_WeaponDamage"          "‏آسیب سلاح"
+        "InlineAttribute_BonusWeaponDamage"     "‏آسیب سلاح اضافی"
+        "InlineAttribute_BulletDamage"          "‏آسیب گلوله"
+        "InlineAttribute_MeleeDamage"           "‏آسیب ضربه نزدیک"
+        "InlineAttribute_SpiritResist"          "‏مقاومت روح"
+        "InlineAttribute_BulletResist"          "‏مقاومت گلوله"
+        "InlineAttribute_SpiritDPS"             "‏آسیب روح در طول زمان"
+        "InlineAttribute_WeaponDPS"             "‏آسیب سلاح در طول زمان"
+        "InlineAttribute_MaxHealth"             "‏حداکثر جان"
+        "InlineAttribute_PureDamage"            "‏آسیب خالص"
+        "InlineAttribute_DamageAmp"             "‏آسیب افزایش‌یافته"
+        "InlineAttribute_StaminaRegenPerSecond" "‏بازیابی استقامت"
+    }
+}
