@@ -24,8 +24,13 @@ STAGE=''
 cleanup() { [[ -z $STAGE ]] || rm -rf -- "$STAGE"; rmdir -- "$LOCK" 2>/dev/null || true; }
 trap cleanup EXIT
 for item in menu vpk fonts; do
-    [[ -f "$BACKUP/$item.state" ]] || { echo "Missing backup state: $item" >&2; exit 1; }
-    state=$(<"$BACKUP/$item.state")
+    # Backwards compatibility: backups made before the font addition only
+    # contain menu.state / vpk.state; treat missing entries as absent.
+    if [[ -f "$BACKUP/$item.state" ]]; then
+        state=$(<"$BACKUP/$item.state")
+    else
+        state='absent'
+    fi
     if [[ $item == fonts ]]; then
         [[ $state == absent || ( $state == present && -d "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
     else
@@ -43,13 +48,22 @@ fi
 STAGE=$(mktemp -d "$GAME/.deadlock-persian-restore.XXXXXXXX")
 # Stage every available original before replacing anything. Keep backups on error.
 for item in menu vpk fonts; do
-    [[ $(<"$BACKUP/$item.state") != present ]] || cp -pR -- "$BACKUP/$item.original" "$STAGE/$item.original"
+    if [[ $item == fonts && -f "$BACKUP/$item.state" && $(<"$BACKUP/$item.state") == present ]]; then
+        cp -pR -- "$BACKUP/$item.original" "$STAGE/$item.original"
+    elif [[ $item != fonts && $(<"$BACKUP/$item.state") == present ]]; then
+        cp -pR -- "$BACKUP/$item.original" "$STAGE/$item.original"
+    fi
 done
 for item in menu vpk fonts; do
+    if [[ -f "$BACKUP/$item.state" ]]; then
+        state=$(<"$BACKUP/$item.state")
+    else
+        state='absent'
+    fi
     if [[ $item == menu ]]; then target="$GAME/$MENU_REL"
     elif [[ $item == vpk ]]; then target="$GAME/$VPK_REL"
     else target="$GAME/$FONTS_REL"; fi
-    if [[ $(<"$BACKUP/$item.state") == present ]]; then
+    if [[ $state == present ]]; then
         if [[ $item == fonts ]]; then rm -rf -- "$target"; fi
         mkdir -p -- "$(dirname -- "$target")"
         mv -f -- "$STAGE/$item.original" "$target"

@@ -38,7 +38,13 @@ python3 "$TRANSLATOR" "$STAGE/$VPK_REL"
 if [[ -e $BACKUP ]]; then
     [[ -d $BACKUP && -f "$BACKUP/format" && $(<"$BACKUP/format") == 'deadlock-persian-v1' && -f "$BACKUP/menu.state" && -f "$BACKUP/vpk.state" ]] || { echo "Invalid backup directory; refusing to overwrite it: $BACKUP" >&2; exit 1; }
     for item in menu vpk fonts; do
-        state=$(<"$BACKUP/$item.state")
+        # Backwards compatibility: backups made before the font addition only
+        # contain menu.state / vpk.state; treat missing entries as absent.
+        if [[ -f "$BACKUP/$item.state" ]]; then
+            state=$(<"$BACKUP/$item.state")
+        else
+            state='absent'
+        fi
         if [[ $item == fonts ]]; then
             [[ $state == absent || ( $state == present && -d "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
         else
