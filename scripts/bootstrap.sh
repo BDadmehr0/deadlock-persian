@@ -15,7 +15,7 @@ if [[ ! -e $DIR ]]; then
     trap 'rm -rf -- "$STAGE"' EXIT
     git clone --filter=blob:none --no-checkout --single-branch --branch "$REF" "$REPO" "$STAGE/repo"
     git -C "$STAGE/repo" sparse-checkout init --no-cone
-    git -C "$STAGE/repo" sparse-checkout set --no-cone '/.gitignore' '/data/citadel_main_english.txt' '/data/pak82_dir.vpk' '/tools/translate_common.py' '/tools/persian_terms.py' '/install.sh' '/uninstall.sh' '/manage.sh' '/scripts/install_windows.py'
+    git -C "$STAGE/repo" sparse-checkout set --no-cone '/.gitignore' '/data/citadel_main_english.txt' '/data/pak82_dir.vpk' '/data/fonts/' '/tools/translate_common.py' '/tools/persian_terms.py' '/install.sh' '/uninstall.sh' '/manage.sh' '/scripts/install_windows.py'
     git -C "$STAGE/repo" checkout "$REF"
     mv -- "$STAGE/repo" "$DIR"
 else
