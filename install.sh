@@ -111,6 +111,43 @@ while IFS= read -r font; do
     mkdir -p -- "$GAME/$FONTS_REL/$(dirname -- "$dest_rel")"
     cp -f -- "$font" "$GAME/$FONTS_REL/$dest_rel"
 done < <(find "$STAGE_FONTS" -type f | sort)
+
+# Patch the game's panorama/fonts/fonts.conf so Panorama uses Vazirmatn for
+# Arabic-script (Persian) UI text. Deadlock already remaps fonts per-language
+# in this same file, so we add a matching rule before </fontconfig>. The game
+# directory's fonts.conf is part of the backed-up fonts folder, so uninstall
+# restores the original automatically.
+FONTS_CONF="$GAME/$FONTS_REL/fonts.conf"
+if [[ -f $FONTS_CONF && ! -L $FONTS_CONF ]]; then
+    if ! grep -q 'deadlock-persian' "$FONTS_CONF" 2>/dev/null; then
+        python3 - "$FONTS_CONF" <<'PY'
+import sys
+path = sys.argv[1]
+rule = (
+    '    <!-- deadlock-persian: Vazirmatn for Persian (Arabic-script) UI text -->\n'
+    '    <match>\n'
+    '        <test qual="any" name="charset" compare="contains">\n'
+    '            <string>Arabic</string>\n'
+    '        </test>\n'
+    '        <edit name="family" mode="prepend" binding="strong">\n'
+    '            <string>Vazirmatn</string>\n'
+    '        </edit>\n'
+    '    </match>\n'
+)
+with open(path, 'r', encoding='utf-8') as f:
+    data = f.read()
+marker = '</fontconfig>'
+idx = data.rfind(marker)
+if idx < 0:
+    raise SystemExit('fonts.conf: </fontconfig> not found; not patching')
+data = data[:idx] + rule + data[idx:]
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(data)
+PY
+    fi
+fi
+
 echo "Installed Persian translation in: $GAME"
 echo "Original files are backed up in: $BACKUP"
 echo 'The menu translation is incomplete and has not been tested in game.'
+echo 'Restart Deadlock for the Vazirmatn font to take effect.'
