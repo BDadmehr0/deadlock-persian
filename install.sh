@@ -12,7 +12,10 @@ GAME=$(cd -- "$GAME" && pwd -P)
 MENU_REL='resource/localization/citadel_main/citadel_main_english.txt'
 VPK_REL='pak82_dir.vpk'
 FONTS_REL='panorama/fonts'
-CORE_FONTS_REL='core/panorama/fonts'
+# The engine-wide fontconfig lives in game/core/panorama/fonts (next to the
+# citadel folder). Earlier installer versions wrongly used citadel/core/... .
+CORE_FONTS_REL='../core/panorama/fonts'
+LEGACY_CORE_REL='core/panorama/fonts'
 BACKUP="$GAME/.deadlock-persian-backup"
 LOCK="$GAME/.deadlock-persian.lock"
 SOURCE_MENU="$ROOT/data/citadel_main_english.txt"
@@ -35,23 +38,20 @@ cp -- "$SOURCE_MENU" "$STAGE/menu.txt"
 cp -R -- "$SOURCE_FONTS/." "$STAGE_FONTS/"
 python3 "$TRANSLATOR" "$STAGE/$VPK_REL"
 
-# Panorama reads fonts.conf from both panorama/fonts AND core/panorama/fonts.
-# We install fonts into both and patch fonts.conf in both so whichever one the
-# game actually loads picks up Vazirmatn for Persian text.
-FONT_DIRS=(menu vpk fonts corefonts)
-declare -A FONT_TARGET=(
-    [fonts]="$GAME/$FONTS_REL"
-    [corefonts]="$GAME/$CORE_FONTS_REL"
-)
-declare -A FONT_KIND=(
-    [fonts]='d'
-    [corefonts]='d'
-)
+# Font deploy targets. corefonts is only used when the game's core folder
+# exists next to citadel (the real Deadlock layout).
+FONT_ITEMS=(fonts)
+declare -A FONT_TARGET=([fonts]="$GAME/$FONTS_REL")
+if [[ -d $GAME/../core/panorama ]]; then
+    FONT_ITEMS+=(corefonts)
+    FONT_TARGET[corefonts]="$GAME/$CORE_FONTS_REL"
+fi
+ALL_ITEMS=(menu vpk "${FONT_ITEMS[@]}")
 
 # Preserve the very first pre-install state. Never replace a previous backup.
 if [[ -e $BACKUP ]]; then
     [[ -d $BACKUP && -f "$BACKUP/format" && $(<"$BACKUP/format") == 'deadlock-persian-v1' && -f "$BACKUP/menu.state" && -f "$BACKUP/vpk.state" ]] || { echo "Invalid backup directory; refusing to overwrite it: $BACKUP" >&2; exit 1; }
-    for item in "${FONT_DIRS[@]}"; do
+    for item in menu vpk fonts corefonts; do
         # Backwards compatibility: older backups only have menu.state / vpk.state;
         # treat missing entries as absent.
         if [[ -f "$BACKUP/$item.state" ]]; then
@@ -75,12 +75,16 @@ else
     TEMP_BACKUP="$STAGE/backup"
     mkdir -- "$TEMP_BACKUP"
     printf '%s\n' 'deadlock-persian-v1' > "$TEMP_BACKUP/format"
-    for item in "${FONT_DIRS[@]}"; do
+    for item in menu vpk fonts corefonts; do
         case "$item" in
             menu) target="$GAME/$MENU_REL"; kind='f' ;;
             vpk)  target="$GAME/$VPK_REL";  kind='f' ;;
-            *)    target="${FONT_TARGET[$item]}"; kind="${FONT_KIND[$item]}" ;;
+            *)    target="${FONT_TARGET[$item]:-}"; kind='d' ;;
         esac
+        if [[ $item == corefonts && -z $target ]]; then
+            printf 'absent\n' > "$TEMP_BACKUP/$item.state"
+            continue
+        fi
         if [[ -L $target || ( -e $target && ( ( $kind == d && ! -d $target ) || ( $kind == f && ! -f $target ) ) ) ]]; then echo "Refusing to replace non-$kind file or symlink: $target" >&2; exit 1; fi
         if [[ -e $target ]]; then
             cp -pR -- "$target" "$TEMP_BACKUP/$item.original"
@@ -91,6 +95,19 @@ else
     done
     mv -- "$TEMP_BACKUP" "$BACKUP"
 fi
+
+# Remove files placed in the wrong citadel/core path by earlier versions.
+cleanup_legacy_core() {
+    local wrong="$GAME/$LEGACY_CORE_REL"
+    [[ -d $wrong ]] || return 0
+    rm -f -- "$wrong/Vazirmatn-Regular.ttf" "$wrong/Vazirmatn-Bold.ttf" \
+             "$wrong/conf.d/99-deadlock-persian.conf" "$wrong/fonts.conf.patched" 2>/dev/null || true
+    rm -rf -- "$wrong/vazirmatn" 2>/dev/null || true
+    find "$wrong" -mindepth 1 -type d -empty -delete 2>/dev/null || true
+    rmdir -p -- "$wrong" 2>/dev/null || true
+}
+cleanup_legacy_core
+
 # Record intended hashes before replacing either file, so a failed install can
 # still be recovered using uninstall.sh --force.
 # The manifest lists installed font files (relative to each font dir).
@@ -112,8 +129,8 @@ mv -f -- "$STAGE/fonts.installed" "$BACKUP/fonts.installed"
             vazirmatn/*.ttf) dest_rel="$(basename -- "$rel")" ;;
             *) dest_rel="$rel" ;;
         esac
-        # The same logical font file goes into both game font directories.
-        for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
+        for item in "${FONT_ITEMS[@]}"; do
+            dir_rel=$([[ $item == fonts ]] && printf '%s' "$FONTS_REL" || printf '%s' "$CORE_FONTS_REL")
             printf '%s  %s\n' "$(sha256sum "$font" | cut -d' ' -f1)" "$dir_rel/$dest_rel"
         done
     done < <(find "$STAGE_FONTS" -type f | sort)
@@ -123,11 +140,11 @@ mkdir -p -- "$(dirname -- "$GAME/$MENU_REL")"
 # Staging and destination are on the same filesystem; renames are atomic.
 mv -f -- "$STAGE/menu.txt" "$GAME/$MENU_REL"
 mv -f -- "$STAGE/$VPK_REL" "$GAME/$VPK_REL"
-# Merge the Vazirmatn font files into both game font directories.
+# Merge the Vazirmatn font files into the game's font folders.
 # TTFs belong at the folder root so fonts.conf can scan them; conf.d rules
 # keep their subdirectory.
-for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
-    target="$GAME/$dir_rel"
+for item in "${FONT_ITEMS[@]}"; do
+    target="${FONT_TARGET[$item]}"
     mkdir -p -- "$target"
     while IFS= read -r font; do
         rel="${font#$STAGE_FONTS/}"
@@ -140,19 +157,25 @@ for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
     done < <(find "$STAGE_FONTS" -type f | sort)
 done
 
-# Patch fonts.conf in BOTH font directories so Panorama uses Vazirmatn for
-# Arabic-script (Persian) UI text. Deadlock remaps fonts per-language in this
-# same file, so we add a matching rule before </fontconfig>. Whichever
-# fonts.conf the game loads will pick up the rule.
+# Patch fonts.conf so Panorama uses Vazirmatn for Arabic-script (Persian) UI
+# text. Deadlock remaps fonts per-language in this same file, so we add a
+# matching rule before </fontconfig>. Any earlier deadlock-persian rule block
+# is replaced so rule updates take effect on reinstall.
 patch_fonts_conf() {
     local conf="$1"
     [[ -f $conf && ! -L $conf ]] || return 0
-    if grep -q 'deadlock-persian' "$conf" 2>/dev/null; then return 0; fi
     python3 - "$conf" <<'PY'
 import sys
 path = sys.argv[1]
+start = '<!-- deadlock-persian'
+end = '</fontconfig>'
 rule = (
     '    <!-- deadlock-persian: Vazirmatn for Persian (Arabic-script) UI text -->\n'
+    '    <match>\n'
+    '        <edit name="family" mode="append">\n'
+    '            <string>Vazirmatn</string>\n'
+    '        </edit>\n'
+    '    </match>\n'
     '    <match>\n'
     '        <test qual="any" name="charset" compare="contains">\n'
     '            <string>Arabic</string>\n'
@@ -164,8 +187,12 @@ rule = (
 )
 with open(path, 'r', encoding='utf-8') as f:
     data = f.read()
-marker = '</fontconfig>'
-idx = data.rfind(marker)
+# Remove any earlier rule block (inserted just before </fontconfig>).
+i = data.find(start)
+j = data.rfind(end)
+if i >= 0 and j > i:
+    data = data[:i] + data[j:]
+idx = data.rfind(end)
 if idx < 0:
     raise SystemExit('fonts.conf: </fontconfig> not found; not patching')
 data = data[:idx] + rule + data[idx:]
@@ -173,14 +200,17 @@ with open(path, 'w', encoding='utf-8') as f:
     f.write(data)
 PY
 }
-patch_fonts_conf "$GAME/$FONTS_REL/fonts.conf"
-patch_fonts_conf "$GAME/$CORE_FONTS_REL/fonts.conf"
+for item in "${FONT_ITEMS[@]}"; do
+    dir_rel=$([[ $item == fonts ]] && printf '%s' "$FONTS_REL" || printf '%s' "$CORE_FONTS_REL")
+    patch_fonts_conf "$GAME/$dir_rel/fonts.conf"
+done
 # Record which fonts.conf files carry our rule so uninstall can strip it even
 # when no directory backup exists (backups from before this feature).
 {
-    for conf_rel in "$FONTS_REL/fonts.conf" "$CORE_FONTS_REL/fonts.conf"; do
-        if [[ -f "$GAME/$conf_rel" ]] && grep -q 'deadlock-persian' "$GAME/$conf_rel" 2>/dev/null; then
-            printf '%s\n' "$conf_rel"
+    for item in "${FONT_ITEMS[@]}"; do
+        dir_rel=$([[ $item == fonts ]] && printf '%s' "$FONTS_REL" || printf '%s' "$CORE_FONTS_REL")
+        if [[ -f "$GAME/$dir_rel/fonts.conf" ]] && grep -q 'deadlock-persian' "$GAME/$dir_rel/fonts.conf" 2>/dev/null; then
+            printf '%s\n' "$dir_rel/fonts.conf"
         fi
     done
 } > "$STAGE/fonts.conf.patched"

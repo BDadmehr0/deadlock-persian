@@ -18,7 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 MENU = Path('resource/localization/citadel_main/citadel_main_english.txt')
 VPK = Path('pak82_dir.vpk')
 FONTS = Path('panorama/fonts')
-CORE_FONTS = Path('core/panorama/fonts')
+CORE_FONTS = Path('../core/panorama/fonts')
+LEGACY_CORE_FONTS = Path('core/panorama/fonts')
 BACKUP = '.deadlock-persian-backup'
 LOCK = '.deadlock-persian.lock'
 PATCH_MARKER = 'deadlock-persian'
@@ -26,6 +27,11 @@ PATCH_START = '<!-- deadlock-persian'
 PATCH_END = '</fontconfig>'
 PATCH_RULE = (
     '    <!-- deadlock-persian: Vazirmatn for Persian (Arabic-script) UI text -->\n'
+    '    <match>\n'
+    '        <edit name="family" mode="append">\n'
+    '            <string>Vazirmatn</string>\n'
+    '        </edit>\n'
+    '    </match>\n'
     '    <match>\n'
     '        <test qual="any" name="charset" compare="contains">\n'
     '            <string>Arabic</string>\n'
@@ -105,23 +111,55 @@ def backup_states(backup):
     return states
 
 
+def font_dirs(game):
+    # The engine-wide fontconfig lives in game/core/panorama/fonts (next to the
+    # citadel folder). Earlier installer versions wrongly used citadel/core/... .
+    dirs = [FONTS]
+    if (game / '../core/panorama').is_dir():
+        dirs.append(CORE_FONTS)
+    return dirs
+
+
+def cleanup_legacy_core(game):
+    wrong = game / LEGACY_CORE_FONTS
+    if not wrong.is_dir():
+        return
+    for name in ('Vazirmatn-Regular.ttf', 'Vazirmatn-Bold.ttf',
+                 'conf.d/99-deadlock-persian.conf'):
+        (wrong / name).unlink(missing_ok=True)
+    shutil.rmtree(wrong / 'vazirmatn', ignore_errors=True)
+    for sub in sorted((p for p in wrong.rglob('*') if p.is_dir()), reverse=True):
+        try:
+            sub.rmdir()
+        except OSError:
+            pass
+    d = wrong
+    while d != game:
+        try:
+            d.rmdir()
+        except OSError:
+            break
+        d = d.parent
+
+
 def installed_matches(game, backup):
     try:
         lines = (backup / 'installed.sha256').read_text(encoding='ascii').splitlines()
         expected = {}
+        known = (MENU.as_posix(), VPK.as_posix())
+        prefixes = tuple(d.as_posix() + '/' for d in FONT_DIRS) + (LEGACY_CORE_FONTS.as_posix() + '/',)
         for line in lines:
             digest, name = line.split('  ', 1)
             if not re.fullmatch(r'[a-fA-F0-9]{64}', digest):
                 return False
-            if name not in (MENU.as_posix(), VPK.as_posix()) and not any(
-                    name.startswith(d.as_posix() + '/') for d in FONT_DIRS):
+            if name not in known and not name.startswith(prefixes):
                 return False
             expected[name] = digest.lower()
-        for name in (MENU.as_posix(), VPK.as_posix()):
+        for name in known:
             if name not in expected or not (game / name).is_file() or file_hash(game / name) != expected[name]:
                 return False
         for name, digest in expected.items():
-            if any(name.startswith(d.as_posix() + '/') for d in FONT_DIRS):
+            if name.startswith(prefixes):
                 if not (game / name).is_file() or file_hash(game / name) != digest:
                     return False
         return True
@@ -137,12 +175,15 @@ def font_dest_rel(rel):
 
 
 def patch_fonts_conf(conf):
-    """Insert the Vazirmatn rule before </fontconfig>; no-op if already patched."""
+    """Insert the Vazirmatn rule before </fontconfig>, replacing any earlier
+    deadlock-persian rule block so rule updates take effect on reinstall."""
     if not conf.is_file() or conf.is_symlink():
         return
     data = conf.read_text(encoding='utf-8')
-    if PATCH_MARKER in data:
-        return
+    i = data.find(PATCH_START)
+    j = data.rfind(PATCH_END)
+    if i >= 0 and j > i:
+        data = data[:i] + data[j:]
     idx = data.rfind(PATCH_END)
     if idx < 0:
         raise ValueError(f'{conf}: {PATCH_END} not found; not patching')
@@ -177,7 +218,10 @@ def install(game):
         shutil.copy2(src_vpk, stage / VPK)
         shutil.copytree(src_fonts, stage / 'fonts')
         subprocess.run([sys.executable, str(translator), str(stage / VPK)], check=True)
-        items = (('menu', MENU), ('vpk', VPK), ('fonts', FONTS), ('corefonts', CORE_FONTS))
+        items = [('menu', MENU), ('vpk', VPK), ('fonts', FONTS)]
+        fdirs = font_dirs(game)
+        if CORE_FONTS in fdirs:
+            items.append(('corefonts', CORE_FONTS))
         if backup.exists():
             backup_states(backup)
             if not installed_matches(game, backup):
@@ -201,8 +245,11 @@ def install(game):
                     if state == 'present':
                         shutil.copy2(target, new_backup / f'{name}.original')
                 (new_backup / f'{name}.state').write_text(state + '\n', encoding='ascii')
+            if not (new_backup / 'corefonts.state').is_file():
+                (new_backup / 'corefonts.state').write_text('absent\n', encoding='ascii')
             (new_backup / 'fonts.installed').write_text('', encoding='ascii')
             os.replace(new_backup, backup)
+        cleanup_legacy_core(game)
         stage_fonts = stage / 'fonts'
         # Fresh manifest of installed font files (relative to each font dir).
         manifest_lines = []
@@ -212,7 +259,7 @@ def install(game):
                 rel = f.relative_to(stage_fonts).as_posix()
                 dest_rel = font_dest_rel(rel).as_posix()
                 manifest_lines.append(dest_rel + '\n')
-                for dir_rel in FONT_DIRS:
+                for dir_rel in fdirs:
                     font_hashes.append(f'{file_hash(f)}  {(dir_rel / dest_rel).as_posix()}\n')
         (backup / 'fonts.installed').write_text(''.join(manifest_lines), encoding='ascii')
         hashes = (f'{file_hash(stage / "menu.txt")}  {MENU.as_posix()}\n'
@@ -223,7 +270,7 @@ def install(game):
         (game / MENU).parent.mkdir(parents=True, exist_ok=True)
         os.replace(stage / 'menu.txt', game / MENU)
         os.replace(stage / VPK, game / VPK)
-        for dir_rel in FONT_DIRS:
+        for dir_rel in fdirs:
             game_fonts = game / dir_rel
             game_fonts.mkdir(parents=True, exist_ok=True)
             for f in sorted(stage_fonts.rglob('*')):
@@ -234,12 +281,12 @@ def install(game):
                     shutil.copy2(f, dest)
         # Patch fonts.conf in both font dirs so whichever one Panorama loads
         # picks up Vazirmatn for Arabic-script (Persian) UI text.
-        for dir_rel in FONT_DIRS:
+        for dir_rel in fdirs:
             patch_fonts_conf(game / dir_rel / 'fonts.conf')
         # Record which fonts.conf files carry our rule so uninstall can strip
         # it even when no directory backup exists.
         patched = []
-        for dir_rel in FONT_DIRS:
+        for dir_rel in fdirs:
             conf = game / dir_rel / 'fonts.conf'
             if conf.is_file() and PATCH_MARKER in conf.read_text(encoding='utf-8'):
                 patched.append((dir_rel / 'fonts.conf').as_posix() + '\n')
@@ -304,6 +351,7 @@ def uninstall(game, force):
             for line in patched_list.read_text(encoding='ascii').splitlines():
                 if line.strip():
                     unpatch_fonts_conf(game / line.strip())
+        cleanup_legacy_core(game)
     shutil.rmtree(backup)
     print(f'Translation removed; original files restored: {game}')
 
