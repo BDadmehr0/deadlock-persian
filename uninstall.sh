@@ -16,6 +16,7 @@ GAME=$(cd -- "$GAME" && pwd -P)
 MENU_REL='resource/localization/citadel_main/citadel_main_english.txt'
 VPK_REL='pak82_dir.vpk'
 FONTS_REL='panorama/fonts'
+CORE_FONTS_REL='core/panorama/fonts'
 BACKUP="$GAME/.deadlock-persian-backup"
 LOCK="$GAME/.deadlock-persian.lock"
 [[ -d $BACKUP && -f "$BACKUP/format" && $(<"$BACKUP/format") == 'deadlock-persian-v1' ]] || { echo "No valid installer backup found: $BACKUP" >&2; exit 1; }
@@ -23,15 +24,20 @@ mkdir -- "$LOCK" 2>/dev/null || { echo "Another install/uninstall is running, or
 STAGE=''
 cleanup() { [[ -z $STAGE ]] || rm -rf -- "$STAGE"; rmdir -- "$LOCK" 2>/dev/null || true; }
 trap cleanup EXIT
-for item in menu vpk fonts; do
-    # Backwards compatibility: backups made before the font addition only
-    # contain menu.state / vpk.state; treat missing entries as absent.
+FONT_DIRS=(menu vpk fonts corefonts)
+declare -A FONT_TARGET=(
+    [fonts]="$GAME/$FONTS_REL"
+    [corefonts]="$GAME/$CORE_FONTS_REL"
+)
+for item in "${FONT_DIRS[@]}"; do
+    # Backwards compatibility: older backups only have menu.state / vpk.state;
+    # treat missing entries as absent.
     if [[ -f "$BACKUP/$item.state" ]]; then
         state=$(<"$BACKUP/$item.state")
     else
         state='absent'
     fi
-    if [[ $item == fonts ]]; then
+    if [[ $item == fonts || $item == corefonts ]]; then
         [[ $state == absent || ( $state == present && -d "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
     else
         [[ $state == absent || ( $state == present && -f "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
@@ -47,34 +53,39 @@ if [[ $FORCE -eq 0 ]]; then
 fi
 STAGE=$(mktemp -d "$GAME/.deadlock-persian-restore.XXXXXXXX")
 # Stage every available original before replacing anything. Keep backups on error.
-for item in menu vpk fonts; do
-    if [[ $item == fonts && -f "$BACKUP/$item.state" && $(<"$BACKUP/$item.state") == present ]]; then
-        cp -pR -- "$BACKUP/$item.original" "$STAGE/$item.original"
-    elif [[ $item != fonts && $(<"$BACKUP/$item.state") == present ]]; then
+for item in "${FONT_DIRS[@]}"; do
+    if [[ -f "$BACKUP/$item.state" && $(<"$BACKUP/$item.state") == present ]]; then
         cp -pR -- "$BACKUP/$item.original" "$STAGE/$item.original"
     fi
 done
-for item in menu vpk fonts; do
-    if [[ -f "$BACKUP/$item.state" ]]; then
-        state=$(<"$BACKUP/$item.state")
-    else
-        state='absent'
-    fi
-    if [[ $item == menu ]]; then target="$GAME/$MENU_REL"
-    elif [[ $item == vpk ]]; then target="$GAME/$VPK_REL"
-    else target="$GAME/$FONTS_REL"; fi
-    if [[ $state == present ]]; then
-        if [[ $item == fonts ]]; then rm -rf -- "$target"; fi
+for item in "${FONT_DIRS[@]}"; do
+    case "$item" in
+        menu) target="$GAME/$MENU_REL" ;;
+        vpk)  target="$GAME/$VPK_REL" ;;
+        *)    target="${FONT_TARGET[$item]}" ;;
+    esac
+    if [[ -f "$BACKUP/$item.state" && $(<"$BACKUP/$item.state") == present ]]; then
+        if [[ $item == fonts || $item == corefonts ]]; then rm -rf -- "$target"; fi
         mkdir -p -- "$(dirname -- "$target")"
-        mv -f -- "$STAGE/$item.original" "$target"
+        if [[ $item == fonts || $item == corefonts ]]; then
+            cp -pR -- "$STAGE/$item.original" "$target"
+        else
+            mv -f -- "$STAGE/$item.original" "$target"
+        fi
     else
-        if [[ $item == fonts ]]; then
+        if [[ $item == fonts || $item == corefonts ]]; then
             if [[ -f "$BACKUP/fonts.installed" ]]; then
-                while IFS= read -r font; do rm -f -- "$GAME/$FONTS_REL/$font"; done < "$BACKUP/fonts.installed"
+                while IFS= read -r font; do
+                    for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
+                        rm -f -- "$GAME/$dir_rel/$font"
+                    done
+                done < "$BACKUP/fonts.installed"
             fi
             # Remove empty subdirectories the installer may have added (conf.d/, vazirmatn/).
             find "$GAME/$FONTS_REL" -mindepth 1 -type d -empty -delete 2>/dev/null || true
+            find "$GAME/$CORE_FONTS_REL" -mindepth 1 -type d -empty -delete 2>/dev/null || true
             rmdir -- "$GAME/$FONTS_REL" 2>/dev/null || true
+            rmdir -- "$GAME/$CORE_FONTS_REL" 2>/dev/null || true
         elif [[ -d $target && ! -L $target ]]; then
             echo "Refusing to remove directory: $target" >&2; exit 1
         else
@@ -82,5 +93,34 @@ for item in menu vpk fonts; do
         fi
     fi
 done
+# Strip our fonts.conf rule from any patched config. Handles backups that
+# predate the font feature (no directory backup for the font folders), where
+# the game's own fonts.conf was patched in place and cannot be restored from a
+# backup copy.
+if [[ -f "$BACKUP/fonts.conf.patched" && -s "$BACKUP/fonts.conf.patched" ]]; then
+    command -v python3 >/dev/null || { echo 'Missing dependency: python3' >&2; exit 1; }
+    while IFS= read -r conf_rel; do
+        [[ -n $conf_rel ]] || continue
+        conf="$GAME/$conf_rel"
+        [[ -f $conf ]] || continue
+        python3 - "$conf" <<'PY'
+import sys
+path = sys.argv[1]
+start = '<!-- deadlock-persian'
+end = '</fontconfig>'
+with open(path, encoding='utf-8') as f:
+    data = f.read()
+i = data.find(start)
+if i < 0:
+    raise SystemExit(0)
+j = data.rfind(end)
+if j < 0 or j < i:
+    raise SystemExit(0)
+data = data[:i] + data[j:]
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(data)
+PY
+    done < "$BACKUP/fonts.conf.patched"
+fi
 rm -rf -- "$BACKUP"
 echo "Translation removed and original files restored: $GAME"

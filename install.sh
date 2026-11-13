@@ -12,6 +12,7 @@ GAME=$(cd -- "$GAME" && pwd -P)
 MENU_REL='resource/localization/citadel_main/citadel_main_english.txt'
 VPK_REL='pak82_dir.vpk'
 FONTS_REL='panorama/fonts'
+CORE_FONTS_REL='core/panorama/fonts'
 BACKUP="$GAME/.deadlock-persian-backup"
 LOCK="$GAME/.deadlock-persian.lock"
 SOURCE_MENU="$ROOT/data/citadel_main_english.txt"
@@ -34,18 +35,31 @@ cp -- "$SOURCE_MENU" "$STAGE/menu.txt"
 cp -R -- "$SOURCE_FONTS/." "$STAGE_FONTS/"
 python3 "$TRANSLATOR" "$STAGE/$VPK_REL"
 
+# Panorama reads fonts.conf from both panorama/fonts AND core/panorama/fonts.
+# We install fonts into both and patch fonts.conf in both so whichever one the
+# game actually loads picks up Vazirmatn for Persian text.
+FONT_DIRS=(menu vpk fonts corefonts)
+declare -A FONT_TARGET=(
+    [fonts]="$GAME/$FONTS_REL"
+    [corefonts]="$GAME/$CORE_FONTS_REL"
+)
+declare -A FONT_KIND=(
+    [fonts]='d'
+    [corefonts]='d'
+)
+
 # Preserve the very first pre-install state. Never replace a previous backup.
 if [[ -e $BACKUP ]]; then
     [[ -d $BACKUP && -f "$BACKUP/format" && $(<"$BACKUP/format") == 'deadlock-persian-v1' && -f "$BACKUP/menu.state" && -f "$BACKUP/vpk.state" ]] || { echo "Invalid backup directory; refusing to overwrite it: $BACKUP" >&2; exit 1; }
-    for item in menu vpk fonts; do
-        # Backwards compatibility: backups made before the font addition only
-        # contain menu.state / vpk.state; treat missing entries as absent.
+    for item in "${FONT_DIRS[@]}"; do
+        # Backwards compatibility: older backups only have menu.state / vpk.state;
+        # treat missing entries as absent.
         if [[ -f "$BACKUP/$item.state" ]]; then
             state=$(<"$BACKUP/$item.state")
         else
             state='absent'
         fi
-        if [[ $item == fonts ]]; then
+        if [[ $item == fonts || $item == corefonts ]]; then
             [[ $state == absent || ( $state == present && -d "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
         else
             [[ $state == absent || ( $state == present && -f "$BACKUP/$item.original" ) ]] || { echo "Backup for $item is incomplete." >&2; exit 1; }
@@ -61,10 +75,12 @@ else
     TEMP_BACKUP="$STAGE/backup"
     mkdir -- "$TEMP_BACKUP"
     printf '%s\n' 'deadlock-persian-v1' > "$TEMP_BACKUP/format"
-    for item in menu vpk fonts; do
-        if [[ $item == menu ]]; then target="$GAME/$MENU_REL"; kind='f'
-        elif [[ $item == vpk ]]; then target="$GAME/$VPK_REL"; kind='f'
-        else target="$GAME/$FONTS_REL"; kind='d'; fi
+    for item in "${FONT_DIRS[@]}"; do
+        case "$item" in
+            menu) target="$GAME/$MENU_REL"; kind='f' ;;
+            vpk)  target="$GAME/$VPK_REL";  kind='f' ;;
+            *)    target="${FONT_TARGET[$item]}"; kind="${FONT_KIND[$item]}" ;;
+        esac
         if [[ -L $target || ( -e $target && ( ( $kind == d && ! -d $target ) || ( $kind == f && ! -f $target ) ) ) ]]; then echo "Refusing to replace non-$kind file or symlink: $target" >&2; exit 1; fi
         if [[ -e $target ]]; then
             cp -pR -- "$target" "$TEMP_BACKUP/$item.original"
@@ -77,20 +93,29 @@ else
 fi
 # Record intended hashes before replacing either file, so a failed install can
 # still be recovered using uninstall.sh --force.
+# The manifest lists installed font files (relative to each font dir).
+while IFS= read -r font; do
+    rel="${font#$STAGE_FONTS/}"
+    case "$rel" in
+        vazirmatn/*.ttf) basename -- "$rel" ;;
+        *) printf '%s\n' "$rel" ;;
+    esac
+done < <(find "$STAGE_FONTS" -type f | sort) > "$STAGE/fonts.installed"
+mv -f -- "$STAGE/fonts.installed" "$BACKUP/fonts.installed"
 {
     printf '%s  %s\n' "$(sha256sum "$STAGE/menu.txt" | cut -d' ' -f1)" "$MENU_REL"
     printf '%s  %s\n' "$(sha256sum "$STAGE/$VPK_REL" | cut -d' ' -f1)" "$VPK_REL"
-    # Record every font file we are about to install, relative to the game dir.
-    # TTFs land at panorama/fonts/ root, conf.d files keep their subdirectory.
+    # Record every font file we are about to install (both font dirs).
     while IFS= read -r font; do
         rel="${font#$STAGE_FONTS/}"
         case "$rel" in
             vazirmatn/*.ttf) dest_rel="$(basename -- "$rel")" ;;
             *) dest_rel="$rel" ;;
         esac
-        game_rel="$FONTS_REL/$dest_rel"
-        printf '%s  %s\n' "$(sha256sum "$font" | cut -d' ' -f1)" "$game_rel"
-        printf '%s\n' "$dest_rel" >> "$BACKUP/fonts.installed"
+        # The same logical font file goes into both game font directories.
+        for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
+            printf '%s  %s\n' "$(sha256sum "$font" | cut -d' ' -f1)" "$dir_rel/$dest_rel"
+        done
     done < <(find "$STAGE_FONTS" -type f | sort)
 } > "$STAGE/installed.sha256"
 mv -f -- "$STAGE/installed.sha256" "$BACKUP/installed.sha256"
@@ -98,29 +123,32 @@ mkdir -p -- "$(dirname -- "$GAME/$MENU_REL")"
 # Staging and destination are on the same filesystem; renames are atomic.
 mv -f -- "$STAGE/menu.txt" "$GAME/$MENU_REL"
 mv -f -- "$STAGE/$VPK_REL" "$GAME/$VPK_REL"
-# Merge the Vazirmatn font files into the game's panorama/fonts folder.
+# Merge the Vazirmatn font files into both game font directories.
 # TTFs belong at the folder root so fonts.conf can scan them; conf.d rules
 # keep their subdirectory.
-mkdir -p -- "$GAME/$FONTS_REL"
-while IFS= read -r font; do
-    rel="${font#$STAGE_FONTS/}"
-    case "$rel" in
-        vazirmatn/*.ttf) dest_rel="$(basename -- "$rel")" ;;
-        *) dest_rel="$rel" ;;
-    esac
-    mkdir -p -- "$GAME/$FONTS_REL/$(dirname -- "$dest_rel")"
-    cp -f -- "$font" "$GAME/$FONTS_REL/$dest_rel"
-done < <(find "$STAGE_FONTS" -type f | sort)
+for dir_rel in "$FONTS_REL" "$CORE_FONTS_REL"; do
+    target="$GAME/$dir_rel"
+    mkdir -p -- "$target"
+    while IFS= read -r font; do
+        rel="${font#$STAGE_FONTS/}"
+        case "$rel" in
+            vazirmatn/*.ttf) dest_rel="$(basename -- "$rel")" ;;
+            *) dest_rel="$rel" ;;
+        esac
+        mkdir -p -- "$target/$(dirname -- "$dest_rel")"
+        cp -f -- "$font" "$target/$dest_rel"
+    done < <(find "$STAGE_FONTS" -type f | sort)
+done
 
-# Patch the game's panorama/fonts/fonts.conf so Panorama uses Vazirmatn for
-# Arabic-script (Persian) UI text. Deadlock already remaps fonts per-language
-# in this same file, so we add a matching rule before </fontconfig>. The game
-# directory's fonts.conf is part of the backed-up fonts folder, so uninstall
-# restores the original automatically.
-FONTS_CONF="$GAME/$FONTS_REL/fonts.conf"
-if [[ -f $FONTS_CONF && ! -L $FONTS_CONF ]]; then
-    if ! grep -q 'deadlock-persian' "$FONTS_CONF" 2>/dev/null; then
-        python3 - "$FONTS_CONF" <<'PY'
+# Patch fonts.conf in BOTH font directories so Panorama uses Vazirmatn for
+# Arabic-script (Persian) UI text. Deadlock remaps fonts per-language in this
+# same file, so we add a matching rule before </fontconfig>. Whichever
+# fonts.conf the game loads will pick up the rule.
+patch_fonts_conf() {
+    local conf="$1"
+    [[ -f $conf && ! -L $conf ]] || return 0
+    if grep -q 'deadlock-persian' "$conf" 2>/dev/null; then return 0; fi
+    python3 - "$conf" <<'PY'
 import sys
 path = sys.argv[1]
 rule = (
@@ -144,8 +172,19 @@ data = data[:idx] + rule + data[idx:]
 with open(path, 'w', encoding='utf-8') as f:
     f.write(data)
 PY
-    fi
-fi
+}
+patch_fonts_conf "$GAME/$FONTS_REL/fonts.conf"
+patch_fonts_conf "$GAME/$CORE_FONTS_REL/fonts.conf"
+# Record which fonts.conf files carry our rule so uninstall can strip it even
+# when no directory backup exists (backups from before this feature).
+{
+    for conf_rel in "$FONTS_REL/fonts.conf" "$CORE_FONTS_REL/fonts.conf"; do
+        if [[ -f "$GAME/$conf_rel" ]] && grep -q 'deadlock-persian' "$GAME/$conf_rel" 2>/dev/null; then
+            printf '%s\n' "$conf_rel"
+        fi
+    done
+} > "$STAGE/fonts.conf.patched"
+mv -f -- "$STAGE/fonts.conf.patched" "$BACKUP/fonts.conf.patched"
 
 echo "Installed Persian translation in: $GAME"
 echo "Original files are backed up in: $BACKUP"
